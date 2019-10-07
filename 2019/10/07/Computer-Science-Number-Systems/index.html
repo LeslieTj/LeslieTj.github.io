@@ -20,7 +20,7 @@
 <meta property="og:image" content="http://yoursite.com/image/base2_to_base8.png">
 <meta property="og:image" content="http://yoursite.com/image/base8_to_base2.png">
 <meta property="og:image" content="http://yoursite.com/image/binary_arithmetric.png">
-<meta property="og:updated_time" content="2019-10-07T19:04:30.379Z">
+<meta property="og:updated_time" content="2019-10-07T19:08:00.222Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Computer Science: Number Systems">
 <meta name="twitter:description" content="Computer Science: Number Systems1. Base 2 -&amp;gt; Base 10 base 8 -&amp;gt; base 10 and base 16 to base 10 is same as base 2 -&amp;gt; base 10 (just replace 2 with 8 or 16). Why we use Base 2? Base 2 has two dig">
@@ -151,7 +151,7 @@
 <p><em>Why we use Base 8 and Base 16?</em> Base 8 and Base 16 are used to <strong>compress binary digits</strong>. Each octal digit represents three binary digits, and each hexadecimal digit represents four binary digits. For example, we know that #FF0000 is  hex color red. If we use Base 2 to represent red color, there would be a long string of numbers. We can also use Base 10 to compress binary digits, but compared to Base 8 and Base 16, it is more complicated converting binary numbers to decimal numbers.</p>
 <h2 id="2-Base-10-gt-Base-2"><a href="#2-Base-10-gt-Base-2" class="headerlink" title="2. Base 10 -&gt; Base 2"></a>2. Base 10 -&gt; Base 2</h2><p>The algorithm is simple: Divide the decimal number by 2 keeping notice of the quotient and the remainder. Continue dividing the quotient by 2 until you get a quotient of zero. Then just write out the remainders in the reverse order.</p>
 <p><img src="/image/base10_to_base2.png" alt="base10_to_base2" title="base10_to_base2"></p>
-<p><code>base 10 -&gt; base 8</code> and <code>base 10 to base 16</code> is same as <code>base 10 -&gt; base 16</code> (divide by 8 or 16 instead of 2).</p>
+<p><code>base 10 -&gt; base 8</code> and <code>base 10 -&gt; base 16</code> is same as <code>base 10 -&gt; base 16</code> (divide by 8 or 16 instead of 2).</p>
 <p><em>Why does the algorithm mentioned above work?</em> Here’s a simple explanation:<br><img src="/image/base10_to_base2_algorithm.png" alt="base10_to_base2_algorithm" title="base10_to_base2_algorithm"></p>
 <h2 id="3-Base-2-gt-Base-8"><a href="#3-Base-2-gt-Base-8" class="headerlink" title="3. Base 2 -&gt; Base 8"></a>3. Base 2 -&gt; Base 8</h2><p>The largest number we can count using 3 digits in Binary is 7(i.e. <code>111</code> in binary). And the largest number we can count using 1 digit in Base 8 is 7. Therefore, each octal digit can replace 3 binary digits: </p>
 <p><img src="/image/base2_to_base8.png" alt="base2_to_base8" title="base2_to_base8"></p>
