@@ -14,7 +14,8 @@
 <meta property="og:description" content="How to represent negative numbers in computersComputers sometimes need to work with negative numbers. This article introduces two methods for computers to represent negative numbers. Using a sign bitO">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/image/two_complement_addition.png">
-<meta property="og:updated_time" content="2019-10-11T09:39:18.184Z">
+<meta property="og:image" content="http://yoursite.com/image/carry_vs_overflow.png">
+<meta property="og:updated_time" content="2019-10-18T20:51:55.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="How to represent negative numbers in computers ">
 <meta name="twitter:description" content="How to represent negative numbers in computersComputers sometimes need to work with negative numbers. This article introduces two methods for computers to represent negative numbers. Using a sign bitO">
@@ -72,6 +73,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" href="/2019/10/18/How-to-represent-fractions-in-computers/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
         
         <li><a class="icon" href="/2019/10/09/How-to-run-JUnit-tests-on-Mac-terminal/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
@@ -100,7 +103,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-represent-negative-numbers-in-computers"><span class="toc-number">1.</span> <span class="toc-text">How to represent negative numbers in computers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-a-sign-bit"><span class="toc-number">1.1.</span> <span class="toc-text">Using a sign bit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2’s-complement"><span class="toc-number">1.2.</span> <span class="toc-text">2’s complement</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#two’s-complement-addition"><span class="toc-number">1.2.1.</span> <span class="toc-text">two’s complement addition</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-represent-negative-numbers-in-computers"><span class="toc-number">1.</span> <span class="toc-text">How to represent negative numbers in computers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-a-sign-bit"><span class="toc-number">1.1.</span> <span class="toc-text">Using a sign bit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2’s-complement"><span class="toc-number">1.2.</span> <span class="toc-text">2’s complement</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2’s-complement-addition"><span class="toc-number">1.2.1.</span> <span class="toc-text">2’s complement addition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Overflow-vs-Carry"><span class="toc-number">1.2.2.</span> <span class="toc-text">Overflow vs Carry</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -142,8 +145,8 @@
     <h1 id="How-to-represent-negative-numbers-in-computers"><a href="#How-to-represent-negative-numbers-in-computers" class="headerlink" title="How to represent negative numbers in computers"></a>How to represent negative numbers in computers</h1><p>Computers sometimes need to work with negative numbers. This article introduces two methods for computers to represent negative numbers.</p>
 <h2 id="Using-a-sign-bit"><a href="#Using-a-sign-bit" class="headerlink" title="Using a sign bit"></a>Using a sign bit</h2><p>One method to represent negative numbers is to use a sign bit. Sign bit is the bit at the far left of the bit pattern, with 0 indicating a positive number and a 1 indicating a negative number. For example, <strong>1</strong>0001001 could represent -9, with the first bit(sign bit) indicating a negative number.</p>
 <p>The smallest possible number using this method of representation is -127 (11111111) and the largest possible number is +127 (01111111). Besides, you might find that 00000000 represents 0 and 11111111 represents -0.</p>
-<h2 id="2’s-complement"><a href="#2’s-complement" class="headerlink" title="2’s complement"></a>2’s complement</h2><p>Most computers use two’s complement representing negative numbers, which can be more effective when performing mathematical operations like adding and subtracting. </p>
-<p>Here is an example of how to find -2 using two’s complement numbers:</p>
+<h2 id="2’s-complement"><a href="#2’s-complement" class="headerlink" title="2’s complement"></a>2’s complement</h2><p>Most computers use 2’s complement representing negative numbers, which can be more effective when performing mathematical operations like adding and subtracting. </p>
+<p>Here is an example of how to find -2 using 2’s complement numbers:</p>
 <ol>
 <li>Find the corresponding positive binary value for the negative number. In this case, 2 = 0010.</li>
 <li>Invert each bit of 2, namely <code>0010 =&gt; 1101</code>.</li>
@@ -152,9 +155,22 @@
 
 </li>
 </ol>
-<p>The smallest possible number using this method of representation is -128 (or 10000000) and the largest possible number is +127 (01111111). And this time, there is only one 0(which is 00000000 in binary).</p>
-<h3 id="two’s-complement-addition"><a href="#two’s-complement-addition" class="headerlink" title="two’s complement addition"></a>two’s complement addition</h3><p>In two’s complement, if the final result overflows the remaining carry number is simply discarded.  For example, <code>-2 + 2</code> in two’s complement binary can be calculated like this:</p>
+<p>Another way to get -2 using 2’s complement is $2^n - (n-bit number)$, take 4-bit number as an example:</p>
+<ol>
+<li>Find the corresponding positive binary value for the negative number. In this case, 2 = 0010</li>
+<li>In this case we use 4-bit number, so $2^4 = 10000$</li>
+<li><code>10000 - 0010 = 1110</code>, so -2 = 1110 using 2’s complement.</li>
+<li>This method is quite simple, and we can spread it into other number systems. For example, in <code>base 3</code>, 121 in 3-bit 3’s complement is: $3^3 - (3-bit number) = 1000 - 121 = 102$</li>
+</ol>
+<p>The smallest possible number using 2’s complement is -128 (or 10000000) and the largest possible number is +127 (01111111). And this time, there is only one 0(which is 00000000 in binary).</p>
+<h3 id="2’s-complement-addition"><a href="#2’s-complement-addition" class="headerlink" title="2’s complement addition"></a>2’s complement addition</h3><p>For example, <code>-2 + 2</code> in 2’s complement binary can be calculated like this:</p>
 <p><img src="/image/two_complement_addition.png" alt="two_complement_addition" title="two_complement_addition"></p>
+<p>Note that in this example, the remaining carry number is simply discarded. </p>
+<h3 id="Overflow-vs-Carry"><a href="#Overflow-vs-Carry" class="headerlink" title="Overflow vs Carry"></a>Overflow vs Carry</h3><p>It is important to differentiate between an overflow and a carry. Let’s look at the comparison below:</p>
+<p><img src="/image/carry_vs_overflow.png" alt="carry_vs_overflow" title="carry_vs_overflow"></p>
+<p>As shown, in the overflow case, <code>1001</code> and <code>1010</code> are both negative numbers, while their sum is <code>0011</code>, which is positive number. Therefore, it is overflow.</p>
+<p>In the carry case, <code>1111</code> and <code>1100</code> are both negative numbers, and their sum is also negative. Therefore it is carry.</p>
+<p>In conclusion, if the sum of two positive numbers is negative, or the sum of two negative numbers is positive, we can say it is an overflow. In other cases, it is a carry.</p>
 
   </div>
 </article>
@@ -178,7 +194,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-represent-negative-numbers-in-computers"><span class="toc-number">1.</span> <span class="toc-text">How to represent negative numbers in computers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-a-sign-bit"><span class="toc-number">1.1.</span> <span class="toc-text">Using a sign bit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2’s-complement"><span class="toc-number">1.2.</span> <span class="toc-text">2’s complement</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#two’s-complement-addition"><span class="toc-number">1.2.1.</span> <span class="toc-text">two’s complement addition</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#How-to-represent-negative-numbers-in-computers"><span class="toc-number">1.</span> <span class="toc-text">How to represent negative numbers in computers</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-a-sign-bit"><span class="toc-number">1.1.</span> <span class="toc-text">Using a sign bit</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2’s-complement"><span class="toc-number">1.2.</span> <span class="toc-text">2’s complement</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2’s-complement-addition"><span class="toc-number">1.2.1.</span> <span class="toc-text">2’s complement addition</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Overflow-vs-Carry"><span class="toc-number">1.2.2.</span> <span class="toc-text">Overflow vs Carry</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
