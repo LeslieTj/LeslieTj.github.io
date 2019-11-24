@@ -24,7 +24,7 @@
 <meta property="og:image" content="http://yoursite.com/image/operand_stack_step_6.png">
 <meta property="og:image" content="http://yoursite.com/image/operand_stack_step_7.png">
 <meta property="og:image" content="http://yoursite.com/image/operand_stack_step_8.png">
-<meta property="og:updated_time" content="2019-11-19T21:31:13.259Z">
+<meta property="og:updated_time" content="2019-11-22T11:35:25.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Virtual Machine Architecture">
 <meta name="twitter:description" content="Java Virtual Machine ArchitectureWhen we run a Java program, typical steps are as follows:  Edit HelloWorld.java file javac HelloWorld.java, i.e., compile .java file into bytecode(class file). java He">
@@ -157,7 +157,7 @@
 <li><code>javac HelloWorld.java</code>, i.e., compile <code>.java</code> file into bytecode(class file).</li>
 <li><code>java HelloWorld</code>, i.e., create a JVM instance execute the bytecode(class file).</li>
 </ol>
-<p>Now I am going to talk about how does a JVM instance load and execute a class file, which involves with the JVM architecture. The Java Virtual Machine(JVM) is an abstract computing machine, which has an instruction set and manipulates various memory areas at run time(i.e., <code>runtime data areas</code>). The structure of JVM is showns as follows:</p>
+<p>Now I am going to talk about how does a JVM instance load and execute a class file, which involves with the JVM architecture. The Java Virtual Machine(JVM) is an abstract computing machine, which has an instruction set and manipulates various memory areas at run time(i.e., <code>runtime data areas</code>). The structure of JVM is shown as follows:</p>
 <p><img src="/image/jvm_architecture.png" alt="jvm_architecture" title="jvm_architecture"></p>
 <h2 id="Class-Loader"><a href="#Class-Loader" class="headerlink" title="Class Loader"></a>Class Loader</h2><p>JVM knows nothing of the Java programming language, only of a particular binary format, the <code>class</code> file format. That is why languages which can be expressed in terms of a valid <code>class</code> file (such as <strong>Scala</strong> and <strong>Kotlin</strong>) can run on JVM. To run a Java program, the class loaders should firstly load the class files. A class file contains Java Virtual Machine instructions (bytecodes) and a symbol table, as well as other ancillary information.</p>
 <h2 id="Runtime-Date-Areas"><a href="#Runtime-Date-Areas" class="headerlink" title="Runtime Date Areas"></a>Runtime Date Areas</h2><p>JVM uses various <code>run time data areas</code> during execute of class files. Some of these data areas are created on JVM start-up and are destroyed only when the JVM exits, so that threads can share these areas. Other data areas are per thread. Per-thread data areas are created when a thread is created and destroyed when the thread exits.</p>
@@ -189,7 +189,7 @@
 <p><img src="/image/operand_stack_javap.png" alt="operand_stack_javap" title="operand_stack_javap"></p>
 <p>Now we start to analyse the instructions(opcode) in the main method:</p>
 <ol>
-<li>iconst_1: Push the int constant <code>1</code> onto the operand stack.</li>
+<li>iconst_1: Push the int constant <code>1</code> (from the constant pool) onto the operand stack.</li>
 </ol>
 <p><img src="/image/operand_stack_step_1.png" alt="operand_stack_step_1" title="operand_stack_step_1"></p>
 <ol start="2">
