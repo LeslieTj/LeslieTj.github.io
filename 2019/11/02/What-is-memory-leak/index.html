@@ -15,7 +15,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/image/stack_and_heap.png">
 <meta property="og:image" content="http://yoursite.com/image/memory_leak_case1.png">
-<meta property="og:updated_time" content="2019-11-02T12:04:41.838Z">
+<meta property="og:updated_time" content="2019-12-14T11:39:29.133Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="What is memory leak">
 <meta name="twitter:description" content="What is memory leakIntroductionWhen a program runs, it needs memory, which is under the control of the operating system. Therefore, after the operating system loading the program into the memory(RAM),">
@@ -153,7 +153,7 @@
 <p><img src="/image/stack_and_heap.png" alt="stack_and_heap" title="stack_and_heap"></p>
 <p>In case 1, when we use <code>malloc</code> to request memory, that memory comes from the heap. As shown in the pictur, if we change the reference of p, the memory allocated previously cannot be reused because the reference to it has been lost, and a leak has occured. </p>
 <p><img src="/image/memory_leak_case1.png" alt="memory_leak_case1" title="memory_leak_case1"></p>
-<p>In case 2, we also use <code>malloc</code> to request a chunk of memory from heap. When the fuction foo is popped, we lost the reference of the allocated memory, which also causes memory leak. To avoid memeory leak, we can modify the code in case 2:</p>
+<p>In case 2, we also use <code>malloc</code> to request a chunk of memory from heap. When the fuction foo is popped, we lost the reference of the allocated memory, which also causes memory leak. To avoid memory leak, we can modify the code in case 2:</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">foo</span><span class="params">()</span> </span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="keyword">int</span> *p = (<span class="keyword">int</span> *) <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)); </span><br><span class="line">  </span><br><span class="line">    <span class="comment">/* Do some work using pointer p */</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">free</span>(p);</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span>; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
