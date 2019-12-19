@@ -6,17 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Modular ArithmeticHere I want to talk about modular arithmetic, which is the basic of public key cryptography.">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Modular Arithmetic">
-<meta property="og:url" content="http://yoursite.com/2019/12/18/Modular-Arithmetic/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="The RSA Algorithm">
+<meta property="og:url" content="http://yoursite.com/2019/12/19/The-RSA-Algorithm/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
-<meta property="og:description" content="Modular ArithmeticHere I want to talk about modular arithmetic, which is the basic of public key cryptography.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-19T15:07:07.852Z">
+<meta property="og:updated_time" content="2019-12-19T17:33:37.845Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Modular Arithmetic">
-<meta name="twitter:description" content="Modular ArithmeticHere I want to talk about modular arithmetic, which is the basic of public key cryptography.">
+<meta name="twitter:title" content="The RSA Algorithm">
     
     
         
@@ -36,7 +33,7 @@
         
     
     <!-- title -->
-    <title>Modular Arithmetic</title>
+    <title>The RSA Algorithm</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -70,10 +67,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2019/12/19/The-RSA-Algorithm/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2019/12/16/Symmetric-Cryptography-Advanced-Encryption-Standard-AES/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2019/12/18/Modular-Arithmetic/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -86,21 +81,21 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/18/Modular-Arithmetic/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&text=Modular Arithmetic"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&is_video=false&description=Modular Arithmetic"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Modular Arithmetic&body=Check out this article: http://yoursite.com/2019/12/18/Modular-Arithmetic/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&name=Modular Arithmetic&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&text=The RSA Algorithm"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&is_video=false&description=The RSA Algorithm"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The RSA Algorithm&body=Check out this article: http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&name=The RSA Algorithm&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Modular-Arithmetic"><span class="toc-number">1.</span> <span class="toc-text">Modular Arithmetic</span></a></li></ol>
+      
     </div>
   </span>
 </div>
@@ -112,7 +107,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Modular Arithmetic
+        The RSA Algorithm
     </h1>
 
 
@@ -124,7 +119,7 @@
       
     <div class="postdate">
       
-        <time datetime="2019-12-18T21:16:40.000Z" itemprop="datePublished">2019-12-18</time>
+        <time datetime="2019-12-19T17:32:15.000Z" itemprop="datePublished">2019-12-19</time>
         
       
     </div>
@@ -139,14 +134,13 @@
   
 
   <div class="content" itemprop="articleBody">
-    <h1 id="Modular-Arithmetic"><a href="#Modular-Arithmetic" class="headerlink" title="Modular Arithmetic"></a>Modular Arithmetic</h1><p>Here I want to talk about modular arithmetic, which is the basic of public key cryptography.</p>
-<script src="http://code.jquery.com/jquery-2.0.0.js"></script>
+    <script src="http://code.jquery.com/jquery-2.0.0.js"></script>
 
 <iframe id="ipynb" marginheight="0" frameborder="0" width="924px" height="680px" srcdoc="<!DOCTYPE html>
 <html>
 <head><meta charset='utf-8' />
 
-<title>modular_arithmetic</title>
+<title>rsa</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13260,17 +13254,23 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Modular-Addition--&amp;-Modular-Multiplication'>Modular Addition  &amp; Modular Multiplication</h1>
+<h1 id='The-RAS-Algorithm'>The RAS Algorithm</h1>
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-$$11 + 13 = 24 = 8\ mod\ 16$$$$11 \cdot 13 = 143 = 15\ mod\ 16$$<p>Note that sometimes we can simplify our computation. For exmaple, we know that $27\ mod\ 16 = 11$ and $45\ mod\ 16 = 13$, therefore, we can know that:</p>
-$$27 \cdot 45 =11 \cdot 13\ mod\ 16= 15\ mod\ 16 $$<p></p>
-<p>We can even make our computation more simpler:</p>
-$$27 \cdot 45 =11 \cdot 13\ mod\ 16 = (-5) \cdot (-3)\ mod\ 16=  15\ mod\ 16 $$<p></p>
+<p>The RSA algorithm is the most widely-used public-key encryption algorithm. A public key encryption scheme consists of the following algorithms $PKE = (KG, Enc, Dec)$:</p>
+<ol>
+<li><p>Key Generation: $KG(\lambda)$ on input a security parameter $\lambda$ outputs a pair of encryption/decryption keys $(PK,SK)$</p>
+</li>
+<li><p>Encryption: $Enc(PK,m;r)$ on inputs a public key $PK$, plaintext $m$ outputs a ciphertext $C$ (eventually local randomness $r$)</p>
+</li>
+<li><p>Decryption: $Dec(SK,C)$ on inputs a decryption key $SK$ and a ciphertext $C$ outputs a plaintext $m$</p>
+</li>
+</ol>
+<p>Now we are going to look at the detail process of RSA.</p>
 
 </div>
 </div>
@@ -13278,14 +13278,79 @@ $$27 \cdot 45 =11 \cdot 13\ mod\ 16 = (-5) \cdot (-3)\ mod\ 16=  15\ mod\ 16 $$<
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Greatest-Common-Divisor'>Greatest Common Divisor</h1>
+<h2 id='Key-Generation-of-RSA'>Key Generation of RSA</h2>
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<p>The greatest common divisor for <code>a</code> and <code>b</code> is the largest positive integer that divides both numbers without remainder. Here is the <code>Euclidean Algorithm</code> to compute <strong>gcd</strong>:</p>
+<ol>
+<li><p>Generate two distinct primes $p$ and $q$ of same bit-size $\lambda$</p>
+</li>
+<li><p>Compute $N = p · q$ and $\phi(N) = (p - 1)(q - 1)$</p>
+</li>
+<li><p>Select a random integer e, $1 &lt; e &lt; \phi(N)$ such that $gcd(e, \phi(N) )= 1$</p>
+</li>
+<li><p>Compute the unique integer d such that $e·d = 1\ mod\ \phi(N)$ using the <code>Extended Euclidean algorithm</code> (i.e., $d = e^{-1}\ mod\ \phi(N)$)</p>
+</li>
+<li><p>The public key is $PK = (N,e)$ and the private key is $SK = d$</p>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Encryption&amp;Decryption-of-RAS'>Encryption&amp;Decryption of RAS</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p><strong>Encryption</strong>:</p>
+<p>Given a message $m \in Z_{N}^{*}$ and the recipient’s public-key $PK = (N, e)$, compute the ciphertext:</p>
+$$c = m^e\ mod\ N$$
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p><strong>Decryption</strong>:</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Given a ciphertext $c$, to recover $m$, compute: 
+$$m = c^d\ mod\ N$$</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Toy-Example'>Toy Example</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Firstly we generate a pair of keys:</p>
+<ol>
+<li>Assume we generate two primes p = 3 and q = 11</li>
+<li>N = 33, $\phi(N) = 20$</li>
+<li>Select an integer e s.t. $gcd(e, 20) = 1$, for instance e = 7</li>
+<li>$d = e^{-1}\ mod\ \phi(N) = 7^{-1} \ mod\ 20 = 3$ </li>
+</ol>
 
 </div>
 </div>
@@ -13293,54 +13358,6 @@ $$27 \cdot 45 =11 \cdot 13\ mod\ 16 = (-5) \cdot (-3)\ mod\ 16=  15\ mod\ 16 $$<
 <div class='cell border-box-sizing code_cell rendered'>
 <div class='input'>
 <div class='prompt input_prompt'>In&nbsp;[1]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>gcd</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='p'>):</span>
-    <span class='k'>while</span> <span class='n'>b</span> <span class='o'>!=</span> <span class='mi'>0</span><span class='p'>:</span>
-        <span class='n'>remainder</span> <span class='o'>=</span> <span class='n'>a</span> <span class='o'>%</span> <span class='n'>b</span>
-        <span class='n'>a</span> <span class='o'>=</span> <span class='n'>b</span>
-        <span class='n'>b</span> <span class='o'>=</span> <span class='n'>remainder</span>
-    <span class='k'>return</span> <span class='nb'>abs</span><span class='p'>(</span><span class='n'>a</span><span class='p'>)</span>
-
-<span class='n'>gcd</span><span class='p'>(</span><span class='mi'>100</span><span class='p'>,</span><span class='mi'>76</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[1]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>4</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Let a &gt; b be two integers such that a &gt; 0 and b &gt; 0. Then the following algorithm(<code>The Extended Euclidean Algorithm</code>) computes integers $\alpha$ and $\beta$ such that:</p>
-$$gcd(a, b) = \alpha · a + \beta · b$$
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[2]:</div>
 <div class='inner_cell'>
     <div class='input_area'>
 <div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>extended_gcd</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='p'>):</span>
@@ -13361,7 +13378,7 @@ $$gcd(a, b) = \alpha · a + \beta · b$$
     
     <span class='k'>return</span> <span class='nb'>abs</span><span class='p'>(</span><span class='n'>a</span><span class='p'>),</span> <span class='n'>lambda11</span><span class='p'>,</span> <span class='n'>lambda12</span> <span class='c1'># abs(a) is gcd(a,b), lambda11 is alpha, lambda12 is beta.</span>
 
-<span class='n'>extended_gcd</span><span class='p'>(</span><span class='mi'>19</span><span class='p'>,</span><span class='mi'>7</span><span class='p'>)</span><span class='c1'># gcd(19, 7) = 3 * 19 - 8 * 7 = 1</span>
+<span class='n'>extended_gcd</span><span class='p'>(</span><span class='mi'>20</span><span class='p'>,</span><span class='mi'>7</span><span class='p'>)</span>
 </pre></div>
 
     </div>
@@ -13374,13 +13391,13 @@ $$gcd(a, b) = \alpha · a + \beta · b$$
 
 <div class='output_area'>
 
-    <div class='prompt output_prompt'>Out[2]:</div>
+    <div class='prompt output_prompt'>Out[1]:</div>
 
 
 
 
 <div class='output_text output_subarea output_execute_result'>
-<pre>(1, 3, -8)</pre>
+<pre>(1, -1, 3)</pre>
 </div>
 
 </div>
@@ -13392,87 +13409,8 @@ $$gcd(a, b) = \alpha · a + \beta · b$$
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Inverses-Modulo-N'>Inverses Modulo N</h1>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>For an integer N, $\textbf{Z}_N = \{ 0, 1, ..., N-2, N-1\}$, we call it the <strong>ring of integers modulo N</strong>.</p>
-<p>For $x\in \textbf{Z}_N$, if $gcd(N, x) = 1$, x has an inverse(x is an invertible element of $\textbf{Z}_N$). That is, there exists $y\in \textbf{Z}_N$ such that $x\cdot y = 1 \ mod\ N$ . We say that <strong>y</strong> is the <code>inverse of x modulo N</code> and write it as $y = x^{-1}\ mod\ N$.</p>
-<p>$y = x^{-1}\ mod\ N$ can be computed using <code>The Extended Euclidean Algorithm</code>:</p>
-<p>Let $gcd(N, x) = \alpha · N + \beta · x$, then $ y = \beta$.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>For example, now we want to compute $7^{-1}\ mod\ 19$:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[3]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>extended_gcd</span><span class='p'>(</span><span class='mi'>19</span><span class='p'>,</span><span class='mi'>7</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[3]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>(1, 3, -8)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Since $\beta= -8$ and $-8 = 11\ mod\ 19$, we can know that the <code>inverse of 7 modulo 19</code> is 11.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Euler&#8217;s-Totient-Function'>Euler&#8217;s Totient Function</h1>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>$\textbf{Z}^{*}_N$ is the subset of $\textbf{Z}_N$, which contains all the invertible emlements of $\textbf{Z}_N$.</p>
-<p>We name the function $\phi(N)$, which assigns to an integer N the number of invertible elements in $\textbf{Z}_N$ (i.e. the size of $\textbf{Z}^{*}_N$), as <strong>Euler’s Totient function</strong>.</p>
-<p>There are several properties of <strong>Euler’s Totient function</strong>:</p>
 <ol>
-<li>If $p\geq 2$ is a prime, then $\phi(p) = p - 1$. For example, 5 is a prime and $5\geq 2$, therefore $\phi(5) = 5 - 1 = 4$. This means that in {0,1,2,3,4,5}, all the elements are invertible except for 0.</li>
-<li>More generally, for any integer $e\geq 1$, $\phi(p^e) = p^{e-1} \cdot (p - 1)$</li>
-<li>For $n, m &gt; 0$ such that $gcd(n,m) = 1$, we have $\phi(n\cdot m) = \phi(n) \cdot \phi(m)$</li>
+<li>The public key is $PK = (N,e) = (33, 7)$ and the private key is $SK = 3$</li>
 </ol>
 
 </div>
@@ -13481,41 +13419,14 @@ $$gcd(a, b) = \alpha · a + \beta · b$$
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Euler&#8217;s-Theorem'>Euler&#8217;s Theorem</h1>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Let $N \in \textbf{N}\ (natural\ number)$ and $a \in \textbf{Z}\ (integer)$,with $gcd(a,N)=1$, then we have $a^{\phi(N)} = 1\ mod\ N$.</p>
-<p>For example, when N = 33, we know that $\phi(33) = 20$, and $gcd(33,25) = 1$, i.e., a = 25. Therefore we can know that $25^{\phi(33)} = 25^{20} = 1\ mod\ 33$.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Fermat&#8217;s-Little-Theorem'>Fermat&#8217;s Little Theorem</h1>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Then we encrypt a message using RSA:</p>
 <ol>
-<li><p>For any prime <strong>p</strong> and any integer $a \neq 0\ mod\ p$, we have
-$a^{p-1} = 1\ mod\ p$.</p>
+<li><p>The message space is $Z_{33}^{*} = \{1, 2, 4, 5, 6, ..., 31, 32\}$, here we choose 4 as the message to be encrypted.</p>
 </li>
-<li><p>Moreover, for any integer a, we have $a^p = a\ mod\ p$.</p>
+<li><p>Encrypt $m = 4$ using RSA encryption with $PK = (33, 7)$:
+ $$c = m^e\ mod\ N = 4^7 \ mod\ 33 = 16$$</p>
 </li>
 </ol>
-<p>Proof of <strong>1</strong>:</p>
-<p>Since <strong>p</strong> is prime and $a \neq 0\ mod\ p$(which means a cannot be multiple of p), then $gcd(a,p)=1$;</p>
-<p>From <strong>Euler’s Totient function</strong>'s property, we know that if $p\geq 2$ is a prime, then $\phi(p) = p - 1$;</p>
-<p>From <strong>Euler’s Theorem</strong>, we know that $a^{\phi(p)} = 1\ mod\ p$;</p>
-<p>Therefore,  $a^{\phi(p)} = a^{p-1} =  1\ mod\ p$.</p>
 
 </div>
 </div>
@@ -13523,67 +13434,8 @@ $a^{p-1} = 1\ mod\ p$.</p>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='How-to-Solve-Modular-Linear-Equations'>How to Solve Modular Linear Equations</h1>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Let $a, x, b \in Z^{*}_{N}$ for a positive integer N, we want to solve the linear equation:</p>
-$$ax = b\ mod\ N$$<p>We can solve it by this way:</p>
-$$x=a^{-1}·b\ mod\ N$$
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>For example, to solve $7x + 3 = 7\ mod\ 19$:</p>
-<p>$7x = 4 \ mod\ 19$</p>
-<p>$x = 7^{-1}\cdot 4 \ mod\ 19$</p>
-<p>We can calculate $7^{-1}\ mod\ 19$, which is 11:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[4]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>extended_gcd</span><span class='p'>(</span><span class='mi'>19</span><span class='p'>,</span><span class='mi'>7</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[4]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>(1, 3, -8)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Therefore, $x = 11 \cdot 4\ mod \ 19 = 6\ mod\ 19$</p>
+<p>Finally we can recover m from C using RSA decryption with SK:
+$$m = c^d\ mod\ N = 16^3 \ mod \ 33 = 4$$</p>
 
 </div>
 </div>
@@ -13630,21 +13482,21 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Modular-Arithmetic"><span class="toc-number">1.</span> <span class="toc-text">Modular Arithmetic</span></a></li></ol>
+      
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/18/Modular-Arithmetic/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&text=Modular Arithmetic"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&is_video=false&description=Modular Arithmetic"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Modular Arithmetic&body=Check out this article: http://yoursite.com/2019/12/18/Modular-Arithmetic/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&title=Modular Arithmetic"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/18/Modular-Arithmetic/&name=Modular Arithmetic&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&text=The RSA Algorithm"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&is_video=false&description=The RSA Algorithm"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The RSA Algorithm&body=Check out this article: http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&name=The RSA Algorithm&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
