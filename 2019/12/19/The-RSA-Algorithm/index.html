@@ -13385,26 +13385,6 @@ $$m = c^d\ mod\ N$$</p>
 </div>
 </div>
 
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[1]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>(1, -1, 3)</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
@@ -13424,7 +13404,7 @@ $$m = c^d\ mod\ N$$</p>
 <li><p>The message space is $Z_{33}^{*} = \{1, 2, 4, 5, 6, ..., 31, 32\}$, here we choose 4 as the message to be encrypted.</p>
 </li>
 <li><p>Encrypt $m = 4$ using RSA encryption with $PK = (33, 7)$:
- $$c = m^e\ mod\ N = 4^7 \ mod\ 33 = 16$$</p>
+ $$c = m^e\ mod\ N = 4^7 \ mod\ 33 = 4^3 \cdot 4^3 \cdot 4 \ mod\ 33 = (-2)\cdot (-2) \cdot 4\ mod\ 33 = 16$$</p>
 </li>
 </ol>
 
@@ -13439,6 +13419,68 @@ $$m = c^d\ mod\ N = 16^3 \ mod \ 33 = 4$$</p>
 
 </div>
 </div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='RSA-Fast-Modular-Exponentiation'>RSA Fast Modular Exponentiation</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Let $d_{k-1}d_{k-2}...d_{1}d_{0}$ be the binary representation of $d \in N\ (integer)$. Now we need to compute $x^d\ mod\ N$.</p>
+<p>Let's firstly compute $x^d$. For example, now we want to compute $x^35$, and the binary representation of 35 is $(100011)_2$. We can simply compute the result by multiplying x in total 35 times, i.e., $x*x*x...x*x$.</p>
+<p>We can also use <code>square-and-multiply algorithm</code> to compute the result:</p>
+<p><img src='/image/square_and_multiply.png' alt='square_and_multiply'></p>
+<p>We can see that there are 7 operations(5 square and 2 multiply) in this way. Now we implement this algorithm in python:</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing code_cell rendered'>
+<div class='input'>
+<div class='prompt input_prompt'>In&nbsp;[2]:</div>
+<div class='inner_cell'>
+    <div class='input_area'>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>mod_power</span><span class='p'>(</span><span class='n'>x</span><span class='p'>,</span><span class='n'>d</span><span class='p'>,</span><span class='n'>N</span><span class='p'>):</span>
+    <span class='n'>binary_d</span> <span class='o'>=</span> <span class='nb'>bin</span><span class='p'>(</span><span class='n'>d</span><span class='p'>)</span><span class='c1'># the binary representation of d, e.g., 35 = 0b100011</span>
+    <span class='n'>result</span> <span class='o'>=</span> <span class='n'>x</span> 
+    <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='n'>binary_d</span><span class='p'>[</span><span class='mi'>3</span><span class='p'>:]:</span>
+        <span class='k'>if</span> <span class='n'>i</span> <span class='o'>==</span> <span class='s1'>&#39;1&#39;</span><span class='p'>:</span>
+            <span class='n'>result</span> <span class='o'>=</span> <span class='n'>result</span> <span class='o'>*</span> <span class='n'>result</span> <span class='o'>*</span> <span class='n'>x</span>
+        <span class='k'>if</span> <span class='n'>i</span> <span class='o'>==</span> <span class='s1'>&#39;0&#39;</span><span class='p'>:</span>
+            <span class='n'>result</span> <span class='o'>=</span> <span class='n'>result</span> <span class='o'>*</span> <span class='n'>result</span>
+    <span class='k'>return</span> <span class='n'>result</span><span class='o'>%</span><span class='k'>N</span>
+
+<span class='n'>mod_power</span><span class='p'>(</span><span class='mi'>3</span><span class='p'>,</span><span class='mi'>5</span><span class='p'>,</span><span class='mi'>13</span><span class='p'>)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class='output_wrapper'>
+<div class='output'>
+
+
+<div class='output_area'>
+
+    <div class='prompt output_prompt'>Out[2]:</div>
+
+
+
+
+<div class='output_text output_subarea output_execute_result'>
+<pre>9</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     </div>
   </div>
