@@ -7,13 +7,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:type" content="article">
-<meta property="og:title" content="The RSA Algorithm">
-<meta property="og:url" content="http://yoursite.com/2019/12/19/The-RSA-Algorithm/index.html">
+<meta property="og:title" content="Symmetric Cryptography: S-box and Key Schedule of AES">
+<meta property="og:url" content="http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-19T17:33:37.845Z">
+<meta property="og:updated_time" content="2019-12-21T18:08:58.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The RSA Algorithm">
+<meta name="twitter:title" content="Symmetric Cryptography: S-box and Key Schedule of AES">
     
     
         
@@ -33,7 +33,7 @@
         
     
     <!-- title -->
-    <title>The RSA Algorithm</title>
+    <title>Symmetric Cryptography: S-box and Key Schedule of AES</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -67,10 +67,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2019/12/18/Modular-Arithmetic/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2019/12/19/The-RSA-Algorithm/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -83,16 +81,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&text=The RSA Algorithm"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&is_video=false&description=The RSA Algorithm"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=The RSA Algorithm&body=Check out this article: http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&name=The RSA Algorithm&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&text=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&is_video=false&description=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Symmetric Cryptography: S-box and Key Schedule of AES&body=Check out this article: http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&name=Symmetric Cryptography: S-box and Key Schedule of AES&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -109,7 +107,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        The RSA Algorithm
+        Symmetric Cryptography: S-box and Key Schedule of AES
     </h1>
 
 
@@ -121,7 +119,7 @@
       
     <div class="postdate">
       
-        <time datetime="2019-12-19T17:32:15.000Z" itemprop="datePublished">2019-12-19</time>
+        <time datetime="2019-12-21T18:08:08.000Z" itemprop="datePublished">2019-12-21</time>
         
       
     </div>
@@ -142,7 +140,7 @@
 <html>
 <head><meta charset='utf-8' />
 
-<title>rsa</title>
+<title>aes</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13256,23 +13254,98 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='The-RAS-Algorithm'>The RAS Algorithm</h1>
+<h1 id='Symmetric-Cryptography:-S-box-and-Key-Schedule-of-AES'>Symmetric Cryptography: S-box and Key Schedule of AES</h1>
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<p>The RSA algorithm is the most widely-used public-key encryption algorithm. A public key encryption scheme consists of the following algorithms $PKE = (KG, Enc, Dec)$:</p>
+<h2 id='Polynomials-in-$F_{2}[x]$'>Polynomials in $F_{2}[x]$</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>A polynomial is an expression of the form:</p>
+$$a_{n}x^{n} + ... + a_{2}x^{2} + a_{1}x +a_0$$<p>Where $a_{i}$ is called <code>coefficient</code>, and $n$ is called the <code>degree</code> of the polynomial.</p>
+<p>We say this is a <strong>polynomial in x</strong>. Often $a_{i} \in Z$, and we say it’s a <strong>polynomial over Z</strong>. We denote the set of all polynomials in $x$ over $Z$ as $Z[x]$.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Instead of having the coefficients in $Z$, we can use bits. So the coefficients will be 0 or 1. Because the set of bits $\{0,1\}$ is written $F_2$, we write the set of polynomials over bits as $F_{2}[x]$.</p>
+<p>For example, here is a polynomial in $F_{2}[x]$:</p>
+$$x^7 + x^6 + x^4 + x^3 + 1$$<p>The coefficients of above polynomial are:</p>
+$$1\ 1\ 0\ 1\ 1\ 1\ 0\ 1$$
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Operations-on-Polynomials-in-$F_{2}[x]$'>Operations on Polynomials in $F_{2}[x]$</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>We can add two polynomials in $F_{2}[x]$ by adding the respective coefficients. Note that the coefficients are bits, therefore $(1 + 1 = 0)_2$.</p>
+<p>For example, we want to add $x^4 + x^3 + 1$ and $x^3 + x^2$:</p>
+$$
+\ 11001\\
+\ 01100\\
+------\\
+100101
+$$<p>Therefore the result is $x^5 + x^2+ 1$.</p>
+<p>Similarly, we can multiply two polynomials, and also, we can divide one polynomial by another, yielding a quotient and remainder.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Irreducible-Polynomials'>Irreducible Polynomials</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>An integer $n$ is called <strong>prime</strong> if its only divisors are 1 and n. The same notion for polynomials is called <strong>irreducible</strong>:</p>
+<p>A polynomial $p(x) \in F_{2}[x]$ is called irreducible if its only divisors are $p(x)$ and the constant polynomial $1 \in F_{2}[x]$.</p>
+<p>Now we can multiply two polynomials in $F_{2}[x]$ then modulo a third one, and the third one is an irreducible polynomial. For example, with $p(x) = x^{3} + x + 1$ as an irreducible polynomial, we can have:</p>
+$$(x^{2}+x+1) \cdot (x^{2}+1) = x^{2}+ x \ mod\ (x^{3}+x+1) $$$$111 \otimes 101 = 110$$<p>Now, we have explained the definition of $\otimes$ mentioned in the previous article <em>Symmetric Cryptography: Advanced Encryption Standard(AES)</em>.</p>
+<p>This $\otimes$ operation, alone with the xor operation($\oplus$) is used to define the <strong>MixColumns</strong> operation and the <strong>S-boxes</strong> of AES. And in AES, we choose $x^{8} + x^{4} + x^{3} + x + 1$ as our irreducible polynomial.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='S-box-in-AES'>S-box in AES</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>The substitution operation for a byte $B$ is defined as follows:</p>
 <ol>
-<li><p>Key Generation: $KG(\lambda)$ on input a security parameter $\lambda$ outputs a pair of encryption/decryption keys $(PK,SK)$</p>
+<li><p>First compute the <code>multiplicative inverse</code> of $B$ in the AES field($B' = B^{-1}\  mod\ x^{8} + x^{4} + x^{3} + x + 1$), to obtain $B' = [x_{7},...,x_{0}]$ . Zero, which has no inverse, is mapped to zero, i.e., $[0,...,0]$.</p>
 </li>
-<li><p>Encryption: $Enc(PK,m;r)$ on inputs a public key $PK$, plaintext $m$ outputs a ciphertext $C$ (eventually local randomness $r$)</p>
-</li>
-<li><p>Decryption: $Dec(SK,C)$ on inputs a decryption key $SK$ and a ciphertext $C$ outputs a plaintext $m$</p>
+<li><p>Then compute a new bit vector $B'' = [y_{7}, . . . , y_{0}]$ with the following transformation in $F_{2}[x]$ (observe that the vector addition is the same as an xor $\oplus$):</p>
 </li>
 </ol>
-<p>Now we are going to look at the detail process of RSA.</p>
+<p><img src='/image/s-box-jupyter.png' alt='s-box-jupyter'></p>
+<p>The result of the substitution is $B''$ .</p>
 
 </div>
 </div>
@@ -13280,79 +13353,53 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Key-Generation-of-RSA'>Key Generation of RSA</h2>
+<h2 id='Key-Schedule-of-AES'>Key Schedule of AES</h2>
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
+<p>At the beginning, we have a 128-bit key $K$:</p>
+<p><img src='/image/key_schedule_aes_jupyter.png' alt='key_schedule_aes_jupyter'></p>
+<p>Split $K$ into four words $W_{0}, W_{1}, W_{2}, W_{3}$ of 32 bits each:</p>
+<p><img src='/image/key_schedule_aes_jupyter2.png' alt='key_schedule_aes_jupyter2'></p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Now we can derive round keys $K_i$ as follows:</p>
+
+<pre><code>for i = 1 to 10 do:
+    T = W4i−1 ≪ 8 
+    T = SubBytes(T) \\ Using S-box
+    T = T ⊕ RCi
+    W4i = W4i−4 ⊕ T
+    W4i+1 = W4i−3 ⊕ W4i 
+    W4i+2 = W4i−2 ⊕ W4i+1 
+    W4i+3 = W4i−1 ⊕ W4i+2
+end
+Ki =W4i,W4i+1,W4i+2,W4i+3</code></pre>
+<p>Note that $RC_i$ is defined as follows:</p>
+$$RC_{i} =x^{i−1}\ mod\ (x^{8}+x^{4}+x^{3}+x+1)$$<p>For example, we want to obtain $K_1$:</p>
 <ol>
-<li><p>Generate two distinct primes $p$ and $q$ of same bit-size $\lambda$</p>
-</li>
-<li><p>Compute $N = p · q$ and $\phi(N) = (p - 1)(q - 1)$</p>
-</li>
-<li><p>Select a random integer e, $1 &lt; e &lt; \phi(N)$ such that $gcd(e, \phi(N) )= 1$</p>
-</li>
-<li><p>Compute the unique integer d such that $e·d = 1\ mod\ \phi(N)$ using the <code>Extended Euclidean algorithm</code> (i.e., $d = e^{-1}\ mod\ \phi(N)$)</p>
-</li>
-<li><p>The public key is $PK = (N,e)$ and the private key is $SK = d$</p>
+<li>i = 1, we first get $W_{4i-1} &lt;&lt; 8$:</li>
+</ol>
+<p><img src='/image/key_schedule_aes_jupyter3.png' alt='key_schedule_aes_jupyter3'></p>
+<ol>
+<li>Then we do the byte substitution using <strong>S-box</strong>:</li>
+</ol>
+<p><img src='/image/key_schedule_aes_jupyter4.png' alt='key_schedule_aes_jupyter4'></p>
+<ol>
+<li><p>Then we XOR the $T$ with $RC_1$. We know that  $RC_{1} =x^{1−1}\ mod\ (x^{8}+x^{4}+x^{3}+x+1) = 1 \ mod\ (x^{8}+x^{4}+x^{3}+x+1) = 1$, therefore $RC_{1} = 00000001$(which is $01$ in hexadecimal), and we expand it into a 32-bit word:</p>
+<p>$${\displaystyle RCON_{i}={\begin{bmatrix}RC_{i}&amp;00_{16}&amp;00_{16}&amp;00_{16}\end{bmatrix}}}$$</p>
+<p>$${\displaystyle RCON_{1}={\begin{bmatrix}RC_{1}&amp;00_{16}&amp;00_{16}&amp;00_{16}\end{bmatrix}} = {\begin{bmatrix}01_{16} &amp;00_{16}&amp;00_{16}&amp;00_{16}\end{bmatrix}}}$$</p>
 </li>
 </ol>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Encryption&amp;Decryption-of-RAS'>Encryption&amp;Decryption of RAS</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p><strong>Encryption</strong>:</p>
-<p>Given a message $m \in Z_{N}^{*}$ and the recipient’s public-key $PK = (N, e)$, compute the ciphertext:</p>
-$$c = m^e\ mod\ N$$
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p><strong>Decryption</strong>:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Given a ciphertext $c$, to recover $m$, compute: 
-$$m = c^d\ mod\ N$$</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Toy-Example'>Toy Example</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Firstly we generate a pair of keys:</p>
-<ol>
-<li>Assume we generate two primes p = 3 and q = 11</li>
-<li>N = 33, $\phi(N) = 20$</li>
-<li>Select an integer e s.t. $gcd(e, 20) = 1$, for instance e = 7</li>
-<li>$d = e^{-1}\ mod\ \phi(N) = 7^{-1} \ mod\ 20 = 3$ </li>
-</ol>
+<p><img src='/image/key_schedule_aes_jupyter5.png' alt='key_schedule_aes_jupyter5'></p>
 
 </div>
 </div>
@@ -13362,25 +13409,7 @@ $$m = c^d\ mod\ N$$</p>
 <div class='prompt input_prompt'>In&nbsp;[1]:</div>
 <div class='inner_cell'>
     <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>extended_gcd</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='p'>):</span>
-    <span class='n'>lambda11</span> <span class='o'>=</span> <span class='mi'>1</span>
-    <span class='n'>lambda22</span> <span class='o'>=</span> <span class='mi'>1</span>
-    <span class='n'>lambda12</span> <span class='o'>=</span> <span class='mi'>0</span>
-    <span class='n'>lambda21</span> <span class='o'>=</span> <span class='mi'>0</span>
-    
-    <span class='k'>while</span> <span class='n'>b</span> <span class='o'>!=</span> <span class='mi'>0</span><span class='p'>:</span>
-        <span class='n'>quotient</span> <span class='o'>=</span> <span class='n'>a</span> <span class='o'>//</span> <span class='n'>b</span>
-        <span class='n'>remainder</span> <span class='o'>=</span> <span class='n'>a</span> <span class='o'>%</span> <span class='n'>b</span>
-        <span class='n'>a</span> <span class='o'>=</span> <span class='n'>b</span>
-        <span class='n'>b</span> <span class='o'>=</span> <span class='n'>remainder</span>
-        <span class='n'>temp21</span><span class='p'>,</span> <span class='n'>temp22</span> <span class='o'>=</span> <span class='n'>lambda21</span><span class='p'>,</span> <span class='n'>lambda22</span>
-        <span class='n'>lambda21</span> <span class='o'>=</span> <span class='n'>lambda11</span> <span class='o'>-</span> <span class='n'>quotient</span><span class='o'>*</span><span class='n'>lambda21</span>
-        <span class='n'>lambda22</span> <span class='o'>=</span> <span class='n'>lambda12</span> <span class='o'>-</span> <span class='n'>quotient</span><span class='o'>*</span><span class='n'>lambda22</span>
-        <span class='n'>lambda11</span><span class='p'>,</span> <span class='n'>lambda12</span> <span class='o'>=</span> <span class='n'>temp21</span><span class='p'>,</span> <span class='n'>temp22</span>
-    
-    <span class='k'>return</span> <span class='nb'>abs</span><span class='p'>(</span><span class='n'>a</span><span class='p'>),</span> <span class='n'>lambda11</span><span class='p'>,</span> <span class='n'>lambda12</span> <span class='c1'># abs(a) is gcd(a,b), lambda11 is alpha, lambda12 is beta.</span>
-
-<span class='n'>extended_gcd</span><span class='p'>(</span><span class='mi'>20</span><span class='p'>,</span><span class='mi'>7</span><span class='p'>)</span>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='nb'>hex</span><span class='p'>(</span><span class='nb'>int</span><span class='p'>(</span><span class='s1'>&#39;8a&#39;</span><span class='p'>,</span><span class='mi'>16</span><span class='p'>)</span><span class='o'>^</span><span class='nb'>int</span><span class='p'>(</span><span class='s1'>&#39;01&#39;</span><span class='p'>,</span><span class='mi'>16</span><span class='p'>))</span>
 </pre></div>
 
     </div>
@@ -13399,7 +13428,7 @@ $$m = c^d\ mod\ N$$</p>
 
 
 <div class='output_text output_subarea output_execute_result'>
-<pre>(1, -1, 3)</pre>
+<pre>&#39;0x8b&#39;</pre>
 </div>
 
 </div>
@@ -13407,76 +13436,13 @@ $$m = c^d\ mod\ N$$</p>
 </div>
 </div>
 
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<ol>
-<li>The public key is $PK = (N,e) = (33, 7)$ and the private key is $SK = 3$</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Then we encrypt a message using RSA:</p>
-<ol>
-<li><p>The message space is $Z_{33}^{*} = \{1, 2, 4, 5, 6, ..., 31, 32\}$, here we choose 4 as the message to be encrypted.</p>
-</li>
-<li><p>Encrypt $m = 4$ using RSA encryption with $PK = (33, 7)$:
- $$c = m^e\ mod\ N = 4^7 \ mod\ 33 = 4^3 \cdot 4^3 \cdot 4 \ mod\ 33 = (-2)\cdot (-2) \cdot 4\ mod\ 33 = 16$$</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Finally we can recover m from C using RSA decryption with SK:
-$$m = c^d\ mod\ N = 16^3 \ mod \ 33 = 4$$</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='RSA-Fast-Modular-Exponentiation'>RSA Fast Modular Exponentiation</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Let $d_{k-1}d_{k-2}...d_{1}d_{0}$ be the binary representation of $d \in N\ (integer)$. Now we need to compute $x^d\ mod\ N$.</p>
-<p>Let's firstly compute $x^d$. For example, now we want to compute $x^35$, and the binary representation of 35 is $(100011)_2$. We can simply compute the result by multiplying x in total 35 times, i.e., $x*x*x...x*x$.</p>
-<p>We can also use <code>square-and-multiply algorithm</code> to compute the result:</p>
-<p><img src='/image/square_and_multiply.png' alt='square_and_multiply'></p>
-<p>We can see that there are 7 operations(5 square and 2 multiply) in this way. Now we implement this algorithm in python:</p>
-
-</div>
-</div>
 </div>
 <div class='cell border-box-sizing code_cell rendered'>
 <div class='input'>
 <div class='prompt input_prompt'>In&nbsp;[2]:</div>
 <div class='inner_cell'>
     <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>mod_power</span><span class='p'>(</span><span class='n'>x</span><span class='p'>,</span><span class='n'>d</span><span class='p'>,</span><span class='n'>N</span><span class='p'>):</span>
-    <span class='n'>binary_d</span> <span class='o'>=</span> <span class='nb'>bin</span><span class='p'>(</span><span class='n'>d</span><span class='p'>)</span><span class='c1'># the binary representation of d, e.g., 35 = 0b100011</span>
-    <span class='n'>result</span> <span class='o'>=</span> <span class='n'>x</span> 
-    <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='n'>binary_d</span><span class='p'>[</span><span class='mi'>3</span><span class='p'>:]:</span>
-        <span class='k'>if</span> <span class='n'>i</span> <span class='o'>==</span> <span class='s1'>&#39;1&#39;</span><span class='p'>:</span>
-            <span class='n'>result</span> <span class='o'>=</span> <span class='n'>result</span> <span class='o'>*</span> <span class='n'>result</span> <span class='o'>*</span> <span class='n'>x</span>
-        <span class='k'>if</span> <span class='n'>i</span> <span class='o'>==</span> <span class='s1'>&#39;0&#39;</span><span class='p'>:</span>
-            <span class='n'>result</span> <span class='o'>=</span> <span class='n'>result</span> <span class='o'>*</span> <span class='n'>result</span>
-    <span class='k'>return</span> <span class='n'>result</span><span class='o'>%</span><span class='k'>N</span>
-
-<span class='n'>mod_power</span><span class='p'>(</span><span class='mi'>3</span><span class='p'>,</span><span class='mi'>5</span><span class='p'>,</span><span class='mi'>13</span><span class='p'>)</span>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='nb'>hex</span><span class='p'>(</span><span class='nb'>int</span><span class='p'>(</span><span class='s1'>&#39;84&#39;</span><span class='p'>,</span><span class='mi'>16</span><span class='p'>)</span><span class='o'>^</span><span class='nb'>int</span><span class='p'>(</span><span class='s1'>&#39;00&#39;</span><span class='p'>,</span><span class='mi'>16</span><span class='p'>))</span>
 </pre></div>
 
     </div>
@@ -13495,7 +13461,7 @@ $$m = c^d\ mod\ N = 16^3 \ mod \ 33 = 4$$</p>
 
 
 <div class='output_text output_subarea output_execute_result'>
-<pre>9</pre>
+<pre>&#39;0x84&#39;</pre>
 </div>
 
 </div>
@@ -13503,6 +13469,24 @@ $$m = c^d\ mod\ N = 16^3 \ mod \ 33 = 4$$</p>
 </div>
 </div>
 
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<ol>
+<li>Then we have:</li>
+</ol>
+
+<pre><code>    W4 = W0 ⊕ T
+    W5 = W1 ⊕ W4 
+    W6 = W2 ⊕ W5 
+    W7 = W3 ⊕ W6</code></pre>
+<ol>
+<li>Finally we have $K_{1}=W_{4},W_{5},W_{6},W_{7}$.</li>
+</ol>
+
+</div>
+</div>
 </div>
     </div>
   </div>
@@ -13551,16 +13535,16 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&text=The RSA Algorithm"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&is_video=false&description=The RSA Algorithm"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=The RSA Algorithm&body=Check out this article: http://yoursite.com/2019/12/19/The-RSA-Algorithm/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&title=The RSA Algorithm"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/19/The-RSA-Algorithm/&name=The RSA Algorithm&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&text=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&is_video=false&description=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Symmetric Cryptography: S-box and Key Schedule of AES&body=Check out this article: http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&title=Symmetric Cryptography: S-box and Key Schedule of AES"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/12/21/Symmetric-Cryptography-S-box-and-Key-Schedule-of-AES/&name=Symmetric Cryptography: S-box and Key Schedule of AES&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
