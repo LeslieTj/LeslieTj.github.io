@@ -7,13 +7,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:type" content="article">
-<meta property="og:title" content="Recursive Structure - Tree">
-<meta property="og:url" content="http://yoursite.com/2020/02/05/Recursive-Structure-Tree/index.html">
+<meta property="og:title" content="Insertion Sort and Selection Sort">
+<meta property="og:url" content="http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-02-05T17:41:15.091Z">
+<meta property="og:updated_time" content="2020-03-04T10:07:43.854Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Recursive Structure - Tree">
+<meta name="twitter:title" content="Insertion Sort and Selection Sort">
     
     
         
@@ -33,7 +33,7 @@
         
     
     <!-- title -->
-    <title>Recursive Structure - Tree</title>
+    <title>Insertion Sort and Selection Sort</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -67,10 +67,10 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/02/05/High-Order-Methods-in-Java/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/02/28/Priority-Queue/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
-        <li><a class="icon" href="/2020/01/27/Modulo-Operation-in-Java/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/02/27/Basic-Logic-Gates/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -83,16 +83,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&text=Recursive Structure - Tree"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&is_video=false&description=Recursive Structure - Tree"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Recursive Structure - Tree&body=Check out this article: http://yoursite.com/2020/02/05/Recursive-Structure-Tree/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&name=Recursive Structure - Tree&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&text=Insertion Sort and Selection Sort"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&is_video=false&description=Insertion Sort and Selection Sort"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Insertion Sort and Selection Sort&body=Check out this article: http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&name=Insertion Sort and Selection Sort&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -109,7 +109,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Recursive Structure - Tree
+        Insertion Sort and Selection Sort
     </h1>
 
 
@@ -121,7 +121,7 @@
       
     <div class="postdate">
       
-        <time datetime="2020-02-05T17:38:32.000Z" itemprop="datePublished">2020-02-05</time>
+        <time datetime="2020-02-27T21:49:32.000Z" itemprop="datePublished">2020-02-27</time>
         
       
     </div>
@@ -142,7 +142,7 @@
 <html>
 <head><meta charset='utf-8' />
 
-<title>recursive_structure_tree</title>
+<title>insertion_sort_and_selection_sort</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13217,118 +13217,201 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Recursive-Structure---Tree'>Recursive Structure - Tree</h1><p>A tree consists of a root and several subtrees, therefore we can view it as a <strong>recursive structure</strong>.</p>
-<p><img src='/image/recursive_structure_tree.png' alt='recursive_structure_tree' title='recursive_structure_tree'></p>
-<h2 id='Binary-Tree-(BT)'>Binary Tree (BT)</h2><p>Here is the implement of a binary tree in Java:</p>
-<div class='highlight'><pre><span></span><span class='kd'>public</span> <span class='kd'>class</span> <span class='nc'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='p'>{</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * Tree&lt;E&gt; class defines a recursive type called Tree, and provides</span>
-<span class='cm'>     * constructor and accessor methods.</span>
-<span class='cm'>     */</span>
-    <span class='kd'>private</span> <span class='kt'>boolean</span> <span class='n'>empty</span><span class='p'>;</span>
-    <span class='kd'>private</span> <span class='n'>E</span> <span class='n'>value</span><span class='p'>;</span>
-    <span class='kd'>private</span> <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='n'>left</span><span class='p'>,</span> <span class='n'>right</span><span class='p'>;</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * Creates a new Tree&lt;E&gt; whose root value is x and left and right</span>
-<span class='cm'>     * subtrees are l and r.</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='nf'>Tree</span><span class='p'>(</span><span class='n'>E</span> <span class='n'>value</span><span class='p'>,</span> <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='n'>left</span><span class='p'>,</span> <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='n'>right</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>empty</span> <span class='o'>=</span> <span class='kc'>false</span><span class='p'>;</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>value</span> <span class='o'>=</span> <span class='n'>value</span><span class='p'>;</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>left</span> <span class='o'>=</span> <span class='n'>left</span><span class='p'>;</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>right</span> <span class='o'>=</span> <span class='n'>right</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * Creates an empty tree</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='nf'>Tree</span><span class='p'>()</span> <span class='p'>{</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>empty</span> <span class='o'>=</span> <span class='kc'>true</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * Creates a tree with a single leaf node</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='nf'>Tree</span><span class='p'>(</span><span class='n'>E</span> <span class='n'>x</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>empty</span> <span class='o'>=</span> <span class='kc'>false</span><span class='p'>;</span>
-        <span class='k'>this</span><span class='p'>.</span><span class='na'>value</span> <span class='o'>=</span> <span class='n'>x</span><span class='p'>;</span> <span class='k'>this</span><span class='p'>.</span><span class='na'>left</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='p'>();</span> <span class='k'>this</span><span class='p'>.</span><span class='na'>right</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='p'>();</span>
-    <span class='p'>}</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * returns true if this tree is empty</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='kt'>boolean</span> <span class='nf'>isEmpty</span><span class='p'>()</span> <span class='p'>{</span>
-        <span class='k'>return</span> <span class='n'>empty</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * gets the root value of this tree</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='n'>E</span> <span class='nf'>getValue</span><span class='p'>()</span> <span class='p'>{</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>empty</span><span class='p'>)</span> <span class='p'>{</span>
-            <span class='k'>throw</span> <span class='k'>new</span> <span class='n'>IllegalStateException</span><span class='p'>(</span>
-                    <span class='s'>&quot;Trying to access root of an empty tree&quot;</span><span class='p'>);</span>
-        <span class='p'>}</span>
-        <span class='k'>return</span> <span class='n'>value</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * gets the left subtree of this node</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='nf'>getLeft</span><span class='p'>()</span> <span class='p'>{</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>empty</span><span class='p'>)</span> <span class='p'>{</span>
-            <span class='k'>throw</span> <span class='k'>new</span> <span class='n'>IllegalStateException</span><span class='p'>(</span>
-                    <span class='s'>&quot;Trying to access subtree of an empty tree&quot;</span><span class='p'>);</span>
-        <span class='p'>}</span>
-        <span class='k'>return</span> <span class='n'>left</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-    <span class='cm'>/**</span>
-<span class='cm'>     * gets the right subtree of this node</span>
-<span class='cm'>     */</span>
-    <span class='kd'>public</span> <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='nf'>getRight</span><span class='p'>()</span> <span class='p'>{</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>empty</span><span class='p'>)</span> <span class='p'>{</span>
-            <span class='k'>throw</span> <span class='k'>new</span> <span class='n'>IllegalStateException</span><span class='p'>(</span>
-                    <span class='s'>&quot;Trying to access subtree of an empty tree&quot;</span><span class='p'>);</span>
-        <span class='p'>}</span>
-        <span class='k'>return</span> <span class='n'>right</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-
-    <span class='nd'>@Override</span> <span class='kd'>public</span> <span class='kt'>boolean</span> <span class='nf'>equals</span><span class='p'>(</span><span class='n'>Object</span> <span class='n'>o</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='n'>t</span> <span class='o'>=</span> <span class='p'>(</span><span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span><span class='p'>)</span> <span class='n'>o</span><span class='p'>;</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='k'>this</span><span class='p'>.</span><span class='na'>empty</span><span class='p'>)</span>
-            <span class='k'>return</span> <span class='n'>t</span><span class='p'>.</span><span class='na'>isEmpty</span><span class='p'>();</span>
-        <span class='k'>else</span>
-            <span class='k'>return</span> <span class='o'>!</span><span class='n'>t</span><span class='p'>.</span><span class='na'>empty</span> <span class='o'>&amp;&amp;</span> <span class='k'>this</span><span class='p'>.</span><span class='na'>value</span><span class='p'>.</span><span class='na'>equals</span><span class='p'>(</span><span class='n'>t</span><span class='p'>.</span><span class='na'>value</span><span class='p'>)</span> <span class='o'>&amp;&amp;</span>
-                    <span class='k'>this</span><span class='p'>.</span><span class='na'>left</span><span class='p'>.</span><span class='na'>equals</span><span class='p'>(</span><span class='n'>t</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>())</span> <span class='o'>&amp;&amp;</span> <span class='k'>this</span><span class='p'>.</span><span class='na'>right</span><span class='p'>.</span><span class='na'>equals</span><span class='p'>(</span><span class='n'>t</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>());</span>
-    <span class='p'>}</span>
-
-<span class='p'>}</span>
-</pre></div>
-<p>We can build a binary tree like this:</p>
-<div class='highlight'><pre><span></span><span class='c1'>//      9</span>
-<span class='c1'>//   3     5</span>
-<span class='c1'>// 2  8</span>
-<span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>tree</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='mi'>9</span><span class='p'>,</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='mi'>3</span><span class='p'>,</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='mi'>2</span><span class='p'>),</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='mi'>8</span><span class='p'>)),</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='mi'>5</span><span class='p'>));</span>
-</pre></div>
-<h3 id='Depth-and--Height-of-Binary-Tree'>Depth and  Height of Binary Tree</h3>
+<h1 id='Insertion-Sort-&amp;-Selection-Sort'>Insertion Sort &amp; Selection Sort</h1>
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Insertion-Sort'>Insertion Sort</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h3 id='Simple-Example'>Simple Example</h3><p>Suppose we have an array:</p>
+
+<pre><code>5, 12, 6, 3 , 11, 8, 4</code></pre>
+<p>Now we want to sort this array in ascending order. We start from the left:</p>
+
+<pre><code>| 5, 12, 6, 3, 11, 8, 4</code></pre>
+<p>The first element is 5, we mark it as sorted directly:</p>
+
+<pre><code>5 | 12, 6, 3, 11, 8, 4</code></pre>
+<p>The next element is 12, we compare it with 5, and decide to put it to the right of 5:</p>
+
+<pre><code>5, 12 | 6, 3, 11, 8, 4</code></pre>
+<p>Then we move to 6, we compare it with the elements in the sorted part(i.e. the left part), and put it into a right place:</p>
+
+<pre><code>5, 6, 12 | 3, 11, 8, 4</code></pre>
+<p>Similarly, we take the next element, and put it into the sorted part:</p>
+
+<pre><code>3, 5, 6, 12 | 11, 8, 4</code></pre>
+
+<pre><code>3, 5, 6, 11, 12 | 8, 4</code></pre>
+
+<pre><code>3, 5, 6, 8, 11, 12 | 4</code></pre>
+
+<pre><code>3, 4, 5, 6, 8, 11, 12 |</code></pre>
+<p>Finally, we obtain a sorted array:</p>
+
+<pre><code>3, 4, 5, 6, 8, 11, 12</code></pre>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h3 id='Implementation'>Implementation</h3><p>We can use <code>Python</code> to implement the insertion sort algorithm:</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing code_cell rendered'>
+<div class='input'>
+<div class='prompt input_prompt'>In&nbsp;[1]:</div>
+<div class='inner_cell'>
+    <div class='input_area'>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>insertion_sort</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>):</span>
+    <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='nb'>len</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)):</span>
+        <span class='c1'># insert arr[i] into the sorted part</span>
+        <span class='n'>key</span> <span class='o'>=</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span>
+        <span class='n'>j</span> <span class='o'>=</span> <span class='n'>i</span> <span class='o'>-</span> <span class='mi'>1</span>
+        <span class='k'>while</span> <span class='n'>j</span> <span class='o'>&gt;=</span> <span class='mi'>0</span> <span class='ow'>and</span> <span class='n'>key</span> <span class='o'>&lt;</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span> <span class='p'>:</span>
+            <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]</span>
+            <span class='n'>j</span> <span class='o'>=</span> <span class='n'>j</span> <span class='o'>-</span> <span class='mi'>1</span>
+                  
+        <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>key</span>
+    
+    <span class='k'>return</span> <span class='n'>arr</span>
+
+<span class='n'>arr</span> <span class='o'>=</span> <span class='p'>[</span><span class='mi'>5</span><span class='p'>,</span> <span class='mi'>12</span><span class='p'>,</span> <span class='mi'>6</span><span class='p'>,</span> <span class='mi'>3</span> <span class='p'>,</span> <span class='mi'>11</span><span class='p'>,</span> <span class='mi'>8</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>]</span>
+<span class='n'>arr</span> <span class='o'>=</span> <span class='n'>insertion_sort</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)</span>
+<span class='nb'>print</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class='output_wrapper'>
+<div class='output'>
+
+
+<div class='output_area'>
+
+    <div class='prompt'></div>
+
+
+<div class='output_subarea output_stream output_stdout output_text'>
+<pre>[3, 4, 5, 6, 8, 11, 12]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Similarly, we can also use <code>Java</code> to implement insertion sort:</p>
+<div class='highlight'><pre><span></span><span class='kd'>public</span> <span class='kd'>static</span> <span class='kt'>int</span><span class='o'>[]</span> <span class='nf'>insertionSort</span><span class='p'>(</span><span class='kt'>int</span><span class='o'>[]</span> <span class='n'>arr</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='k'>for</span> <span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span> <span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>arr</span><span class='p'>.</span><span class='na'>length</span><span class='p'>;</span> <span class='n'>i</span><span class='o'>++</span><span class='p'>)</span> <span class='p'>{</span>
+
+        <span class='kt'>int</span> <span class='n'>key</span> <span class='o'>=</span> <span class='n'>arr</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span><span class='p'>;</span>
+        <span class='kt'>int</span> <span class='n'>j</span> <span class='o'>=</span> <span class='n'>i</span> <span class='o'>-</span> <span class='mi'>1</span><span class='p'>;</span>
+
+        <span class='k'>while</span> <span class='p'>(</span><span class='n'>j</span> <span class='o'>&gt;=</span> <span class='mi'>0</span> <span class='o'>&amp;&amp;</span> <span class='n'>key</span> <span class='o'>&lt;</span> <span class='n'>arr</span><span class='o'>[</span><span class='n'>j</span><span class='o'>]</span><span class='p'>)</span> <span class='p'>{</span>
+                <span class='n'>arr</span><span class='o'>[</span><span class='n'>j</span><span class='o'>+</span><span class='mi'>1</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>arr</span><span class='o'>[</span><span class='n'>j</span><span class='o'>]</span><span class='p'>;</span>
+                <span class='n'>j</span><span class='o'>--</span><span class='p'>;</span>
+       <span class='p'>}</span>
+
+       <span class='n'>arr</span><span class='o'>[</span><span class='n'>j</span><span class='o'>+</span><span class='mi'>1</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>key</span><span class='p'>;</span>
+    <span class='p'>}</span>
+
+    <span class='k'>return</span> <span class='n'>arr</span><span class='p'>;</span>
+<span class='p'>}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h3 id='Time-Complexity'>Time Complexity</h3><p>The <strong>worst</strong> case of insertion sort comes when elements in the array are stored in descending order while we want to sort it in ascending order. In this case, suppose we have an array of size $n$, there will be $n$ iterations:</p>
 <ul>
-<li>Height: In a tree, the height of a node <code>v</code> is the length of the <strong>longest path</strong> from <code>v</code> to a leaf. Particularly, the height of a <strong>tree</strong> is the length of the longest path from <code>root</code> to a leaf.</li>
+<li>1st iteration: Compare the 1st element with 0 previous element. Shift 0 element to the right. =&gt;  0 comparison + 0 swap</li>
+<li>2nd iteration: Compare the 2nd element with 1 previous element. Shift 1 element to the right. =&gt; 1 comparison + 1 swap</li>
+<li>3rd iteration: Compare the 3rd element with 2 previous element. Shift 2 elements to the right. =&gt; 2 comparsions + 2 swaps</li>
+<li>...</li>
+<li>nth iteration: Compare the nth element with n-1 previous element. Shift n-1 elements to the right. =&gt; n-1 comparison + n-1 swaps</li>
 </ul>
+<p>The number of operations is:</p>
+$$2 * (1 + 2 + 3 + ... + (n-1)) = (n-1)n$$<p>Therefore, insertion sort is in $O(n^2)$.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h3 id='Improvement-on-Insertion-Sort'>Improvement on Insertion Sort</h3>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>The problem of insertion sort is in the <strong>insertion part</strong>. Each time when we want to insert an element into the sorted part, we have to compare it with all the elements in the sorted part, which is in $O(n)$.</p>
+<p>To improve insertion sort, we can use <code>tree sort</code>. <strong>Tree sort is a smart version of insertion sort</strong>. Each time we can insert an element into an AVL tree, which is in $O(logn)$.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Selection-Sort'>Selection Sort</h2>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h3 id='Simple-Example'>Simple Example</h3><p>Like insertion sort, in selection sort we still split the array into two parts:</p>
 <ul>
-<li>Depth: The depth of a node <code>v</code> is the length of the path from the <code>root</code> to <code>v</code>.</li>
+<li>The first part of the array is sorted.</li>
+<li>The second part contains elements <strong>≥</strong> the elements in the first part. Namely, each time we pick the smallest element from the second part, and put it into the sorted part.</li>
 </ul>
-<p><img src='/image/height_depth_tree.png' alt='height_depth_tree' title='height_depth_tree'></p>
-<p>Here is the code to compute the height of a binary tree:</p>
+<p>Now we try to sort the following array using selection sort:</p>
+
+<pre><code>5, 12, 6, 3 , 11, 8, 4</code></pre>
+<p>We start from the left:</p>
+
+<pre><code>| 5, 12, 6, 3, 11, 8, 4</code></pre>
+<p>We fisrtly pick the smallest element in the second part, which is 3, and we put 3 into the sorted part:</p>
+
+<pre><code>3 | 5, 12, 6, 11, 8, 4</code></pre>
+<p>Then we pick the smallest element 4 and put it into the sorted part:</p>
+
+<pre><code>3, 4 | 5, 12, 6, 11, 8</code></pre>
+<p>We keep doing the same thing till there is no element in the second part:</p>
+
+<pre><code>3, 4, 5 | 12, 6, 11, 8</code></pre>
+
+<pre><code>3, 4, 5, 6 | 12, 11, 8</code></pre>
+
+<pre><code>3, 4, 5, 6, 8 | 12, 11</code></pre>
+
+<pre><code>3, 4, 5, 6, 8, 11 | 12</code></pre>
+
+<pre><code>3, 4, 5, 6, 8, 11, 12 |</code></pre>
 
 </div>
 </div>
@@ -13336,17 +13419,88 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<div class='highlight'><pre><span></span><span class='kd'>static</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='kt'>int</span> <span class='nf'>height</span><span class='p'>(</span><span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>E</span><span class='o'>&gt;</span> <span class='n'>t</span><span class='p'>)</span> <span class='p'>{</span> 
-    <span class='k'>if</span> <span class='p'>(</span><span class='n'>t</span><span class='p'>.</span><span class='na'>isEmpty</span><span class='p'>()){</span>
-        <span class='k'>return</span> <span class='o'>-</span><span class='mi'>1</span><span class='p'>;</span>
+<h3 id='Implementation'>Implementation</h3><p>We can use <code>Python</code> to implement the selection sort algorithm:</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing code_cell rendered'>
+<div class='input'>
+<div class='prompt input_prompt'>In&nbsp;[2]:</div>
+<div class='inner_cell'>
+    <div class='input_area'>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='k'>def</span> <span class='nf'>selection_sort</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>):</span>
+    <span class='k'>for</span> <span class='n'>i</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='nb'>len</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)</span> <span class='o'>-</span> <span class='mi'>1</span><span class='p'>):</span>
+        <span class='c1'># Store the minimum position.</span>
+        <span class='nb'>min</span> <span class='o'>=</span> <span class='n'>i</span>
+        
+        <span class='c1'># Find the minimum position.</span>
+        <span class='k'>for</span> <span class='n'>j</span> <span class='ow'>in</span> <span class='nb'>range</span><span class='p'>(</span><span class='n'>i</span><span class='o'>+</span><span class='mi'>1</span><span class='p'>,</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)):</span>
+            <span class='k'>if</span> <span class='n'>arr</span><span class='p'>[</span><span class='nb'>min</span><span class='p'>]</span> <span class='o'>&gt;</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>j</span><span class='p'>]:</span>
+                <span class='nb'>min</span> <span class='o'>=</span> <span class='n'>j</span>
+                
+        
+        <span class='c1'># Swap arr[i] and arr[min].</span>
+        <span class='n'>temp</span> <span class='o'>=</span> <span class='n'>arr</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span>
+        <span class='n'>arr</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>arr</span><span class='p'>[</span><span class='nb'>min</span><span class='p'>]</span>
+        <span class='n'>arr</span><span class='p'>[</span><span class='nb'>min</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>temp</span>
+    
+    <span class='k'>return</span> <span class='n'>arr</span>
+
+<span class='n'>arr</span> <span class='o'>=</span> <span class='p'>[</span><span class='mi'>5</span><span class='p'>,</span> <span class='mi'>12</span><span class='p'>,</span> <span class='mi'>6</span><span class='p'>,</span> <span class='mi'>3</span> <span class='p'>,</span> <span class='mi'>11</span><span class='p'>,</span> <span class='mi'>8</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>]</span>
+<span class='n'>arr</span> <span class='o'>=</span> <span class='n'>selection_sort</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)</span>
+<span class='nb'>print</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>)</span>       
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class='output_wrapper'>
+<div class='output'>
+
+
+<div class='output_area'>
+
+    <div class='prompt'></div>
+
+
+<div class='output_subarea output_stream output_stdout output_text'>
+<pre>[3, 4, 5, 6, 8, 11, 12]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>We can also use <code>Java</code> to implement selection sort:</p>
+<div class='highlight'><pre><span></span><span class='kd'>public</span> <span class='kd'>static</span> <span class='kt'>int</span><span class='o'>[]</span> <span class='nf'>selectionSort</span><span class='p'>(</span><span class='kt'>int</span><span class='o'>[]</span> <span class='n'>arr</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='k'>for</span> <span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='p'>;</span> <span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>arr</span><span class='p'>.</span><span class='na'>length</span> <span class='o'>-</span> <span class='mi'>1</span><span class='p'>;</span> <span class='n'>i</span><span class='o'>++</span><span class='p'>)</span> <span class='p'>{</span>
+
+        <span class='c1'>// Store the minimum position.</span>
+        <span class='kt'>int</span> <span class='n'>min</span> <span class='o'>=</span> <span class='n'>i</span><span class='p'>;</span>
+
+        <span class='c1'>// Find the minimum position.</span>
+        <span class='k'>for</span> <span class='p'>(</span><span class='kt'>int</span> <span class='n'>j</span> <span class='o'>=</span> <span class='n'>i</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>;</span> <span class='n'>j</span> <span class='o'>&lt;</span> <span class='n'>arr</span><span class='p'>.</span><span class='na'>length</span><span class='p'>;</span> <span class='n'>j</span><span class='o'>++</span><span class='p'>)</span> <span class='p'>{</span>
+            <span class='k'>if</span> <span class='p'>(</span><span class='n'>arr</span><span class='o'>[</span><span class='n'>min</span><span class='o'>]</span> <span class='o'>&gt;</span> <span class='n'>arr</span><span class='o'>[</span><span class='n'>j</span><span class='o'>]</span><span class='p'>)</span> <span class='p'>{</span>
+                    <span class='n'>min</span> <span class='o'>=</span> <span class='n'>j</span><span class='p'>;</span>
+            <span class='p'>}</span>            
+        <span class='p'>}</span>
+
+        <span class='c1'>// Swap arr[i] and arr[min].</span>
+        <span class='kt'>int</span> <span class='n'>temp</span> <span class='o'>=</span> <span class='n'>arr</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span><span class='p'>;</span>
+        <span class='n'>arr</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>arr</span><span class='o'>[</span><span class='n'>min</span><span class='o'>]</span><span class='p'>;</span>
+        <span class='n'>arr</span><span class='o'>[</span><span class='n'>min</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>temp</span><span class='p'>;</span>        
     <span class='p'>}</span>
-    <span class='k'>return</span> <span class='mi'>1</span> <span class='o'>+</span> <span class='n'>max</span><span class='p'>(</span><span class='n'>height</span><span class='p'>(</span><span class='n'>t</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>()),</span> 
-                   <span class='n'>height</span><span class='p'>(</span><span class='n'>t</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>()));</span>
+
+    <span class='k'>return</span> <span class='n'>arr</span><span class='p'>;</span>
 <span class='p'>}</span>
 </pre></div>
-<p>To compute the height of the tree, suppose we have known the height of the subtrees, we can easily obtain the height of the whole tree by adding 1.</p>
-<p><img src='/image/height_tree.png' alt='height_tree' title='height_tree'></p>
-<p>As for the base case, if a tree is empty, the height is not defined, we return -1. In this way, we can make sure that if a tree only consists of a root, the height of this tree is 0.</p>
 
 </div>
 </div>
@@ -13354,58 +13508,23 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<p>Here is the code to compute the depth of a certain node in a binary tree:</p>
-<div class='highlight'><pre><span></span><span class='cm'>/**</span>
-<span class='cm'>     * Given a tree of integers a, which does not contain duplicates, and a node</span>
-<span class='cm'>     * value x, the depth method returns the depth of the given node value. Return</span>
-<span class='cm'>     * −1 if the node value is not in the tree.</span>
-<span class='cm'>     *</span>
-<span class='cm'>     * @param a a tree of integers</span>
-<span class='cm'>     * @param x a node value</span>
-<span class='cm'>     * @return The depth of the given node value. Return −1 if the node value is not</span>
-<span class='cm'>     * in the tree.</span>
-<span class='cm'>     */</span>
-    <span class='kd'>static</span> <span class='kt'>int</span> <span class='nf'>depth</span><span class='p'>(</span><span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>a</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>x</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-            <span class='k'>return</span> <span class='o'>-</span><span class='mi'>1</span><span class='p'>;</span>
-        <span class='p'>}</span>
-
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>==</span> <span class='n'>x</span><span class='p'>)</span> <span class='p'>{</span>
-            <span class='k'>return</span> <span class='mi'>0</span><span class='p'>;</span>
-        <span class='p'>}</span>
-
-        <span class='kt'>int</span> <span class='n'>left</span> <span class='o'>=</span> <span class='n'>depth</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>(),</span> <span class='n'>x</span><span class='p'>);</span>
-        <span class='kt'>int</span> <span class='n'>leftResult</span> <span class='o'>=</span> <span class='n'>left</span> <span class='o'>==</span> <span class='o'>-</span><span class='mi'>1</span> <span class='o'>?</span> <span class='o'>-</span><span class='mi'>1</span> <span class='p'>:</span> <span class='n'>left</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>;</span>
-
-        <span class='kt'>int</span> <span class='n'>right</span> <span class='o'>=</span> <span class='n'>depth</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>(),</span> <span class='n'>x</span><span class='p'>);</span>
-        <span class='kt'>int</span> <span class='n'>rightResult</span> <span class='o'>=</span> <span class='n'>right</span> <span class='o'>==</span> <span class='o'>-</span><span class='mi'>1</span> <span class='o'>?</span> <span class='o'>-</span><span class='mi'>1</span> <span class='p'>:</span> <span class='n'>right</span> <span class='o'>+</span> <span class='mi'>1</span><span class='p'>;</span>
-
-        <span class='k'>return</span> <span class='n'>Math</span><span class='p'>.</span><span class='na'>max</span><span class='p'>(</span><span class='n'>leftResult</span><span class='p'>,</span> <span class='n'>rightResult</span><span class='p'>);</span>
-    <span class='p'>}</span>
-</pre></div>
-
+<h3 id='Time-Complexity'>Time Complexity</h3>
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Binary-Search-Tree-(BST)'>Binary Search Tree (BST)</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>A binary tree is a binary search tree if, for <strong>every node</strong>:</p>
+<p>Like insertion sort, the <strong>worst</strong> case of selection sort comes when elements in the array are stored in descending order while we want to sort it in ascending order. In this case, suppose we have an array of size $n$, there will be $n-1$ iterations:</p>
 <ul>
-<li><p>All the values stored in the left subtree of the node are less than the value at the node.</p>
-</li>
-<li><p>All the values stored in the right subtree of the node are greater than the value at the node.</p>
-</li>
+<li>1st iteration: Compare the 1st element with n-1 elements to find the smallest element. Swap the 1st element with the smallest element. =&gt; n-1 comparisons + 1 swap </li>
+<li>2nd iteration: Compare the 2nd element with n-2 elements to find the smallest element. Swap the 2nd element with the smallest element. =&gt; n-2 comparisons + 1 swap </li>
+<li>3rd iteration: Compare the 3rd element with n-3 elements. Swap the 3rd element with the smallest element. =&gt; n-3 comparisons + 1 swap </li>
+<li>...</li>
+<li>(n-1)th iteration: Compare the (n-1)th element with the nth element(which is the smallest element in the worst case), then swap them. =&gt; 1 comparisions + 1 swap</li>
 </ul>
-<p>Each time we insert a new value in a BST, we remain the above <code>invariant</code>. This means, as shown in the following picture, the root value <code>29</code> is <strong>always</strong> greater than all the node values of left subtree, and is <strong>always</strong> less than all the node values of right subtree.</p>
-<p><img src='/image/binary_search_tree_1.png' alt='binary_search_tree_1' title='binary_search_tree_1'></p>
+<p>The number of operations is:</p>
+$$2 + 3 + ... + n = \frac{(n-1)(n+2)}{2}$$<p>Therefore, selection sort is in $O(n^2)$.</p>
 
 </div>
 </div>
@@ -13413,233 +13532,8 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Check-if-a-binary-tree-is-BST-or-not'>Check if a binary tree is BST or not</h3><p>To check a BST, the most intuitive way would be:</p>
-<div class='highlight'><pre><span></span><span class='cm'>/**</span>
-<span class='cm'> * Given a tree of integers a, the isSearchTree method returns a boolean value</span>
-<span class='cm'> * indicating whether a is a binary search tree.</span>
-<span class='cm'> *</span>
-<span class='cm'> * @param a a tree of integers</span>
-<span class='cm'> * @return true if the tree is a binary search tree, else false</span>
-<span class='cm'> */</span>
-<span class='kd'>static</span> <span class='kt'>boolean</span> <span class='nf'>isSearchTree</span><span class='p'>(</span><span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>a</span><span class='p'>)</span> <span class='p'>{</span>
-    <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-        <span class='k'>return</span> <span class='kc'>true</span><span class='p'>;</span>
-    <span class='p'>}</span>
-
-    <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-        <span class='k'>return</span> <span class='kc'>true</span><span class='p'>;</span>
-    <span class='p'>}</span> <span class='k'>else</span> <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='o'>!</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-        <span class='k'>return</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&lt;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='n'>isSearchTree</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>());</span>
-    <span class='p'>}</span> <span class='k'>else</span> <span class='k'>if</span> <span class='p'>(</span><span class='o'>!</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-        <span class='k'>return</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&gt;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='n'>isSearchTree</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>());</span>
-    <span class='p'>}</span> <span class='k'>else</span> <span class='p'>{</span>
-        <span class='k'>return</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&lt;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> 
-            <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&gt;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span>  
-            <span class='n'>isSearchTree</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>())</span> <span class='o'>&amp;&amp;</span> <span class='n'>isSearchTree</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>());</span>
-    <span class='p'>}</span>       
-<span class='p'>}</span>
-</pre></div>
-<p>However, this way is wrong, since it only check the direct children of a certain node. What if we have a tree like this:</p>
-<p><img src='/image/check_bst.png' alt='check_bst' title='check_bst'></p>
-<p>If we test the above case using this way, the result would be true. However, it is not a BST!</p>
-<p>The correct way of checking a BST is:</p>
-<ol>
-<li><p>Do inorder traversal of the given tree and store the result in a temp list.</p>
-</li>
-<li><p>Check if the temp list is sorted in ascending order, if it is, then the tree is BST.</p>
-</li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Deletion-in-BST'>Deletion in BST</h3><p>In terms of deleting a node in a binary search tree, there are three cases to consider:</p>
-<ol>
-<li><strong>1st case (easy)</strong>: Deleting a node with no children. “Delete” the node from the tree.</li>
-</ol>
-<ol>
-<li><strong>2nd case(easy)</strong>: Deleting a node with one child. “Delete” the node and replace it with its child.</li>
-</ol>
-<ol>
-<li><strong>3rd case(hard)</strong>: Deleting a node with two children.</li>
-</ol>
-<p>For example, we have a binary search tree of integers:</p>
-<p><img src='/image/binary_search_tree_2.png' alt='binary_search_tree_2' title='binary_search_tree_2'></p>
-<p>For the 1st case, if we want to delete the node <code>30</code>, which has no children, we can just remove it form the tree:</p>
-<p><img src='/image/binary_search_tree_3.png' alt='binary_search_tree_3' title='binary_search_tree_3'></p>
-<p>For the 2nd case, if we want to delete the node <code>90</code>, which has one child, we remove the target node, and replace it with its child, which is  node <code>98</code> in this example:</p>
-<p><img src='/image/binary_search_tree_4.png' alt='binary_search_tree_4' title='binary_search_tree_4'></p>
-<p>For the 3rd case, i.e., deleting a node with two children, we should:</p>
-<ol>
-<li>Find the <strong>maximum node value</strong> on the <strong>left subtree</strong> and replace it with the node to be deleted.</li>
-</ol>
-<ol>
-<li>Delete the (original) maximum node value from the left subtree.</li>
-</ol>
-<p>Suppose we want to delete the node <code>84</code>, we should firstly find the largest node of its left subtree, which is the node <code>50</code>. No matter what kind of left subtree we have, we know that the largest node in this subtree has <strong>at most one child(i.e., has no child or only has a left child)</strong>. In another word, the largest node in the left subtree can not have a right child, otherwise the right child is larger than it. This means that when we delete the largest node in the left subtree, we can only confront with two cases, i.e., the 1st case or the 2nd case.</p>
-<p>In our example, the node <code>50</code> has no children. We replace it with the node to be deleted, then delete it from the left subtree(which is same as the 1st case):</p>
-<p><img src='/image/binary_search_tree_5.png' alt='binary_search_tree_5' title='binary_search_tree_5'></p>
-<p>Since <code>50</code> is the largest node in the left subtree, when we replace it with the node to be deleted, it is guaranteed that <code>50</code> is greater than all the node values in the left subtree and less than all the node values in the right subtree. In this way, we can remain the invariant of BST.</p>
-<p>Here is the Java implement of deletion in BST:</p>
-<div class='highlight'><pre><span></span><span class='cm'>/**</span>
-<span class='cm'> * Given a binary search tree of integers, the delete method can delete the</span>
-<span class='cm'> * value x from a and return the resulting tree. The original tree a must not</span>
-<span class='cm'> * be altered. Rather, this method builds a new tree that contains all the</span>
-<span class='cm'> * values of a except for one copy of x. The resulting tree is also a binary</span>
-<span class='cm'> * search tree.</span>
-<span class='cm'> *</span>
-<span class='cm'> * @param a a binary search tree of integers</span>
-<span class='cm'> * @param x the value to be deleted</span>
-<span class='cm'> * @return a new tree that contains all the values of a except for one copy of x</span>
-<span class='cm'> */</span>
-<span class='kd'>static</span> <span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='nf'>delete</span><span class='p'>(</span><span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>a</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>x</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-            <span class='k'>return</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>();</span>
-        <span class='p'>}</span>
-
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>==</span> <span class='n'>x</span><span class='p'>)</span> <span class='p'>{</span>
-
-            <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span><span class='c1'>// Case 1: Deleting a node with no children.</span>
-                <span class='k'>return</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>();</span>
-            <span class='p'>}</span> <span class='k'>else</span> <span class='k'>if</span> <span class='p'>(</span><span class='o'>!</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>()</span> <span class='o'>&amp;&amp;</span> <span class='o'>!</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span><span class='c1'>// Case 3: Deleting a node with two children.</span>
-                <span class='kt'>int</span> <span class='n'>max</span> <span class='o'>=</span> <span class='n'>max</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>());</span>
-                <span class='k'>return</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='n'>max</span><span class='p'>,</span> <span class='n'>delete</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>(),</span> <span class='n'>max</span><span class='p'>),</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>());</span>
-            <span class='p'>}</span> <span class='k'>else</span> <span class='p'>{</span><span class='c1'>// Case 2: Deleting a node with one child.</span>
-                <span class='k'>return</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>()</span> <span class='o'>?</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>()</span> <span class='p'>:</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>();</span>
-            <span class='p'>}</span>
-
-        <span class='p'>}</span> <span class='k'>else</span> <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>()</span> <span class='o'>&gt;</span> <span class='n'>x</span><span class='p'>)</span> <span class='p'>{</span>
-            <span class='k'>return</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>(),</span> <span class='n'>delete</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>(),</span> <span class='n'>x</span><span class='p'>),</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>());</span>
-        <span class='p'>}</span> <span class='k'>else</span> <span class='p'>{</span>
-            <span class='k'>return</span> <span class='k'>new</span> <span class='n'>Tree</span><span class='o'>&lt;&gt;</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>(),</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getLeft</span><span class='p'>(),</span> <span class='n'>delete</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>(),</span> <span class='n'>x</span><span class='p'>));</span>
-        <span class='p'>}</span>
-<span class='p'>}</span>
-
-
-<span class='cm'>/**</span>
-<span class='cm'> * Given a binary search tree of integers a,  the max method can find the</span>
-<span class='cm'> * maximum value stored in the tree efficiently.</span>
-<span class='cm'> *</span>
-<span class='cm'> * @param a a binary search tree of integers</span>
-<span class='cm'> * @return the maximum value stored in the tree</span>
-<span class='cm'> */</span>
-<span class='kd'>static</span> <span class='kt'>int</span> <span class='nf'>max</span><span class='p'>(</span><span class='n'>Tree</span><span class='o'>&lt;</span><span class='n'>Integer</span><span class='o'>&gt;</span> <span class='n'>a</span><span class='p'>)</span> <span class='p'>{</span>
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-            <span class='k'>throw</span> <span class='k'>new</span> <span class='n'>IllegalArgumentException</span><span class='p'>();</span>
-        <span class='p'>}</span>
-
-        <span class='k'>if</span> <span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>().</span><span class='na'>isEmpty</span><span class='p'>())</span> <span class='p'>{</span>
-            <span class='k'>return</span> <span class='n'>a</span><span class='p'>.</span><span class='na'>getValue</span><span class='p'>();</span>
-        <span class='p'>}</span>
-
-        <span class='k'>return</span> <span class='n'>max</span><span class='p'>(</span><span class='n'>a</span><span class='p'>.</span><span class='na'>getRight</span><span class='p'>());</span>
-<span class='p'>}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Degenerated-BST'>Degenerated BST</h3><p>A common problem of BST is that sometimes a BST can be degenerated. A degenerate BST is a tree where most of the nodes are located in either the left or the right subtree, just like this:</p>
-<p><img src='/image/degenerated_bst.png' alt='degenerated_bst' title='degenerated_bst'></p>
-<p>We should avoid a degenerated BST, because it is the worst case. In this case, some operations on BSTs, such as searching for a value and inserting a value, are in $O(n)$. To solve this problem, we should introduce self-balancing or height balanced binary search trees, i.e., AVL tree.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='AVL-tree'>AVL tree</h2><p>AVL tree, namely <code>self-balancing or height-balanced binary search tree</code>, is named after its inventors <strong>Adelson-Velskii</strong> and <strong>Landis</strong>(1962).</p>
-<p>An AVL tree is a <strong>binary search tree</strong> such that for every node, the difference of the heights between its left and right subtree is <strong>at most ±1</strong>.</p>
-<p><img src='/image/avl_tree_1.png' alt='avl_tree_1' title='avl_tree_1'></p>
-<p>As shown in the above picture, the height of the left subtree is 1, the height of the right subtree is also 1. Although the difference is 0, the tree is <strong>not a binary search tree</strong>, therefore it is <strong>not</strong> an AVL tree.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Balance-Factor'>Balance Factor</h3><p>The balance factor is defined as:</p>
-<p><code>balance factor = height(rightSubTree) – height(leftSubTree)</code></p>
-<p>Apart from the invariant of BST, there is another invariant for an AVL tree:</p>
-<p><code>balance factor = -1, 0 or 1, i.e., AVL trees are height-balanced.</code></p>
-<ul>
-<li><p>If the balance factor is 0 then the tree is balanced.</p>
-</li>
-<li><p>If the balance factor is 1 then the tree is heavier to the right.</p>
-</li>
-<li><p>If the balance factor is -1 then the tree is heavier to the left.</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Rotations'>Rotations</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>AVL trees must always be hight balanced. That means that any operation (insertion/deletion) must result in a height balanced tree. To maintain the height balanced property when inserting and deleting, we
-use rotations.</p>
-<p>There are four rotations in total. Two single rotations (<code>LL</code> and <code>RR</code>); and two double rotations (<code>LR</code>, and <code>RL</code>).</p>
-<p><code>RR</code> is a mirror of <code>LL</code> and <code>RL</code> is a mirror of <code>LR</code>, therefore we only go over <code>LL</code> and <code>LR</code> now.</p>
-<h4 id='LL-Rotation'>LL Rotation</h4><p>In this case then the height of the left subtree of the left subtree(ll) is greater than the height of the right subtree(r).</p>
-<p>Firstly we should do the height check to identify the root of the tree with the height imbalance. This is done in a bottom up manner -- starting from where you made the change(e.g., insertion or deletion) to the tree and checking the height balanced property of each parent tree until you find an imbalance, then label the tree.</p>
-<p>After performing the height check and determining what type of rotation to do, then label the nodes and trees something like what I have done. In the case of LL, I label the root A, the root of the left B, and the root of the left of the left C, we know that all of these are non-empty otherwise the tree would not need rebalancing. Then label all the subtrees 1, 2, 3 and 4 from left to right (even if they are empty).</p>
-<p><img src='/image/avl_tree_ll.png' alt='avl_tree_ll' title='avl_tree_ll'></p>
-<p>Note that everything in subtree 1 MUST be smaller than all of A, B and C, everything in 2 is smaller than A, and B but not C, everything in 3 is smaller than A but bigger than B (and C), and finally everything in subtree 4 is larger than all of A, B and C.</p>
-<p>To do the rotation, all you have to remember is how A, B and C change.</p>
-
-<pre><code>     A     B
-    /     / \
-   B  -&gt; A   C
-  /
- C</code></pre>
-<p>Then, you can arrange all the subtrees according to the constraints that we identified above (there is only one place for each subtree to go that would result in a valid BST).</p>
-<h4 id='LR-Rotation'>LR Rotation</h4><p>We do the LR rotation when the height of the right subtree of the left subtree (lr) is greater than the height of the right subtree (r).</p>
-<p><img src='/image/avl_tree_lr.png' alt='avl_tree_lr' title='avl_tree_lr'></p>
-<p>Again we label A, B, and C, and subtrees 1 to 4 and this time push C to the top of the tree.</p>
-
-<pre><code>     A     C
-    /     / \
-   B  -&gt; B   A
-    \
-     C</code></pre>
-<p>Then we arrange everything in the only way that we can to produce a valid BST.</p>
-<p>One thing worth noting is that if we have an unbalanced tree like this:</p>
-<p><img src='/image/avl_tree_rotation.png' alt='avl_tree_rotation' title='avl_tree_rotation'></p>
-<p>The above tree satiesfy the requirements of both LL and LR rotaion, which rotation should we choose? The answer is LL.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Insertion-in-AVL'>Insertion in AVL</h3><p>Firstly, make sure that both the <code>insertHB</code> method is recursive. This means that the insertHBwill look similar to insert with a little more 'added on'. Specifically, the trees should be checked for the height balanced property and rotated accordingly after performing the insert operation.</p>
-<p>Here we write a separate method for each rotation. These methods will assume that the input tree <strong>REQUIRES</strong> that specific rotation (these methods will not check for this themselves) and will output the tree produced by applying that specific rotation to the given input tree (meaning that the output tree will be height-balanced).</p>
-<p>In addition to four methods corresponding to the four rotation, we would additionally write a <code>rebalanceTree</code> method that takes an arbitrary BST and firstly checks if it is already height balanced(we also need a method to check whether a tree is height balanced), and, if it is not, then determine the correct rotation to apply and then finally apply that rotation. If the input tree is already height balanced, then we can just directly return it with no modifications required.</p>
-<p>If the input tree is not height balanced, then we need to determine which of the four rotations to do.</p>
-<p>First we need to check if the tree is <code>left-heavy</code> (meaning we will either need an LL or LR rotation) or <code>right-heavy</code> (meaning that we need either a RR or RL rotation). This is easily determined by comparing the heights of the left and right subtrees. Suppose the tree is left-heavy, meaning that the height of the left subtree is greater than the height of the right (this would arise if we have inserted an element into the left subtree or deleted an element from the right subtree), then the second stage of checks is to choose between LL or LR. This is
-where many people make mistakes. We compare the height of the left subtree of the left (ll) to the height of
-the right subtree (r). We do the LL rotation if the height of ll if greater than the height of r. Conversely, we do the LR rotation if the height of lr is greater than the height of r.</p>
-<p>Of course all of this is mirrored if the tree is right-heavy:</p>
-
-<pre><code>height(rr)&gt;height(l) -&gt; RR rotation
-height(lr)&gt;height(l) -&gt; RL rotation</code></pre>
+<h3 id='Improvement-on-Selection-Sort'>Improvement on Selection Sort</h3><p>The problem of selection sort is in the <strong>selection part</strong>. Each time we have to find the minimum element in the unsorted part, which is in $O(n)$.</p>
+<p><code>Heap sort</code> is an improvement of selection sort, which will be discussed in the article $\textit{Priority Queue}$.</p>
 
 </div>
 </div>
@@ -13691,16 +13585,16 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&text=Recursive Structure - Tree"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&is_video=false&description=Recursive Structure - Tree"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Recursive Structure - Tree&body=Check out this article: http://yoursite.com/2020/02/05/Recursive-Structure-Tree/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&title=Recursive Structure - Tree"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/02/05/Recursive-Structure-Tree/&name=Recursive Structure - Tree&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&text=Insertion Sort and Selection Sort"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&is_video=false&description=Insertion Sort and Selection Sort"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Insertion Sort and Selection Sort&body=Check out this article: http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&title=Insertion Sort and Selection Sort"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/02/27/Insertion-Sort-and-Selection-Sort/&name=Insertion Sort and Selection Sort&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
