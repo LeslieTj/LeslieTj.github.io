@@ -6,14 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="article">
+    <meta name="description" content="LeetCode Problem: Number of IslandsGiven a 2d grid map of 1s (land) and 0s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontall">
+<meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode Problem: Number of Islands">
 <meta property="og:url" content="http://yoursite.com/2020/03/23/LeetCode-Problem-Number-of-Islands/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
+<meta property="og:description" content="LeetCode Problem: Number of IslandsGiven a 2d grid map of 1s (land) and 0s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontall">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-23T13:57:48.421Z">
+<meta property="og:image" content="http://yoursite.com/image/num_of_islands.png">
+<meta property="og:image" content="http://yoursite.com/image/num_of_islands_2.png">
+<meta property="og:updated_time" content="2020-03-23T15:52:41.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode Problem: Number of Islands">
+<meta name="twitter:description" content="LeetCode Problem: Number of IslandsGiven a 2d grid map of 1s (land) and 0s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontall">
+<meta name="twitter:image" content="http://yoursite.com/image/num_of_islands.png">
     
     
         
@@ -95,7 +101,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode-Problem-Number-of-Islands"><span class="toc-number">1.</span> <span class="toc-text">LeetCode Problem: Number of Islands</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -134,7 +140,23 @@
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h1 id="LeetCode-Problem-Number-of-Islands"><a href="#LeetCode-Problem-Number-of-Islands" class="headerlink" title="LeetCode Problem: Number of Islands"></a>LeetCode Problem: Number of Islands</h1><p>Given a 2d grid map of <code>1</code>s (land) and <code>0</code>s (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water.</p>
+<p>For example, if we have a grid like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">11110</span><br><span class="line">11010</span><br><span class="line">11000</span><br><span class="line">00000</span><br></pre></td></tr></table></figure>
+
+<p>The number of islands is 1:</p>
+<p><img src="/image/num_of_islands.png" alt="num_of_islands" title="num_of_islands"></p>
+<p>If we have a grid like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">11000</span><br><span class="line">11000</span><br><span class="line">00100</span><br><span class="line">00011</span><br></pre></td></tr></table></figure>
+
+<p>The number of islands is 3:</p>
+<p><img src="/image/num_of_islands_2.png" alt="num_of_islands_2" title="num_of_islands_2"></p>
+<p>To solve the problem, we need a counter to record the number of islands. At the beginning, the counter is set to 0. What we need to do is to traverse the grid, and once we find a land, we change this land to water(change <code>1</code> to <code>0</code>). Then we search the surrounding lands and also change them to water. After we “merge” all the adjacent lands, we increase our counter and continue to traverse the grid. </p>
+<p>Here is the code to solve the problem:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NumberOfIslands</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">numOfIslands</span><span class="params">(<span class="keyword">char</span>[][] grid)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> numOfIslands = <span class="number">0</span>;<span class="comment">// a counter to record the number of islands</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// traverse the grid</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; grid.length; i++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; grid[i].length; j++) &#123;</span><br><span class="line">                <span class="comment">// once we find a land, we search and "merge" all its surrounding lands</span></span><br><span class="line">                <span class="comment">// and increase the counter by 1</span></span><br><span class="line">                <span class="keyword">if</span> (grid[i][j] == <span class="string">'1'</span>) &#123;</span><br><span class="line">                    dfs(grid, i, j);</span><br><span class="line">                    numOfIslands++;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> numOfIslands;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// search all surround lands of land(i,j), and change them from 1 to 0</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">char</span>[][] grid, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (i &lt; <span class="number">0</span> || i &gt;= grid.length || j &lt; <span class="number">0</span> || j &gt;= grid[i].length || grid[i][j] == <span class="string">'0'</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        grid[i][j] = <span class="string">'0'</span>;</span><br><span class="line">        dfs(grid, i - <span class="number">1</span>, j);<span class="comment">// search up</span></span><br><span class="line">        dfs(grid, i + <span class="number">1</span>, j);<span class="comment">// search down</span></span><br><span class="line">        dfs(grid, i, j - <span class="number">1</span>);<span class="comment">// search left</span></span><br><span class="line">        dfs(grid, i, j + <span class="number">1</span>); <span class="comment">// search right</span></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// main method to test the numOfIslands method.</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[][] grid = &#123;</span><br><span class="line">                &#123;<span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>&#125;,</span><br><span class="line">                &#123;<span class="string">'1'</span>, <span class="string">'1'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>&#125;,</span><br><span class="line">                &#123;<span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>&#125;,</span><br><span class="line">                &#123;<span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'0'</span>, <span class="string">'1'</span>, <span class="string">'1'</span>&#125;&#125;;</span><br><span class="line"></span><br><span class="line">        System.out.println(numOfIslands(grid));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Note that we use <code>depth-first search(DFS)</code> to search the surrounding lands, the process is like this: <a href="https://www.youtube.com/watch?v=l3nXH-G_f90" target="_blank" rel="noopener">https://www.youtube.com/watch?v=l3nXH-G_f90</a></p>
+
   </div>
 </article>
 
@@ -157,7 +179,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode-Problem-Number-of-Islands"><span class="toc-number">1.</span> <span class="toc-text">LeetCode Problem: Number of Islands</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
