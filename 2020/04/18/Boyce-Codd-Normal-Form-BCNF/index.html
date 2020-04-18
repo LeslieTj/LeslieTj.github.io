@@ -7,13 +7,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:type" content="article">
-<meta property="og:title" content="No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)">
-<meta property="og:url" content="http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/index.html">
+<meta property="og:title" content="Boyce-Codd Normal Form(BCNF)">
+<meta property="og:url" content="http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-18T09:34:34.126Z">
+<meta property="og:updated_time" content="2020-04-18T16:50:32.851Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)">
+<meta name="twitter:title" content="Boyce-Codd Normal Form(BCNF)">
     
     
         
@@ -33,7 +33,7 @@
         
     
     <!-- title -->
-    <title>No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)</title>
+    <title>Boyce-Codd Normal Form(BCNF)</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -67,10 +67,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2020/04/18/Dijkstra’s-Algorithm-Prim-s-Algorithm/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -83,16 +81,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&text=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&is_video=false&description=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)&body=Check out this article: http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&name=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&text=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&is_video=false&description=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Boyce-Codd Normal Form(BCNF)&body=Check out this article: http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&name=Boyce-Codd Normal Form(BCNF)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -109,7 +107,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)
+        Boyce-Codd Normal Form(BCNF)
     </h1>
 
 
@@ -121,7 +119,7 @@
       
     <div class="postdate">
       
-        <time datetime="2020-04-18T08:59:44.000Z" itemprop="datePublished">2020-04-18</time>
+        <time datetime="2020-04-18T16:43:06.000Z" itemprop="datePublished">2020-04-18</time>
         
       
     </div>
@@ -142,7 +140,7 @@
 <html>
 <head><meta charset='utf-8' />
 
-<title>no_comparison-based_sorting</title>
+<title>bcnf</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13217,17 +13215,51 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O(nlogn)'>No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)</h1><p>No <strong>comparison-based</strong> sorting algorithm has the <strong>Worst Case</strong> time complexity better than $O(nlogn)$.</p>
-<p>Suppose we have a sequence:</p>
-$$[x_1, x_2, ... , x_n]$$<p>There are $n!$ ways to rearrange it, i.e., $n!$ permutations.</p>
-<p>The task of any sorting algorithm is to determine which of the many ways of rearranging leads to a <strong>sorted sequence</strong>, i.e., we need to find a sorted sequence from $n!$ sequences. And our question is, how can we find the only one?</p>
-<p>We can use comparison. For example, suppose we have in the sequence we have only 3 elements, therefore we have $3!= 6$ possibilities:</p>
-$$(i)\ \ [x_1, x_2, x_3]$$$$(ii)\ \ [x_1, x_3, x_2]$$$$(iii)\ \ [x_2, x_1, x_3]$$$$(iv)\ \ [x_2, x_3, x_1]$$$$(v)\ \ [x_3, x_1, x_2]$$$$(vi)\ \ [x_3, x_2, x_1]$$<p>We want to obtain an ascending sequence. We can firstly compare $x_1$ and $x_2$. Suppose $x_1 &lt; x_2$, then we can rule out the sequences where $x_1 &gt; x_2$. Here is what we left:</p>
-$$(i)\ \ [x_1, x_2, x_3]$$$$(ii)\ \ [x_1, x_3, x_2]$$$$(v)\ \ [x_3, x_1, x_2]$$<p>We should keep comparing two elements and eliminating some possibilities until, eventually, it is left with only one.</p>
-<p>Now, our question becomes how many times do we need to compare? This is determined by the decision tree of the algorithm (every node corresponds to one comparison):</p>
-<p><img src='/image/best_of_sorting.png' alt='best_of_sorting' title='best_of_sorting'></p>
-<p>In the best possible case, the decision tree is perfectly balanced. Then its height is $O(log(n!))$. We know that:</p>
-$$log(n!) ≤ log(n^n) = nlogn$$<p>Therefore, $O(log(n!)) ≤ O(nlogn)$, that is, no <strong>comparison-based</strong> sorting algorithm has the <strong>Worst Case</strong> time complexity better than $O(nlogn)$.</p>
+<h1 id='Boyce-Codd-Normal-Form(BCNF)'>Boyce-Codd Normal Form(BCNF)</h1><h2 id='Decomposition-of-Relational-Schema'>Decomposition of Relational Schema</h2><p>Given a relation $R(A1, A2, ... An) = R(\bar{A})$, the idea of decomposition is to create two relations:</p>
+<p>$R1(B1, B2, ... Bm) = R(\bar{B})$</p>
+<p>and</p>
+<p>$R2(C1, C2, ... Ck) = R(\bar{C})$</p>
+<p>such that:</p>
+<ol>
+<li>$R1$ and $R2$ together contain all the attributes in $R$, i.e., $(B1, B2, ... Bm) \cup (C1, C2, ... Ck) = (A1, A2, ... An)$.</li>
+</ol>
+<ol>
+<li>The natrual join of R1 and R2 can give us R, i.e., $R1 \bowtie R2 = R$.</li>
+</ol>
+<p>This can be illustrated as:</p>
+<p><img src='/image/bcnf_1.png' alt='bcnf_1' title='bcnf_1'></p>
+<p>One form of decomposition is called <code>Boyce-Codd Normal Form(BCNF)</code>.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h2 id='Boyce-Codd-Normal-Form'>Boyce-Codd Normal Form</h2><p>Relation $R$ with associated functional dependencies are in Boyce-Codd Normal Form (BCNF) if:</p>
+<p>For each $\bar{A} \rightarrow \bar{B}$, $\bar{A}$ is a <strong>key</strong>. That is, the left hand side of every functional dependency is a key</p>
+<p>This can be visualised as:</p>
+<p><img src='/image/bcnf_2.png' alt='bcnf_2' title='bcnf_2'></p>
+<p>For example:</p>
+<p>Given a relation $R(A,B,C,D)$ with the following functional dependencies:</p>
+
+<pre><code>B → C
+D → A
+BA → D
+CD → B</code></pre>
+<p>Now we can decompose $R$ into Boyce-Codd Normal Form:</p>
+<p>Using the functional dependency B → C, we can decompose R into:</p>
+<ul>
+<li>R1(B,C), which is in BCNF now.</li>
+<li>R2(A,B,D), which is not in BCNF because of the the functional dependency D → A.</li>
+</ul>
+<p>Using the functional dependency D → A, we can decompose R2 into:</p>
+<ul>
+<li>R3(A,D), which is in BCNF now.</li>
+<li>R4(B,D), which is in BCNF now.</li>
+</ul>
+<p>Therefore we can decompose R into R1(B,C), R3(A,D), R4(B,D).</p>
+<p>Decomposition using BCNF can make sure that there is <strong>no data loss</strong> and <strong>no data redundancy</strong>. However, sometimes it is better to keep some information in the same table despite redundancy.</p>
 
 </div>
 </div>
@@ -13279,16 +13311,16 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&text=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&is_video=false&description=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)&body=Check out this article: http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&title=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/&name=No comparison-based sorting algorithm has the Worst Case time complexity better than O(nlogn)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&text=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&is_video=false&description=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Boyce-Codd Normal Form(BCNF)&body=Check out this article: http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&name=Boyce-Codd Normal Form(BCNF)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
