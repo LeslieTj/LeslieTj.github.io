@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://yoursite.com/image/amortized_complexity_2.png">
 <meta property="og:image" content="http://yoursite.com/image/amortized_complexity_3.png">
 <meta property="og:image" content="http://yoursite.com/image/amortized_complexity_4.png">
-<meta property="og:updated_time" content="2020-02-10T22:47:04.048Z">
+<meta property="og:updated_time" content="2020-04-13T12:15:15.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Amortized Complexity">
 <meta name="twitter:description" content="Amortized ComplexityAmortized time complexity considers the overall effect of a set of operations. One typical example used to demonstrate amortized time complexity is the dynamic array. Suppose we ha">
@@ -156,9 +156,9 @@
 <p><img src="/image/amortized_complexity_4.png" alt="amortized_complexity_4" title="amortized_complexity_4"></p>
 <p>So, for a dynamic array, what is the real time complexity of insertion? In this case, we use <code>amortized time complexity</code>.</p>
 <p>As mentioned above, we create an empty array, which can contain 5 elements. Each time the array becomes full, we double its size and do the copy. For simplicity,  assume we want to insert <code>n = 5 * 2^k</code> elements into this array, the process would be:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">             5 insertions    (initial size: 5)</span><br><span class="line">5 copies  +  5 insertions    (size: 10)</span><br><span class="line">10 copies +  10 insertions   (size: 20)</span><br><span class="line">20 copies +  20 insertions   (size: 40)</span><br><span class="line">40 copies +  40 insertions   (size: 80)</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">             5 insertions    (initial size: 5)</span><br><span class="line">5 copies  +  5 insertions    (size: 10)</span><br><span class="line">10 copies +  10 insertions   (size: 20)</span><br><span class="line">20 copies +  20 insertions   (size: 40)</span><br><span class="line">40 copies +  40 insertions   (size: 80)</span><br><span class="line">......</span><br><span class="line"></span><br><span class="line">We have k rows(not including the first row) here.</span><br></pre></td></tr></table></figure>
 
-<p>We have <code>5 + 5 * (1 + 2 + 4 + ... + 2^k-1)</code> insertions, and <code>5 * (1 + 2 + 4 + ... + 2^k-1)</code> copies. Therefore we have <code>5 + 2 * 5 * (1 + 2 + 4 + ... + 2^k-1)</code> operations in total. Then we can calculate the amortized cost of inserting n elements:</p>
+<p>We have <code>5 + 5 * (1 + 2 + 4 + ... + 2^k-1)</code> insertions(because <code>1 + 2 + 4 + ... + 2^k-1 = 2^k - 1</code>, we can know that <code>5 + 5 * (1 + 2 + 4 + ... + 2^k-1) = 5 * 2^k = n</code>), and <code>5 * (1 + 2 + 4 + ... + 2^k-1)</code> copies. Therefore we have <code>5 + 2 * 5 * (1 + 2 + 4 + ... + 2^k-1)</code> operations in total. Then we can calculate the amortized cost of inserting n elements:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">amortized cost = 5 + 2 * 5 * (1 + 2 + 4 + ... + 2^k-1) ➗ n </span><br><span class="line">               = 5 + 2 * 5 * (1 + 2 + 4 + ... + 2^k-1) ➗ 5 * 2^k</span><br></pre></td></tr></table></figure>
 
 <p>This is quite understandable. Indeed, inserting <code>5 * 2^k</code> elments into a dynamic array costs <code>5 + 2 * 5 * (1 + 2 + 4 + ... + 2^k-1)</code> operations.</p>

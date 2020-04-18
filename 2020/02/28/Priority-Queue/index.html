@@ -13328,7 +13328,7 @@ div#notebook {
 <span class='c1'>// parent(i) returns i div 2.</span>
 <span class='kt'>void</span> <span class='nf'>insert</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>p</span><span class='p'>,</span> <span class='kt'>int</span><span class='o'>[]</span> <span class='n'>heap</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>n</span><span class='p'>)</span> <span class='p'>{</span> 
     <span class='k'>if</span> <span class='p'>(</span><span class='n'>n</span> <span class='o'>==</span> <span class='n'>MAXSIZE</span><span class='p'>)</span> <span class='p'>{</span>
-    <span class='k'>throw</span> <span class='n'>HeapFullException</span><span class='p'>;</span>
+        <span class='k'>throw</span> <span class='n'>HeapFullException</span><span class='p'>;</span>
     <span class='p'>}</span>
     <span class='n'>n</span><span class='o'>=</span><span class='n'>n</span><span class='o'>+</span><span class='mi'>1</span><span class='p'>;</span>
     <span class='n'>heap</span><span class='o'>[</span><span class='n'>n</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>p</span><span class='p'>;</span> <span class='c1'>// insert the new value as the last node of the last level </span>
@@ -13397,11 +13397,11 @@ div#notebook {
 </pre></div>
 <hr>
 <ol>
-<li>The operation update(value, priority), which is also $O(nlogn)$:</li>
+<li>The operation update(value, priority), which is also $O(logn)$:</li>
 </ol>
 <div class='highlight'><pre><span></span><span class='c1'>// changes the priority of the node stored on position i</span>
 <span class='kt'>void</span> <span class='nf'>update</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>priority</span><span class='p'>,</span> <span class='kt'>int</span><span class='o'>[]</span> <span class='n'>heap</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>n</span><span class='p'>)</span> <span class='p'>{</span>
-    <span class='n'>heap</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>priority</span> <span class='p'>;</span>
+    <span class='n'>heap</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>priority</span><span class='p'>;</span>
 
     <span class='k'>if</span> <span class='p'>(</span><span class='n'>heap</span><span class='o'>[</span><span class='n'>parent</span><span class='p'>(</span><span class='n'>i</span><span class='p'>)</span><span class='o'>]</span> <span class='o'>&lt;</span> <span class='n'>heap</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span><span class='p'>)</span> <span class='p'>{</span>
         <span class='n'>bubbleUp</span><span class='p'>(</span><span class='n'>i</span><span class='p'>,</span> <span class='n'>heap</span><span class='p'>,</span> <span class='n'>n</span><span class='p'>);</span>
@@ -13410,20 +13410,48 @@ div#notebook {
     <span class='p'>}</span>
 <span class='p'>}</span>
 </pre></div>
+<p>We can simplify the above method as:</p>
+<div class='highlight'><pre><span></span><span class='kt'>void</span> <span class='nf'>update</span><span class='p'>(</span><span class='kt'>int</span> <span class='n'>i</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>priority</span><span class='p'>,</span> <span class='kt'>int</span><span class='o'>[]</span> <span class='n'>heap</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>n</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='n'>heap</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>priority</span><span class='p'>;</span>
+    <span class='n'>bubbleUp</span><span class='p'>(</span><span class='n'>i</span><span class='p'>,</span> <span class='n'>heap</span><span class='p'>,</span> <span class='n'>n</span><span class='p'>);</span>
+    <span class='n'>bubbleDown</span><span class='p'>(</span><span class='n'>i</span><span class='p'>,</span> <span class='n'>heap</span><span class='p'>,</span> <span class='n'>n</span><span class='p'>);</span>
+<span class='p'>}</span>
+</pre></div>
 <hr>
 <ol>
-<li>We use the method 2(which is mentioned above) to implement the operation <code>heapify</code>:</li>
+<li>We use the method 2(which is mentioned above) to implement the operation <code>heapify</code>（which is <code>O(n)</code>）:</li>
 </ol>
 <div class='highlight'><pre><span></span><span class='c1'>// n is the size of the heap</span>
 <span class='kt'>void</span> <span class='nf'>heapify</span><span class='p'>(</span><span class='kt'>int</span><span class='o'>[]</span> <span class='n'>arr</span><span class='p'>,</span> <span class='kt'>int</span> <span class='n'>n</span><span class='p'>)</span> <span class='p'>{</span>
     <span class='c1'>// we firstly fill the arr into the heap, </span>
     <span class='c1'>// therefore at the begining, int[] arr = int[] heap.</span>
     <span class='c1'>// Then we bubble down from the leaf node:</span>
-    <span class='k'>for</span> <span class='p'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='n'>n</span> <span class='n'>div</span> <span class='mi'>2</span><span class='p'>;</span> <span class='n'>i</span> <span class='o'>&gt;</span> <span class='mi'>0</span><span class='p'>;</span> <span class='n'>i</span><span class='err'>−−</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='k'>for</span> <span class='p'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='n'>n</span> <span class='n'>div</span> <span class='mi'>2</span><span class='p'>;</span> <span class='n'>i</span> <span class='o'>&gt;</span> <span class='mi'>0</span><span class='p'>;</span> <span class='n'>i</span><span class='o'>--</span><span class='p'>)</span> <span class='p'>{</span>
         <span class='n'>bubbleDown</span><span class='p'>(</span><span class='n'>i</span><span class='p'>,</span> <span class='n'>arr</span><span class='p'>,</span> <span class='n'>n</span><span class='p'>);</span>
     <span class='p'>}</span> 
 <span class='p'>}</span>
 </pre></div>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<h1 id='Heap-Sort'>Heap Sort</h1><p><code>Heap sort</code> is an improvement of selection sort. And we can implement the selection part using a heap(a Min PQ). The pseudocode is like this:</p>
+<div class='highlight'><pre><span></span><span class='kt'>void</span> <span class='n'>heap</span> <span class='nf'>sort</span><span class='p'>(</span><span class='kt'>int</span> <span class='o'>[]</span> <span class='n'>arr</span><span class='p'>)</span> <span class='p'>{</span>
+    <span class='c1'>// 1. Build a min heap(Min PQ) from the elements in the array, i.e., heapify, which is O(n).</span>
+    <span class='n'>MinHeap</span> <span class='n'>h</span> <span class='o'>=</span> <span class='k'>new</span> <span class='n'>MinHeap</span><span class='o'>&lt;</span><span class='n'>Int</span><span class='o'>&gt;</span><span class='p'>();</span>
+    <span class='n'>h</span><span class='p'>.</span><span class='na'>heapify</span><span class='p'>(</span><span class='n'>arr</span><span class='p'>);</span>
+
+    <span class='c1'>// 2. Pick the smallest element from the heap, and </span>
+    <span class='c1'>// place it on the position right after the sorted part.</span>
+    <span class='k'>for</span> <span class='p'>(</span><span class='n'>i</span><span class='o'>=</span><span class='mi'>0</span><span class='p'>;</span> <span class='n'>i</span><span class='o'>&lt;</span><span class='n'>arr</span><span class='p'>.</span><span class='na'>length</span><span class='p'>;</span> <span class='n'>i</span><span class='o'>++</span><span class='p'>)</span> <span class='p'>{</span> 
+        <span class='n'>arr</span><span class='o'>[</span><span class='n'>i</span><span class='o'>]</span> <span class='o'>=</span> <span class='n'>h</span><span class='p'>.</span><span class='na'>deleteMin</span><span class='p'>();</span><span class='c1'>// O(logn)</span>
+    <span class='p'>}</span> 
+<span class='p'>}</span>
+</pre></div>
+<p>The time complexity of the above code is $O(nlogn)$.</p>
 
 </div>
 </div>
