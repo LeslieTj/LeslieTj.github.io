@@ -7,13 +7,13 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:type" content="article">
-<meta property="og:title" content="Boyce-Codd Normal Form(BCNF)">
-<meta property="og:url" content="http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/index.html">
+<meta property="og:title" content="Functional Dependency">
+<meta property="og:url" content="http://yoursite.com/2020/04/19/Functional-Dependency/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-18T16:50:32.851Z">
+<meta property="og:updated_time" content="2020-04-19T08:55:58.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Boyce-Codd Normal Form(BCNF)">
+<meta name="twitter:title" content="Functional Dependency">
     
     
         
@@ -33,7 +33,7 @@
         
     
     <!-- title -->
-    <title>Boyce-Codd Normal Form(BCNF)</title>
+    <title>Functional Dependency</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -67,10 +67,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/04/19/Functional-Dependency/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2020/04/18/No-comparison-based-sorting-algorithm-has-the-Worst-Case-time-complexity-better-than-O-nlogn/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -83,16 +81,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&text=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&is_video=false&description=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Boyce-Codd Normal Form(BCNF)&body=Check out this article: http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&name=Boyce-Codd Normal Form(BCNF)&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/19/Functional-Dependency/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/19/Functional-Dependency/&text=Functional Dependency"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/19/Functional-Dependency/&is_video=false&description=Functional Dependency"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Functional Dependency&body=Check out this article: http://yoursite.com/2020/04/19/Functional-Dependency/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/19/Functional-Dependency/&name=Functional Dependency&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -109,7 +107,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Boyce-Codd Normal Form(BCNF)
+        Functional Dependency
     </h1>
 
 
@@ -121,7 +119,7 @@
       
     <div class="postdate">
       
-        <time datetime="2020-04-18T16:43:06.000Z" itemprop="datePublished">2020-04-18</time>
+        <time datetime="2020-04-19T08:54:12.000Z" itemprop="datePublished">2020-04-19</time>
         
       
     </div>
@@ -142,7 +140,7 @@
 <html>
 <head><meta charset='utf-8' />
 
-<title>bcnf</title>
+<title>functional_dependency</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13217,51 +13215,87 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Boyce-Codd-Normal-Form(BCNF)'>Boyce-Codd Normal Form(BCNF)</h1><h2 id='Decomposition-of-Relational-Schema'>Decomposition of Relational Schema</h2><p>Given a relation $R(A1, A2, ... An) = R(\bar{A})$, the idea of decomposition is to create two relations:</p>
-<p>$R1(B1, B2, ... Bm) = R(\bar{B})$</p>
-<p>and</p>
-<p>$R2(C1, C2, ... Ck) = R(\bar{C})$</p>
-<p>such that:</p>
-<ol>
-<li>$R1$ and $R2$ together contain all the attributes in $R$, i.e., $(B1, B2, ... Bm) \cup (C1, C2, ... Ck) = (A1, A2, ... An)$.</li>
-</ol>
-<ol>
-<li>The natrual join of R1 and R2 can give us R, i.e., $R1 \bowtie R2 = R$.</li>
-</ol>
-<p>This can be illustrated as:</p>
-<p><img src='/image/bcnf_1.png' alt='bcnf_1' title='bcnf_1'></p>
-<p>One form of decomposition is called <code>Boyce-Codd Normal Form(BCNF)</code>.</p>
-
+<h1 id='Functional-Dependency'>Functional Dependency</h1><h2 id='Definition-of-Functional-Dependency'>Definition of Functional Dependency</h2><p>Suppose we have a table <code>STUDENT</code>:</p>
+<table>
+<thead><tr>
+<th style='text-align:center'>ID</th>
+<th style='text-align:center'>NAME</th>
+<th style='text-align:center'>MARK</th>
+<th style='text-align:center'>GRADE</th>
+<th style='text-align:center'>ADDRESS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style='text-align:center'>1</td>
+<td style='text-align:center'>Bruce</td>
+<td style='text-align:center'>90</td>
+<td style='text-align:center'>A+</td>
+<td style='text-align:center'>Sunset Road</td>
+</tr>
+<tr>
+<td style='text-align:center'>2</td>
+<td style='text-align:center'>Leslie</td>
+<td style='text-align:center'>80</td>
+<td style='text-align:center'>A</td>
+<td style='text-align:center'>Barsa Road</td>
+</tr>
+<tr>
+<td style='text-align:center'>...</td>
+<td style='text-align:center'>...</td>
+<td style='text-align:center'>...</td>
+<td style='text-align:center'>...</td>
+<td style='text-align:center'>...</td>
+</tr>
+</tbody>
+</table>
+<p>The attribute <code>GRADE</code> is based on the Student's <code>MARK</code>. For example, a mark of 90 could translate to a grade of A+, 80 to A, and so on. Therefore, <code>GRADE</code> is determined by <code>MARK</code>, and in <code>STUDENT</code> any two tuples that have the same <code>MARK</code> have the same <code>GRADE</code>, i.e.,</p>
+<p>$\forall s,t \in  STUDENT:$</p>
+$$s.MARK = t.MARK \Rightarrow s.GRADE = t.GRADE$$<p>This is the formal definition of functional dependency, which is written as:</p>
+$$MARK \rightarrow GRADE$$<p>In general, we can define a functional dependency as:</p>
+<p>Given $\bar{A} = A_1, A_2, ... A_n$ and $\bar{B} = B_1, B_2, ... B_n$($\bar{A}$ and $\bar{B}$ are two sets of attributes),</p>
+<p>$\bar{A} \rightarrow \bar{B}$ on Relation $R$</p>
+<p>means:</p>
+<p>$\forall t,u \in R:$</p>
+$$t.\bar{A} = u.\bar{A} \Rightarrow t.\bar{B} = u.\bar{B}$$
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Boyce-Codd-Normal-Form'>Boyce-Codd Normal Form</h2><p>Relation $R$ with associated functional dependencies are in Boyce-Codd Normal Form (BCNF) if:</p>
-<p>For each $\bar{A} \rightarrow \bar{B}$, $\bar{A}$ is a <strong>key</strong>. That is, the left hand side of every functional dependency is a key</p>
-<p>This can be visualised as:</p>
-<p><img src='/image/bcnf_2.png' alt='bcnf_2' title='bcnf_2'></p>
-<p>For example:</p>
-<p>Given a relation $R(A,B,C,D)$ with the following functional dependencies:</p>
+<h2 id='Closure-of-Attributes'>Closure of Attributes</h2><p>Given a set of attributes $\bar{A}$, the closure of $\bar{A}$ are <strong>all the attributes that it can determine</strong>, which is written as $\bar{A^{+}}$.</p>
+<p>Here is an example to calculate the closure:</p>
+<p>Given relation <code>R(A,B,C,D,E)</code> with the following functional dependencies:</p>
 
-<pre><code>B → C
-D → A
-BA → D
-CD → B</code></pre>
-<p>Now we can decompose $R$ into Boyce-Codd Normal Form:</p>
-<p>Using the functional dependency B → C, we can decompose R into:</p>
-<ul>
-<li>R1(B,C), which is in BCNF now.</li>
-<li>R2(A,B,D), which is not in BCNF because of the the functional dependency D → A.</li>
-</ul>
-<p>Using the functional dependency D → A, we can decompose R2 into:</p>
-<ul>
-<li>R3(A,D), which is in BCNF now.</li>
-<li>R4(B,D), which is in BCNF now.</li>
-</ul>
-<p>Therefore we can decompose R into R1(B,C), R3(A,D), R4(B,D).</p>
-<p>Decomposition using BCNF can make sure that there is <strong>no data loss</strong> and <strong>no data redundancy</strong>. However, sometimes it is better to keep some information in the same table despite redundancy.</p>
+<pre><code>AB → C
+AE → D
+D  → B</code></pre>
+<p>We want to compute $\{A,B,E\}^{+}$. We firstly <strong>start with {A,B,E} itself</strong>:</p>
+
+<pre><code>{A,B,E}</code></pre>
+<p>Using <code>AB → C</code>, we have:</p>
+
+<pre><code>{A,B,E,C}</code></pre>
+<p>Using <code>AE → D</code>, we have:</p>
+
+<pre><code>{A,B,E,C,D}</code></pre>
+<p>Using <code>D  → B</code>, we cannot update our result:</p>
+
+<pre><code>{A,B,E,C,D}</code></pre>
+<p>Therefore, the closure of ABE($\{A,B,E\}^{+}$) is:</p>
+
+<pre><code>{A,B,C,D,E}</code></pre>
+<p>i.e.,</p>
+
+<pre><code>ABE → ABCDE</code></pre>
+<p>Based on the follow-up knowledge we can know that <code>ABE</code> is a <code>key</code>.</p>
+<h2 id='Key'>Key</h2><p>Given a relation $R$, which has <strong>no duplicates</strong>, then:</p>
+<p>If $\bar{A} \rightarrow$ all attributes of $R$, then $\bar{A}$ is a <strong>key</strong>.</p>
+<p>In above relation <code>STUDENT</code>, we know that:</p>
+$$ID \rightarrow NAME,MARK,GRADE,ADDRESS$$<p>Therefore <code>ID</code> is a key.</p>
+<p>Given some functional dependencies, to check if $\bar{A}$ is a key for $R$, we can firstly computer $\bar{A^{+}}$, and if $\bar{A^{+}}$ is equal to all attributes in $R$, then $\bar{A}$ is a key.</p>
+<p>Note that in a relation, there may be <strong>more than one key</strong>.</p>
 
 </div>
 </div>
@@ -13313,16 +13347,16 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&text=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&is_video=false&description=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Boyce-Codd Normal Form(BCNF)&body=Check out this article: http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&title=Boyce-Codd Normal Form(BCNF)"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/18/Boyce-Codd-Normal-Form-BCNF/&name=Boyce-Codd Normal Form(BCNF)&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/04/19/Functional-Dependency/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/04/19/Functional-Dependency/&text=Functional Dependency"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/04/19/Functional-Dependency/&is_video=false&description=Functional Dependency"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Functional Dependency&body=Check out this article: http://yoursite.com/2020/04/19/Functional-Dependency/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/04/19/Functional-Dependency/&title=Functional Dependency"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/04/19/Functional-Dependency/&name=Functional Dependency&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
