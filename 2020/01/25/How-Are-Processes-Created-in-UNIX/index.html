@@ -13457,8 +13457,8 @@ hello, I am parent of 98498 (rc_wait:98498) (pid:98497)
         <span class='n'>myargs</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>strdup</span><span class='p'>(</span><span class='s'>&quot;wc&quot;</span><span class='p'>);</span> <span class='c1'>// program: &quot;wc&quot; (word count), i.e., the name of an executable</span>
         <span class='n'>myargs</span><span class='p'>[</span><span class='mi'>1</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>strdup</span><span class='p'>(</span><span class='s'>&quot;exec.c&quot;</span><span class='p'>);</span> <span class='c1'>// argument: file to count </span>
         <span class='n'>myargs</span><span class='p'>[</span><span class='mi'>2</span><span class='p'>]</span> <span class='o'>=</span> <span class='nb'>NULL</span><span class='p'>;</span> <span class='c1'>// marks end of array </span>
-        <span class='n'>execvp</span><span class='p'>(</span><span class='n'>myargs</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>],</span> <span class='n'>myargs</span><span class='p'>);</span> <span class='c1'>// runs word count printf(&quot;this shouldn’t print out&quot;);</span>
-        <span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;this shouldn’t print out&quot;</span><span class='p'>);</span>
+        <span class='n'>execvp</span><span class='p'>(</span><span class='n'>myargs</span><span class='p'>[</span><span class='mi'>0</span><span class='p'>],</span> <span class='n'>myargs</span><span class='p'>);</span> <span class='c1'>// runs word count, i.e., transform the currently running program into a different running program (wc)</span>
+        <span class='n'>printf</span><span class='p'>(</span><span class='s'>&quot;this shouldn’t print out&quot;</span><span class='p'>);</span><span class='c1'>// A successful call to exec() never returns, therefore this line would not be execute.</span>
     <span class='p'>}</span> <span class='k'>else</span> <span class='p'>{</span>
         <span class='c1'>// parent goes down this path (main)</span>
         <span class='kt'>int</span> <span class='n'>rc_wait</span> <span class='o'>=</span> <span class='n'>wait</span><span class='p'>(</span><span class='nb'>NULL</span><span class='p'>);</span>
@@ -13533,7 +13533,7 @@ hello, I am parent of 98504 (rc_wait:98504) (pid:98503)
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<p>In this example, the child process calls <code>execvp()</code> to run the word count program <code>wc</code>. And <code>wc</code> is run on the source file <code>exec.c</code>, thus telling us how many lines, words, and bytes are found in this file.</p>
+<p>In this example, the child process calls <code>execvp()</code> to run the word count program <code>wc</code>. And <code>wc</code> is run on the source file <code>exec.c</code>, thus telling us how many lines, words, and bytes are found in this file. Note that</p>
 
 </div>
 </div>
