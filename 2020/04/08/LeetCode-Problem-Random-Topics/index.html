@@ -6,14 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:type" content="article">
+    <meta name="description" content="LeetCode Problem: Random Topics1. Random Pick with WeightGiven an array w of positive integers, where w[i] describes the weight of index i, write a function pickIndex which randomly picks an index in">
+<meta name="keywords" content="algorithm">
+<meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode Problem: Random Topics">
 <meta property="og:url" content="http://yoursite.com/2020/04/08/LeetCode-Problem-Random-Topics/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
+<meta property="og:description" content="LeetCode Problem: Random Topics1. Random Pick with WeightGiven an array w of positive integers, where w[i] describes the weight of index i, write a function pickIndex which randomly picks an index in">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-04-08T10:19:57.313Z">
+<meta property="og:updated_time" content="2020-04-27T11:31:16.060Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode Problem: Random Topics">
+<meta name="twitter:description" content="LeetCode Problem: Random Topics1. Random Pick with WeightGiven an array w of positive integers, where w[i] describes the weight of index i, write a function pickIndex which randomly picks an index in">
     
     
         
@@ -97,7 +101,7 @@
 
     </div>
     <div id="toc">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode-Problem-Random-Topics"><span class="toc-number">1.</span> <span class="toc-text">LeetCode Problem: Random Topics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Random-Pick-with-Weight"><span class="toc-number">1.1.</span> <span class="toc-text">1. Random Pick with Weight</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Implement-Rand10-Using-Rand7"><span class="toc-number">1.2.</span> <span class="toc-text">2. Implement Rand10() Using Rand7()</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -130,13 +134,55 @@
       
 
       
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/algorithm/">algorithm</a>
+    </div>
+
 
     </div>
   </header>
   
 
   <div class="content" itemprop="articleBody">
-    
+    <h1 id="LeetCode-Problem-Random-Topics"><a href="#LeetCode-Problem-Random-Topics" class="headerlink" title="LeetCode Problem: Random Topics"></a>LeetCode Problem: Random Topics</h1><h2 id="1-Random-Pick-with-Weight"><a href="#1-Random-Pick-with-Weight" class="headerlink" title="1. Random Pick with Weight"></a>1. Random Pick with Weight</h2><p>Given an array <code>w</code> of positive integers, where <code>w[i]</code> describes the weight of index <code>i</code>, write a function pickIndex which randomly picks an index in proportion to its weight. For example:</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center"></th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">i</td>
+<td align="center">0</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">w[i]</td>
+<td align="center">1</td>
+<td align="center">3</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>As shown, the index <code>0</code> has a weight <code>1</code>, and the index <code>1</code> has a weight <code>3</code>.</p>
+<p>Here is the code to solve the problem:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Random;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RandomPickWithWeight</span> </span>&#123;</span><br><span class="line">    Random random;</span><br><span class="line">    <span class="keyword">int</span>[] sum;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">RandomPickWithWeight</span><span class="params">(<span class="keyword">int</span>[] w)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.random = <span class="keyword">new</span> Random();</span><br><span class="line">        <span class="keyword">this</span>.sum = w.clone();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; sum.length; i++) &#123;</span><br><span class="line">            sum[i] += sum[i - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pickIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> pick = random.nextInt(sum[sum.length - <span class="number">1</span>]) + <span class="number">1</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = sum.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = left + (right - left) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (sum[mid] &lt; pick) &#123;</span><br><span class="line">                left = mid + <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (sum[mid] &gt; pick) &#123;</span><br><span class="line">                right = mid - <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">return</span> mid;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> left;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * index: [0,1]</span></span><br><span class="line"><span class="comment">         * weight:[1,3]</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        RandomPickWithWeight randomPick = <span class="keyword">new</span> RandomPickWithWeight(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>, <span class="number">3</span>&#125;);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> pick_1 = randomPick.pickIndex();</span><br><span class="line">        <span class="keyword">int</span> pick_2 = randomPick.pickIndex();</span><br><span class="line">        <span class="keyword">int</span> pick_3 = randomPick.pickIndex();</span><br><span class="line">        System.out.println(String.format(<span class="string">"[%d, %d, %d]"</span>, pick_1, pick_2, pick_3));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>The idea of the above code is shown in the following video: <a href="https://www.youtube.com/watch?v=_pnWZe44rdo" target="_blank" rel="noopener">https://www.youtube.com/watch?v=_pnWZe44rdo</a></p>
+<hr>
+<h2 id="2-Implement-Rand10-Using-Rand7"><a href="#2-Implement-Rand10-Using-Rand7" class="headerlink" title="2. Implement Rand10() Using Rand7()"></a>2. Implement Rand10() Using Rand7()</h2><p>Given a function rand7 which generates a uniform random integer in the range 1 to 7, write a function rand10 which generates a uniform random integer in the range 1 to 10.</p>
+<p>Here is the code to solve the problem:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">rand10</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> random = <span class="number">41</span>;</span><br><span class="line">        <span class="keyword">while</span>(random &gt; <span class="number">40</span>) &#123;       </span><br><span class="line">            random =  <span class="number">7</span>*(rand7() - <span class="number">1</span>) + rand7();</span><br><span class="line">        &#125;    </span><br><span class="line">        <span class="keyword">return</span> random % <span class="number">10</span> + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>The idea of the above code is shown in the following video: <a href="https://www.youtube.com/watch?v=mK0JeED2D8k" target="_blank" rel="noopener">https://www.youtube.com/watch?v=mK0JeED2D8k</a></p>
+<hr>
+
   </div>
 </article>
 
@@ -159,7 +205,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#LeetCode-Problem-Random-Topics"><span class="toc-number">1.</span> <span class="toc-text">LeetCode Problem: Random Topics</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Random-Pick-with-Weight"><span class="toc-number">1.1.</span> <span class="toc-text">1. Random Pick with Weight</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Implement-Rand10-Using-Rand7"><span class="toc-number">1.2.</span> <span class="toc-text">2. Implement Rand10() Using Rand7()</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
