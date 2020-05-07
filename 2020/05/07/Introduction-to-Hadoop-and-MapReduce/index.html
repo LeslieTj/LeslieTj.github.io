@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="python">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Data Cleaning">
-<meta property="og:url" content="http://yoursite.com/2020/05/03/Data-Cleaning/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Introduction to Hadoop and MapReduce">
+<meta property="og:url" content="http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-03T20:20:51.440Z">
+<meta property="og:updated_time" content="2020-05-07T22:08:36.444Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Data Cleaning">
+<meta name="twitter:title" content="Introduction to Hadoop and MapReduce">
     
     
         
@@ -34,7 +33,7 @@
         
     
     <!-- title -->
-    <title>Data Cleaning</title>
+    <title>Introduction to Hadoop and MapReduce</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -68,10 +67,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/05/06/Guitar-Chords/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2020/05/02/Reverse-a-Stack-using-Recursion/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/05/06/Guitar-Chords/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -84,16 +81,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/03/Data-Cleaning/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/03/Data-Cleaning/&text=Data Cleaning"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/03/Data-Cleaning/&is_video=false&description=Data Cleaning"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Data Cleaning&body=Check out this article: http://yoursite.com/2020/05/03/Data-Cleaning/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/03/Data-Cleaning/&name=Data Cleaning&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&text=Introduction to Hadoop and MapReduce"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&is_video=false&description=Introduction to Hadoop and MapReduce"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Introduction to Hadoop and MapReduce&body=Check out this article: http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&name=Introduction to Hadoop and MapReduce&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -110,7 +107,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Data Cleaning
+        Introduction to Hadoop and MapReduce
     </h1>
 
 
@@ -122,7 +119,7 @@
       
     <div class="postdate">
       
-        <time datetime="2020-05-03T20:18:46.000Z" itemprop="datePublished">2020-05-03</time>
+        <time datetime="2020-05-07T15:51:47.000Z" itemprop="datePublished">2020-05-07</time>
         
       
     </div>
@@ -131,11 +128,6 @@
       
 
       
-    <div class="article-tag">
-        <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/python/">python</a>
-    </div>
-
 
     </div>
   </header>
@@ -148,7 +140,7 @@
 <html>
 <head><meta charset='utf-8' />
 
-<title>data_cleaning</title>
+<title>hadoop</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13223,7 +13215,30 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Data-Cleaning'>Data Cleaning</h1><p>The process of data cleaning can be divided into 7 steps. Now I will use the data from Kaggle project <code>Titanic: Machine Learning from Disaster</code> to demonstrate the detailed steps.</p>
+<h1 id='Introduction-to-Hadoop-and-MapReduce'>Introduction to Hadoop and MapReduce</h1><h2 id='Overview'>Overview</h2><p>Big data has the following properties:</p>
+<ol>
+<li>high volumn: the size of big data is large</li>
+<li>high variaty: big data comes from different data sources and has different formats </li>
+<li>high velocity: big data is generate at a high speed, and it needs to be made available to process at a short time</li>
+</ol>
+<p><code>Hadoop</code> is used to store and process big data. There are two parts of Hadoop:</p>
+<ol>
+<li><p>Hadoop Distributed File System(HDFS) =&gt; store data</p>
+</li>
+<li><p>MapReduce =&gt; process data</p>
+</li>
+</ol>
+<p><code>Hadoop</code> splits the data into different parts and stores them on a set of machines known as <code>cluster</code>. We can add more machines on the cluster, as the amount of data we are storing grows.</p>
+<p><img src='/image/hadoop_1.png' alt='hadoop_1' title='hadoop_1'></p>
+<p>Then using <code>MapReduce</code> we can process the data where it is actually stored(process the data <strong>in place</strong>), rather than retreiving the data from a central server.</p>
+<h2 id='HDFS'>HDFS</h2><p>Suppose we are going to store a 160-megabyte file (say <code>raindrop.txt</code>) in HDFS. The file is firstly split into several blocks, and each block has a maximum size of 64 megabytes by default and is given a unique name(like <code>blk_1</code>):</p>
+<p><img src='/image/hadoop_2.png' alt='hadoop_2' title='hadoop_2'></p>
+<p>Then the file is uploaded to HDFS, and each block will be stored on one node(<strong>DataNode</strong>, a piece of software called running on each machine) of the cluster. To know which nodes make up the original file, we have a separate machine running the a software called <code>NameNode</code>, which stores the Metadata of <code>raindrop.txt</code>.</p>
+<p><img src='/image/hadoop_3.png' alt='hadoop_3' title='hadoop_3'></p>
+<p>If one of the data nodes fails, there would be some missing data for the <code>raindrop.txt</code>. To solve the problem, Hadoop relicates each block three times. It picks three nodes <strong>at random</strong> and puts one copy of the block on each of the three:</p>
+<p><img src='/image/hadoop_4.png' alt='hadoop_4' title='hadoop_4'></p>
+<p>In this way, if a single node fail, we still have two other copies of blocks on other nodes. And the <code>NameNode</code> will detect that some blocks are <strong>under-replicated</strong> and re-replicate these blocks.</p>
+<p>Moreover, if the NameNode fails, the entire cluster was inaccessible. That is, if the metadata on the Name Node was lost, we have no way of knowing which block belongs to which file. To avoid the problem, we can have <strong>two NameNodes</strong>, the <code>Active NameNode</code> and the <code>Standby NameNode</code>. The standby NameNode can take over if the active one fails.</p>
 
 </div>
 </div>
@@ -13231,7 +13246,92 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-1:-Load-Data'>Step 1: Load Data</h2>
+<h2 id='MapReduce'>MapReduce</h2><p>We have known how data is stored in HDFS, now we will talk about how data is processed with <code>MapReduce</code>.</p>
+<p>Processing a file serially from top to bottom can take a long time. Instead, <code>MapReduce</code> is designed to process data in parallel. That is, divide the file into chunks, and process in parallel:</p>
+<p><img src='/image/hadoop_5.png' alt='hadoop_5' title='hadoop_5'></p>
+<p>For example, suppose we run thousands of stores around the world, and we have a file that contains all our sales for the year 2019, which is like this:</p>
+
+<pre><code>2019-01-01 London Books 36.89
+2019-01-01 Beijing Music 25.75
+2019-01-02 Paris Clothes 55.00
+2019-01-02 London Toys 50.25
+...</code></pre>
+<p>And now we want to calculate the <strong>total sales per store</strong>. To solve this problem, we can use <code>hashtable</code>, and for each entry, the key is the store location(say <code>London</code>) and the value is the sales. And we can scan all the sales records from the top to the bottom and update the value for a certain key. However, for big data this way would cost a lot of time and space.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>MapReduce shows us a different way to solve this problem, which has two types of roles:</p>
+<ol>
+<li>mappers</li>
+<li>reducers</li>
+</ol>
+<p>We split our file into many chunks, and each chunk is given to one of the mappers. All the mappers can work on a small fraction of the data at the same time.</p>
+<p><img src='/image/hadoop_6.png' alt='hadoop_6' title='hadoop_6'></p>
+<p>Once the mappers finish the mapping job, each of the reducers will be responsible for certain stores and collect the corresponding results from the mappers. Then the reducers can calculate the total sales of per store.</p>
+<p>There is also a <code>shuffle and sort</code> phase, and Hadoop takes care of this phase. That is, we do not have to sort the keys in our reducer code, and we get them in already sorted order.</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>Now we can write the mapper and reducer code using Python, and simulate the MapReduce process using bash. We have a <code>mapper.py</code> like this:</p>
+
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<div class='highlight'><pre><span></span><span class='kn'>import</span> <span class='nn'>sys</span>
+
+
+<span class='k'>def</span> <span class='nf'>mapper</span><span class='p'>():</span>
+    <span class='c1'># read standard input line by line</span>
+    <span class='k'>for</span> <span class='n'>line</span> <span class='ow'>in</span> <span class='n'>sys</span><span class='o'>.</span><span class='n'>stdin</span><span class='p'>:</span>
+        <span class='c1'># strip off extra whitespace, split on blank space and put the data in an array</span>
+        <span class='n'>data</span> <span class='o'>=</span> <span class='n'>line</span><span class='o'>.</span><span class='n'>strip</span><span class='p'>()</span><span class='o'>.</span><span class='n'>split</span><span class='p'>(</span><span class='s1'>&#39; &#39;</span><span class='p'>)</span>
+
+        <span class='k'>if</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>data</span><span class='p'>)</span> <span class='o'>==</span> <span class='mi'>4</span><span class='p'>:</span>
+            <span class='n'>date</span><span class='p'>,</span> <span class='n'>store</span><span class='p'>,</span> <span class='n'>item</span><span class='p'>,</span> <span class='n'>cost</span> <span class='o'>=</span> <span class='n'>data</span>
+
+        <span class='c1'># write the results to standard output</span>
+        <span class='nb'>print</span><span class='p'>(</span><span class='s1'>&#39;</span><span class='si'>{0}</span><span class='se'>\t</span><span class='si'>{1}</span><span class='s1'>&#39;</span><span class='o'>.</span><span class='n'>format</span><span class='p'>(</span><span class='n'>store</span><span class='p'>,</span> <span class='n'>cost</span><span class='p'>))</span>
+
+
+<span class='k'>if</span> <span class='vm'>__name__</span> <span class='o'>==</span> <span class='s1'>&#39;__main__&#39;</span><span class='p'>:</span>
+    <span class='n'>mapper</span><span class='p'>()</span>
+</pre></div>
+<p>And we have a <code>reducer.py</code> like this:</p>
+<div class='highlight'><pre><span></span><span class='kn'>import</span> <span class='nn'>sys</span>
+
+
+<span class='k'>def</span> <span class='nf'>reducer</span><span class='p'>():</span>
+    <span class='n'>total_sales</span> <span class='o'>=</span> <span class='p'>{}</span>
+
+    <span class='k'>for</span> <span class='n'>line</span> <span class='ow'>in</span> <span class='n'>sys</span><span class='o'>.</span><span class='n'>stdin</span><span class='p'>:</span>
+        <span class='n'>data</span> <span class='o'>=</span> <span class='n'>line</span><span class='o'>.</span><span class='n'>strip</span><span class='p'>()</span><span class='o'>.</span><span class='n'>split</span><span class='p'>(</span><span class='s1'>&#39;</span><span class='se'>\t</span><span class='s1'>&#39;</span><span class='p'>)</span>
+        <span class='k'>if</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>data</span><span class='p'>)</span> <span class='o'>!=</span> <span class='mi'>2</span><span class='p'>:</span>
+            <span class='c1'># Something has gone wrong. Skip this line.           </span>
+            <span class='k'>continue</span>
+
+        <span class='n'>store</span><span class='p'>,</span> <span class='n'>sale</span> <span class='o'>=</span> <span class='n'>data</span>
+        <span class='n'>total_sales</span><span class='o'>.</span><span class='n'>setdefault</span><span class='p'>(</span><span class='n'>store</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>)</span>
+        <span class='n'>total_sales</span><span class='p'>[</span><span class='n'>store</span><span class='p'>]</span> <span class='o'>+=</span> <span class='nb'>float</span><span class='p'>(</span><span class='n'>sale</span><span class='p'>)</span>
+
+    <span class='k'>for</span> <span class='n'>store</span> <span class='ow'>in</span> <span class='n'>total_sales</span><span class='p'>:</span>
+        <span class='nb'>print</span><span class='p'>(</span><span class='s1'>&#39;</span><span class='si'>{0}</span><span class='se'>\t</span><span class='si'>{1}</span><span class='s1'>&#39;</span><span class='o'>.</span><span class='n'>format</span><span class='p'>(</span><span class='n'>store</span><span class='p'>,</span> <span class='n'>total_sales</span><span class='p'>[</span><span class='n'>store</span><span class='p'>]))</span>
+
+<span class='k'>if</span> <span class='vm'>__name__</span> <span class='o'>==</span> <span class='s1'>&#39;__main__&#39;</span><span class='p'>:</span>
+    <span class='n'>reducer</span><span class='p'>()</span>
+</pre></div>
+<p>Now we can simulate the MapReduce process like this:</p>
+
 </div>
 </div>
 </div>
@@ -13240,160 +13340,7 @@ div#notebook {
 <div class='prompt input_prompt'>In&nbsp;[1]:</div>
 <div class='inner_cell'>
     <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='kn'>import</span> <span class='nn'>numpy</span> <span class='k'>as</span> <span class='nn'>np</span>
-<span class='kn'>import</span> <span class='nn'>pandas</span> <span class='k'>as</span> <span class='nn'>pd</span>
-
-<span class='n'>raw_data</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>read_csv</span><span class='p'>(</span><span class='s1'>&#39;./data_source/titanic_data.csv&#39;</span><span class='p'>)</span>
-<span class='n'>raw_data</span><span class='o'>.</span><span class='n'>head</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[1]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>A/5 21171</td>
-      <td>7.2500</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>PC 17599</td>
-      <td>71.2833</td>
-      <td>C85</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>STON/O2. 3101282</td>
-      <td>7.9250</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>113803</td>
-      <td>53.1000</td>
-      <td>C123</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5</td>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>373450</td>
-      <td>8.0500</td>
-      <td>NaN</td>
-      <td>S</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-2:-Preview-Data'>Step 2: Preview Data</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[2]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>raw_data</span><span class='o'>.</span><span class='n'>info</span><span class='p'>()</span>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='o'>!</span>cat ./data_source/stores_data.txt
 </pre></div>
 
     </div>
@@ -13410,23 +13357,44 @@ div#notebook {
 
 
 <div class='output_subarea output_stream output_stdout output_text'>
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 891 entries, 0 to 890
-Data columns (total 12 columns):
-PassengerId    891 non-null int64
-Survived       891 non-null int64
-Pclass         891 non-null int64
-Name           891 non-null object
-Sex            891 non-null object
-Age            714 non-null float64
-SibSp          891 non-null int64
-Parch          891 non-null int64
-Ticket         891 non-null object
-Fare           891 non-null float64
-Cabin          204 non-null object
-Embarked       889 non-null object
-dtypes: float64(2), int64(5), object(5)
-memory usage: 83.7+ KB
+<pre>2019-01-01 London Books 36.89
+2019-01-01 Beijing Music 25.75
+2019-01-02 Paris Clothes 55.00
+2019-01-02 London Toys 50.25
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class='cell border-box-sizing code_cell rendered'>
+<div class='input'>
+<div class='prompt input_prompt'>In&nbsp;[2]:</div>
+<div class='inner_cell'>
+    <div class='input_area'>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='o'>!</span> cat ./data_source/stores_data.txt <span class='p'>|</span> python mapper.py
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class='output_wrapper'>
+<div class='output'>
+
+
+<div class='output_area'>
+
+    <div class='prompt'></div>
+
+
+<div class='output_subarea output_stream output_stdout output_text'>
+<pre>London	36.89
+Beijing	25.75
+Paris	55.00
+London	50.25
 </pre>
 </div>
 </div>
@@ -13440,7 +13408,7 @@ memory usage: 83.7+ KB
 <div class='prompt input_prompt'>In&nbsp;[3]:</div>
 <div class='inner_cell'>
     <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>raw_data</span><span class='o'>.</span><span class='n'>describe</span><span class='p'>(</span><span class='n'>include</span> <span class='o'>=</span> <span class='s1'>&#39;all&#39;</span><span class='p'>)</span>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='o'>!</span> cat ./data_source/stores_data.txt <span class='p'>|</span> python mapper.py <span class='p'>|</span> sort
 </pre></div>
 
     </div>
@@ -13453,999 +13421,28 @@ memory usage: 83.7+ KB
 
 <div class='output_area'>
 
-    <div class='prompt output_prompt'>Out[3]:</div>
+    <div class='prompt'></div>
 
 
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>PassengerId</th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Ticket</th>
-      <th>Fare</th>
-      <th>Cabin</th>
-      <th>Embarked</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891</td>
-      <td>891</td>
-      <td>714.000000</td>
-      <td>891.000000</td>
-      <td>891.000000</td>
-      <td>891</td>
-      <td>891.000000</td>
-      <td>204</td>
-      <td>889</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>891</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>681</td>
-      <td>NaN</td>
-      <td>147</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Markun, Mr. Johann</td>
-      <td>male</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>CA. 2343</td>
-      <td>NaN</td>
-      <td>B96 B98</td>
-      <td>S</td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1</td>
-      <td>577</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>7</td>
-      <td>NaN</td>
-      <td>4</td>
-      <td>644</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>446.000000</td>
-      <td>0.383838</td>
-      <td>2.308642</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>29.699118</td>
-      <td>0.523008</td>
-      <td>0.381594</td>
-      <td>NaN</td>
-      <td>32.204208</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>257.353842</td>
-      <td>0.486592</td>
-      <td>0.836071</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>14.526497</td>
-      <td>1.102743</td>
-      <td>0.806057</td>
-      <td>NaN</td>
-      <td>49.693429</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>1.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.420000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>223.500000</td>
-      <td>0.000000</td>
-      <td>2.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>20.125000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>7.910400</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>446.000000</td>
-      <td>0.000000</td>
-      <td>3.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>28.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>14.454200</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>668.500000</td>
-      <td>1.000000</td>
-      <td>3.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>38.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>31.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>891.000000</td>
-      <td>1.000000</td>
-      <td>3.000000</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>80.000000</td>
-      <td>8.000000</td>
-      <td>6.000000</td>
-      <td>NaN</td>
-      <td>512.329200</td>
-      <td>NaN</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
+<div class='output_subarea output_stream output_stdout output_text'>
+<pre>Beijing	25.75
+London	36.89
+London	50.25
+Paris	55.00
+</pre>
 </div>
-</div>
-
 </div>
 
 </div>
 </div>
 
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-3:-Check-Null-Value'>Step 3: Check Null Value</h2>
-</div>
-</div>
 </div>
 <div class='cell border-box-sizing code_cell rendered'>
 <div class='input'>
 <div class='prompt input_prompt'>In&nbsp;[4]:</div>
 <div class='inner_cell'>
     <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>data</span> <span class='o'>=</span> <span class='n'>raw_data</span><span class='o'>.</span><span class='n'>copy</span><span class='p'>(</span><span class='n'>deep</span> <span class='o'>=</span> <span class='kc'>True</span><span class='p'>)</span>
-<span class='n'>data</span><span class='o'>.</span><span class='n'>isnull</span><span class='p'>()</span><span class='o'>.</span><span class='n'>sum</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[4]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>PassengerId      0
-Survived         0
-Pclass           0
-Name             0
-Sex              0
-Age            177
-SibSp            0
-Parch            0
-Ticket           0
-Fare             0
-Cabin          687
-Embarked         2
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>As shown, athe column <code>Cabin</code> contains a lot of null values, therefore we can remove it. More information about <code>null value</code> is shown in appendix.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-4:-Complete-Null-Value'>Step 4: Complete Null Value</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[5]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='c1'># By default, fillna method returns a new data frame.</span>
-<span class='c1'># If we set `inplace = True`, fillna will make the changes </span>
-<span class='c1'># in the original data frame.</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Age&#39;</span><span class='p'>]</span><span class='o'>.</span><span class='n'>fillna</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Age&#39;</span><span class='p'>]</span><span class='o'>.</span><span class='n'>median</span><span class='p'>(),</span> <span class='n'>inplace</span> <span class='o'>=</span> <span class='kc'>True</span><span class='p'>)</span> <span class='c1'># we can also replace NaN values with data[&#39;Age&#39;].mean()</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Embarked&#39;</span><span class='p'>]</span><span class='o'>.</span><span class='n'>fillna</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Embarked&#39;</span><span class='p'>]</span><span class='o'>.</span><span class='n'>mode</span><span class='p'>()[</span><span class='mi'>0</span><span class='p'>],</span> <span class='n'>inplace</span> <span class='o'>=</span> <span class='kc'>True</span><span class='p'>)</span>
-
-<span class='n'>data</span><span class='o'>.</span><span class='n'>isnull</span><span class='p'>()</span><span class='o'>.</span><span class='n'>sum</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[5]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>PassengerId      0
-Survived         0
-Pclass           0
-Name             0
-Sex              0
-Age              0
-SibSp            0
-Parch            0
-Ticket           0
-Fare             0
-Cabin          687
-Embarked         0
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-5:-Feature-Engineering'>Step 5: Feature Engineering</h2><h3 id='5.1:-Delete-Some-Features'>5.1: Delete Some Features</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[6]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>drop_column</span> <span class='o'>=</span> <span class='p'>[</span><span class='s1'>&#39;PassengerId&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Cabin&#39;</span><span class='p'>,</span> <span class='s1'>&#39;Ticket&#39;</span><span class='p'>]</span>
-<span class='n'>data</span><span class='o'>.</span><span class='n'>drop</span><span class='p'>(</span><span class='n'>drop_column</span><span class='p'>,</span> <span class='n'>axis</span> <span class='o'>=</span> <span class='mi'>1</span><span class='p'>,</span> <span class='n'>inplace</span> <span class='o'>=</span> <span class='kc'>True</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='5.2:-Create-Some-New-Features'>5.2: Create Some New Features</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[7]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;FamilySize&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;SibSp&#39;</span><span class='p'>]</span> <span class='o'>+</span> <span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Parch&#39;</span><span class='p'>]</span> <span class='o'>+</span> <span class='mi'>1</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;IsAlone&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>np</span><span class='o'>.</span><span class='n'>where</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;FamilySize&#39;</span><span class='p'>]</span> <span class='o'>&gt;</span> <span class='mi'>1</span><span class='p'>,</span> <span class='mi'>0</span><span class='p'>,</span> <span class='mi'>1</span><span class='p'>)</span>
-<span class='n'>data</span><span class='o'>.</span><span class='n'>head</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[7]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-      <th>Embarked</th>
-      <th>FamilySize</th>
-      <th>IsAlone</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>S</td>
-      <td>2</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>C</td>
-      <td>2</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>S</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>S</td>
-      <td>2</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>S</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='5.3:-Data-Binning'>5.3: Data Binning</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[8]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;FareCut&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>qcut</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Fare&#39;</span><span class='p'>],</span> <span class='mi'>4</span><span class='p'>)</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;AgeCut&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>cut</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Age&#39;</span><span class='p'>]</span><span class='o'>.</span><span class='n'>astype</span><span class='p'>(</span><span class='nb'>int</span><span class='p'>),</span> <span class='mi'>6</span><span class='p'>)</span>
-<span class='n'>data</span><span class='o'>.</span><span class='n'>head</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[8]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-      <th>Embarked</th>
-      <th>FamilySize</th>
-      <th>IsAlone</th>
-      <th>FareCut</th>
-      <th>AgeCut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>S</td>
-      <td>2</td>
-      <td>0</td>
-      <td>(-0.001, 7.91]</td>
-      <td>(13.333, 26.667]</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>C</td>
-      <td>2</td>
-      <td>0</td>
-      <td>(31.0, 512.329]</td>
-      <td>(26.667, 40.0]</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>S</td>
-      <td>1</td>
-      <td>1</td>
-      <td>(7.91, 14.454]</td>
-      <td>(13.333, 26.667]</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>S</td>
-      <td>2</td>
-      <td>0</td>
-      <td>(31.0, 512.329]</td>
-      <td>(26.667, 40.0]</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>S</td>
-      <td>1</td>
-      <td>1</td>
-      <td>(7.91, 14.454]</td>
-      <td>(26.667, 40.0]</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>More information about data binning is shown in appendix.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-6:-Encode-For-Categorical-Features'>Step 6: Encode For Categorical Features</h2><p>There are two ways to do the encode for categorical features. One way is using <code>Sklearn LabelEncode</code>, the other way is using <code>Pandas get_dummies</code>.</p>
-<h3 id='Sklearn-LabelEncode'>Sklearn LabelEncode</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[9]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='kn'>from</span> <span class='nn'>sklearn.preprocessing</span> <span class='kn'>import</span> <span class='n'>LabelEncoder</span>
-
-<span class='n'>label</span> <span class='o'>=</span> <span class='n'>LabelEncoder</span><span class='p'>()</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Sex_Code&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>label</span><span class='o'>.</span><span class='n'>fit_transform</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Sex&#39;</span><span class='p'>])</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Embarked_Code&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>label</span><span class='o'>.</span><span class='n'>fit_transform</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Embarked&#39;</span><span class='p'>])</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;AgeBin_Code&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>label</span><span class='o'>.</span><span class='n'>fit_transform</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;AgeCut&#39;</span><span class='p'>])</span>
-<span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;FareBin_Code&#39;</span><span class='p'>]</span> <span class='o'>=</span> <span class='n'>label</span><span class='o'>.</span><span class='n'>fit_transform</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;FareCut&#39;</span><span class='p'>])</span>
-<span class='n'>data</span><span class='o'>.</span><span class='n'>head</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[9]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>Survived</th>
-      <th>Pclass</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-      <th>SibSp</th>
-      <th>Parch</th>
-      <th>Fare</th>
-      <th>Embarked</th>
-      <th>FamilySize</th>
-      <th>IsAlone</th>
-      <th>FareCut</th>
-      <th>AgeCut</th>
-      <th>Sex_Code</th>
-      <th>Embarked_Code</th>
-      <th>AgeBin_Code</th>
-      <th>FareBin_Code</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Braund, Mr. Owen Harris</td>
-      <td>male</td>
-      <td>22.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>7.2500</td>
-      <td>S</td>
-      <td>2</td>
-      <td>0</td>
-      <td>(-0.001, 7.91]</td>
-      <td>(13.333, 26.667]</td>
-      <td>1</td>
-      <td>2</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Cumings, Mrs. John Bradley (Florence Briggs Th...</td>
-      <td>female</td>
-      <td>38.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>71.2833</td>
-      <td>C</td>
-      <td>2</td>
-      <td>0</td>
-      <td>(31.0, 512.329]</td>
-      <td>(26.667, 40.0]</td>
-      <td>0</td>
-      <td>0</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>3</td>
-      <td>Heikkinen, Miss. Laina</td>
-      <td>female</td>
-      <td>26.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.9250</td>
-      <td>S</td>
-      <td>1</td>
-      <td>1</td>
-      <td>(7.91, 14.454]</td>
-      <td>(13.333, 26.667]</td>
-      <td>0</td>
-      <td>2</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>1</td>
-      <td>Futrelle, Mrs. Jacques Heath (Lily May Peel)</td>
-      <td>female</td>
-      <td>35.0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>53.1000</td>
-      <td>S</td>
-      <td>2</td>
-      <td>0</td>
-      <td>(31.0, 512.329]</td>
-      <td>(26.667, 40.0]</td>
-      <td>0</td>
-      <td>2</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>3</td>
-      <td>Allen, Mr. William Henry</td>
-      <td>male</td>
-      <td>35.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>8.0500</td>
-      <td>S</td>
-      <td>1</td>
-      <td>1</td>
-      <td>(7.91, 14.454]</td>
-      <td>(26.667, 40.0]</td>
-      <td>1</td>
-      <td>2</td>
-      <td>2</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Pandas-get_dummies'>Pandas get_dummies</h3><p>We can also use get_dummies method to do the encode. For example:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[10]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>pd</span><span class='o'>.</span><span class='n'>get_dummies</span><span class='p'>(</span><span class='n'>data</span><span class='p'>[</span><span class='s1'>&#39;Sex&#39;</span><span class='p'>])</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[10]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>female</th>
-      <th>male</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>886</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>887</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>888</th>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>889</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>890</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-<p>891 rows × 2 columns</p>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Further details of <code>get_dummies</code> method is shown in the appendix.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Step-7:-Check-For-Data-Cleaning'>Step 7: Check For Data Cleaning</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[11]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>data</span><span class='o'>.</span><span class='n'>info</span><span class='p'>()</span>
+<div class=' highlight hl-ipython3'><pre><span></span><span class='o'>!</span> cat ./data_source/stores_data.txt <span class='p'>|</span> python mapper.py <span class='p'>|</span> sort <span class='p'>|</span> python reducer.py
 </pre></div>
 
     </div>
@@ -14462,496 +13459,11 @@ dtype: int64</pre>
 
 
 <div class='output_subarea output_stream output_stdout output_text'>
-<pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 891 entries, 0 to 890
-Data columns (total 17 columns):
-Survived         891 non-null int64
-Pclass           891 non-null int64
-Name             891 non-null object
-Sex              891 non-null object
-Age              891 non-null float64
-SibSp            891 non-null int64
-Parch            891 non-null int64
-Fare             891 non-null float64
-Embarked         891 non-null object
-FamilySize       891 non-null int64
-IsAlone          891 non-null int64
-FareCut          891 non-null category
-AgeCut           891 non-null category
-Sex_Code         891 non-null int64
-Embarked_Code    891 non-null int64
-AgeBin_Code      891 non-null int64
-FareBin_Code     891 non-null int64
-dtypes: category(2), float64(2), int64(10), object(3)
-memory usage: 106.7+ KB
+<pre>Beijing	25.75
+London	87.14
+Paris	55.0
 </pre>
 </div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Appendix'>Appendix</h2>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Null-Value'>Null Value</h3><p>In pandas, NaN(Not a Number) represents missing values, i.e., null values:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[12]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>s</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>Series</span><span class='p'>([</span><span class='s1'>&#39;a&#39;</span><span class='p'>,</span> <span class='s1'>&#39;b&#39;</span><span class='p'>,</span> <span class='n'>np</span><span class='o'>.</span><span class='n'>nan</span><span class='p'>,</span> <span class='s1'>&#39;d&#39;</span><span class='p'>])</span>
-<span class='n'>s</span><span class='o'>.</span><span class='n'>isnull</span><span class='p'>()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[12]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>0    False
-1    False
-2     True
-3    False
-dtype: bool</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Data-Binning'>Data Binning</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Using <code>pandas.cut</code>, we can bin data into several buckets. For example, suppose we have a set of people with different ages, we can divide them into different age groups:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[13]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>ages</span> <span class='o'>=</span> <span class='p'>[</span><span class='mi'>18</span><span class='p'>,</span> <span class='mi'>21</span><span class='p'>,</span> <span class='mi'>28</span><span class='p'>,</span> <span class='mi'>27</span><span class='p'>,</span> <span class='mi'>21</span><span class='p'>,</span> <span class='mi'>23</span><span class='p'>,</span> <span class='mi'>37</span><span class='p'>,</span> <span class='mi'>31</span><span class='p'>,</span> <span class='mi'>62</span><span class='p'>,</span> <span class='mi'>43</span><span class='p'>,</span> <span class='mi'>75</span><span class='p'>]</span>
-<span class='n'>bins</span> <span class='o'>=</span> <span class='p'>[</span><span class='mi'>17</span><span class='p'>,</span> <span class='mi'>25</span><span class='p'>,</span> <span class='mi'>35</span><span class='p'>,</span> <span class='mi'>60</span><span class='p'>,</span> <span class='mi'>100</span><span class='p'>]</span> <span class='c1'># (17, 25], (25, 35], (35, 60],(60, 100]</span>
-<span class='n'>age_bins</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>cut</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>,</span> <span class='n'>bins</span><span class='p'>)</span>
-<span class='n'>pd</span><span class='o'>.</span><span class='n'>value_counts</span><span class='p'>(</span><span class='n'>age_bins</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[13]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>(17, 25]     4
-(25, 35]     3
-(60, 100]    2
-(35, 60]     2
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h4 id='cut-vs-qcut'>cut vs qcut</h4><p>We can use <code>pandas.cut</code> or pandas.qcut to bin data into multiple buckets automatically. However, these two methods have different cutting strategy.</p>
-<p>Let's firstly look at <code>pandas.cut</code>, which cuts the data based on the max age and the min age:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[14]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='c1'># automatically bin the age data into 4 groups</span>
-<span class='n'>age_bins</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>cut</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>,</span> <span class='n'>precision</span><span class='o'>=</span> <span class='mi'>2</span><span class='p'>)</span>
-<span class='n'>pd</span><span class='o'>.</span><span class='n'>value_counts</span><span class='p'>(</span><span class='n'>age_bins</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[14]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>(17.94, 32.25]    7
-(60.75, 75.0]     2
-(32.25, 46.5]     2
-(46.5, 60.75]     0
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>We can see that the range of each group is the same, which is 14.25.</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[15]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>age_range</span> <span class='o'>=</span> <span class='nb'>max</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>)</span> <span class='o'>-</span> <span class='nb'>min</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>)</span>
-<span class='nb'>print</span><span class='p'>(</span><span class='n'>age_range</span> <span class='o'>/</span> <span class='mi'>4</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt'></div>
-
-
-<div class='output_subarea output_stream output_stdout output_text'>
-<pre>14.25
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>As for <code>pandas.qcut</code>,  it divides data into equal-sized buckets based on sample quantiles:</p>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[16]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>age_bins</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>qcut</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>,</span> <span class='mi'>4</span><span class='p'>,</span> <span class='n'>precision</span><span class='o'>=</span> <span class='mi'>2</span><span class='p'>)</span>
-<span class='n'>pd</span><span class='o'>.</span><span class='n'>value_counts</span><span class='p'>(</span><span class='n'>age_bins</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[16]:</div>
-
-
-
-
-<div class='output_text output_subarea output_execute_result'>
-<pre>(40.0, 75.0]     3
-(22.0, 28.0]     3
-(17.99, 22.0]    3
-(28.0, 40.0]     2
-dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[17]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>Q1</span> <span class='o'>=</span> <span class='n'>np</span><span class='o'>.</span><span class='n'>percentile</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>,</span> <span class='mi'>25</span><span class='p'>)</span> <span class='c1'># 25%</span>
-<span class='n'>Q2</span> <span class='o'>=</span> <span class='n'>np</span><span class='o'>.</span><span class='n'>percentile</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>,</span> <span class='mi'>50</span><span class='p'>)</span> <span class='c1'># 50%</span>
-<span class='n'>Q3</span> <span class='o'>=</span> <span class='n'>np</span><span class='o'>.</span><span class='n'>percentile</span><span class='p'>(</span><span class='n'>ages</span><span class='p'>,</span> <span class='mi'>75</span><span class='p'>)</span> <span class='c1'># 75%</span>
-<span class='nb'>print</span><span class='p'>(</span><span class='n'>Q1</span><span class='p'>,</span> <span class='n'>Q2</span><span class='p'>,</span> <span class='n'>Q3</span><span class='p'>)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt'></div>
-
-
-<div class='output_subarea output_stream output_stdout output_text'>
-<pre>22.0 28.0 40.0
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<h3 id='Pandas-get_dummies'>Pandas get_dummies</h3>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[18]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='n'>temp_dict</span> <span class='o'>=</span> <span class='p'>{</span>
-    <span class='s1'>&#39;ID&#39;</span><span class='p'>:</span> <span class='p'>[</span><span class='mi'>1</span><span class='p'>,</span> <span class='mi'>2</span><span class='p'>,</span> <span class='mi'>3</span><span class='p'>],</span>
-    <span class='s1'>&#39;Name&#39;</span><span class='p'>:[</span><span class='s1'>&#39;Jay&#39;</span><span class='p'>,</span><span class='s1'>&#39;Eric&#39;</span><span class='p'>,</span><span class='s1'>&#39;Adele&#39;</span><span class='p'>],</span>
-    <span class='s1'>&#39;Sex&#39;</span><span class='p'>:[</span><span class='s1'>&#39;male&#39;</span><span class='p'>,</span> <span class='s1'>&#39;male&#39;</span><span class='p'>,</span> <span class='s1'>&#39;female&#39;</span><span class='p'>],</span>
-    <span class='s1'>&#39;Age&#39;</span><span class='p'>:[</span><span class='mi'>40</span><span class='p'>,</span> <span class='mi'>72</span><span class='p'>,</span> <span class='mi'>30</span><span class='p'>]</span>
-<span class='p'>}</span> 
-
-<span class='c1'># &#39;Name&#39; and &#39;Sex&#39; are categorical variables</span>
-<span class='n'>temp_dataframe</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>DataFrame</span><span class='p'>(</span><span class='n'>temp_dict</span><span class='p'>)</span>
-<span class='n'>temp_dataframe</span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[18]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Sex</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>Jay</td>
-      <td>male</td>
-      <td>40</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>Eric</td>
-      <td>male</td>
-      <td>72</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>Adele</td>
-      <td>female</td>
-      <td>30</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class='cell border-box-sizing code_cell rendered'>
-<div class='input'>
-<div class='prompt input_prompt'>In&nbsp;[19]:</div>
-<div class='inner_cell'>
-    <div class='input_area'>
-<div class=' highlight hl-ipython3'><pre><span></span><span class='c1'># All categorical variables are converted dummy/indicator variables.</span>
-<span class='n'>dummies</span> <span class='o'>=</span> <span class='n'>pd</span><span class='o'>.</span><span class='n'>get_dummies</span><span class='p'>(</span><span class='n'>temp_dataframe</span><span class='p'>)</span>
-<span class='n'>dummies</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class='output_wrapper'>
-<div class='output'>
-
-
-<div class='output_area'>
-
-    <div class='prompt output_prompt'>Out[19]:</div>
-
-
-
-<div class='output_html rendered_html output_subarea output_execute_result'>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border='1' class='dataframe'>
-  <thead>
-    <tr style='text-align: right;'>
-      <th></th>
-      <th>ID</th>
-      <th>Age</th>
-      <th>Name_Adele</th>
-      <th>Name_Eric</th>
-      <th>Name_Jay</th>
-      <th>Sex_female</th>
-      <th>Sex_male</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>40</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>72</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>30</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
 </div>
 
 </div>
@@ -14977,8 +13489,6 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 })
 </script> 
     
-
-
 
   </div>
 </article>
@@ -15007,16 +13517,16 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/03/Data-Cleaning/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/03/Data-Cleaning/&text=Data Cleaning"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/03/Data-Cleaning/&is_video=false&description=Data Cleaning"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Data Cleaning&body=Check out this article: http://yoursite.com/2020/05/03/Data-Cleaning/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/03/Data-Cleaning/&title=Data Cleaning"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/03/Data-Cleaning/&name=Data Cleaning&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&text=Introduction to Hadoop and MapReduce"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&is_video=false&description=Introduction to Hadoop and MapReduce"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Introduction to Hadoop and MapReduce&body=Check out this article: http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&title=Introduction to Hadoop and MapReduce"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/07/Introduction-to-Hadoop-and-MapReduce/&name=Introduction to Hadoop and MapReduce&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
