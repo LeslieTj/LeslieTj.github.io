@@ -8,13 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="machine learning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Matrix Derivatives">
-<meta property="og:url" content="http://yoursite.com/2020/05/19/Matrix-Derivatives/index.html">
+<meta property="og:title" content="Multiclass Linear SVM &amp; Multinomial Logistic Regression">
+<meta property="og:url" content="http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/index.html">
 <meta property="og:site_name" content="Leslie&#39;s Blog">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-19T14:36:52.932Z">
+<meta property="og:updated_time" content="2020-05-22T14:27:12.357Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Matrix Derivatives">
+<meta name="twitter:title" content="Multiclass Linear SVM &amp; Multinomial Logistic Regression">
     
     
         
@@ -34,7 +34,7 @@
         
     
     <!-- title -->
-    <title>Matrix Derivatives</title>
+    <title>Multiclass Linear SVM &amp; Multinomial Logistic Regression</title>
     <!-- styles -->
     <link rel="stylesheet" href="/css/style.css">
     <!-- persian styles -->
@@ -68,10 +68,8 @@
     <span id="actions">
       <ul>
         
-        <li><a class="icon" href="/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        
-        <li><a class="icon" href="/2020/05/14/MapReduce-Word-Count-Example/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        <li><a class="icon" href="/2020/05/19/Matrix-Derivatives/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -84,16 +82,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/19/Matrix-Derivatives/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&text=Matrix Derivatives"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&is_video=false&description=Matrix Derivatives"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Matrix Derivatives&body=Check out this article: http://yoursite.com/2020/05/19/Matrix-Derivatives/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&name=Matrix Derivatives&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&text=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&is_video=false&description=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Multiclass Linear SVM &amp; Multinomial Logistic Regression&body=Check out this article: http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&name=Multiclass Linear SVM &amp; Multinomial Logistic Regression&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -110,7 +108,7 @@
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
-        Matrix Derivatives
+        Multiclass Linear SVM &amp; Multinomial Logistic Regression
     </h1>
 
 
@@ -122,7 +120,7 @@
       
     <div class="postdate">
       
-        <time datetime="2020-05-19T14:33:30.000Z" itemprop="datePublished">2020-05-19</time>
+        <time datetime="2020-05-22T14:24:00.000Z" itemprop="datePublished">2020-05-22</time>
         
       
     </div>
@@ -148,7 +146,7 @@
 <html>
 <head><meta charset='utf-8' />
 
-<title>matrix_derivatives</title>
+<title>stanford_svm_logistic</title>
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
@@ -13223,135 +13221,124 @@ div#notebook {
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h1 id='Matrix-Derivatives'>Matrix Derivatives</h1>
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Consider a simple case of $y = Wx$, we have:</p>
+<h1 id='Multiclass-Linear-SVM-&amp;-Multinomial-Logistic-Regression'>Multiclass Linear SVM &amp; Multinomial Logistic Regression</h1><p>This notebook is based on Stanford CS231n, while the notation is a little different.</p>
+<h2 id='Vectorized-Data'>Vectorized Data</h2><ol>
+<li>vectorized training data:</li>
+</ol>
 $$
+X = 
 \begin{bmatrix}
-    y_{1}\\
-    y_{2}\\
-    y_{3}\\ 
-    \dots\\
-    y_{C}\\
-\end{bmatrix}= 
-y = Wx =
-\begin{bmatrix}
-    w_{11} &amp; w_{12}&amp; w_{13} &amp; \dots  &amp;w_{1D} \\
-    w_{21} &amp; w_{22}&amp; w_{23} &amp; \dots  &amp;w_{2D} \\
-    w_{31} &amp; w_{32}&amp; w_{33} &amp; \dots  &amp;w_{3D} \\
-    \dots  &amp; \dots &amp; \dots  &amp; \dots  &amp; \dots \\   
-    w_{C1} &amp; w_{C2}&amp; w_{C3} &amp; \dots  &amp;w_{CD} \\  
-\end{bmatrix}\cdot
-\begin{bmatrix}
-    x_{1}\\
-    x_{2}\\
-    x_{3}\\ 
-    \dots\\
-    x_{C}\\
-\end{bmatrix}
+    x_{0}^{(1)} &amp; x_{0}^{(2)} &amp; x_{0}^{(3)} &amp; \dots  &amp;x_{0}^{(N)} \\
+    x_{1}^{(1)} &amp; x_{1}^{(2)} &amp; x_{1}^{(3)} &amp; \dots  &amp;x_{1}^{(N)} \\
+    x_{2}^{(1)} &amp; x_{2}^{(2)} &amp; x_{2}^{(3)} &amp; \dots  &amp;x_{2}^{(N)} \\
+    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\
+    x_{D}^{(1)} &amp; x_{D}^{(2)} &amp; x_{D}^{(3)} &amp; \dots  &amp;x_{D}^{(N)} \\
+\end{bmatrix} 
 = 
 \begin{bmatrix}
-    \sum_{j=1}^{D}w_{1,j}x_j\\
-    \sum_{j=1}^{D}w_{2,j}x_j\\
-    \sum_{j=1}^{D}w_{3,j}x_j\\
+    X^{(1)} &amp; X^{(2)} &amp; X^{(3)} &amp; \dots  &amp;X^{(N)}\\
+\end{bmatrix} 
+$$<p>where each column is a training point $X^{(i)}$ with dimension <strong>D</strong>, and we assume that $x_{0} = 1$.</p>
+<hr>
+<ol>
+<li>vectorized labels:</li>
+</ol>
+$$
+y = 
+\begin{bmatrix}
+    y^{(1)} &amp; y^{(2)} &amp; y^{(3)} &amp; \dots &amp; y^{(N)} \\
+\end{bmatrix} $$<p>where $y^{(i)}$ is the true label(class) of the $ith$ training point $X^{(i)}$, which is an integer.</p>
+<hr>
+<ol>
+<li>vectorized weights:</li>
+</ol>
+$$
+W = 
+\begin{bmatrix}
+    w_{0}^{(1)} &amp; w_{1}^{(1)} &amp; w_{2}^{(1)} &amp; \dots  &amp;w_{D}^{(1)} \\
+    w_{0}^{(2)} &amp; w_{1}^{(2)} &amp; w_{2}^{(2)} &amp; \dots  &amp;w_{D}^{(2)}\\
+    w_{0}^{(3)} &amp; w_{1}^{(3)} &amp; w_{2}^{(3)} &amp; \dots  &amp;w_{D}^{(3)}\\
+    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\   
+    w_{0}^{(C)} &amp; w_{1}^{(C)} &amp; w_{2}^{(C)} &amp; \dots  &amp;w_{D}^{(C)}\\  
+\end{bmatrix} 
+= 
+\begin{bmatrix}
+    W^{(1)}\\
+    W^{(2)}\\
+    W^{(3)}\\
     \dots \\   
-    \sum_{j=1}^{D}w_{C,j}x_j \\  
-\end{bmatrix}
-$$<p>We want to compute the derivative of $y$ with respect to $x$, i.e., $\frac{\partial y}{\partial x}$. Since we need to compute the derivatives of <strong>each component of $y$</strong> with respect to <strong>each component of $x$</strong>, the derivative $\frac{\partial y}{\partial x}$ (<code>Jacobian matrix</code>) contains $C \times D$ values:</p>
-$$\frac{\partial y}{\partial x}
-=
+    W^{(C)}\\  
+\end{bmatrix} 
+$$<p>where <strong>C</strong> is the number of classes, i.e., there are <strong>C</strong> classes for the training set. And here $w_0 = b$, in this way we can transform our score function from $f = WX + b$ to $f = WX$.</p>
+<h2 id='Score-Function'>Score Function</h2>$$
+f(X,W) = WX =
 \begin{bmatrix}
-    \frac{\partial y_1}{\partial x_1} &amp; \frac{\partial y_1}{\partial x_2} &amp; \frac{\partial y_1}{\partial x_3}&amp; \dots  &amp;\frac{\partial y_1}{\partial x_D} \\
-    \frac{\partial y_2}{\partial x_1} &amp; \frac{\partial y_2}{\partial x_2} &amp; \frac{\partial y_2}{\partial x_3}&amp; \dots  &amp;\frac{\partial y_2}{\partial x_D}\\
-     \frac{\partial y_3}{\partial x_1} &amp; \frac{\partial y_3}{\partial x_2} &amp; \frac{\partial y_3}{\partial x_3}&amp; \dots  &amp;\frac{\partial y_3}{\partial x_D} \\
-    \dots  &amp; \dots &amp; \dots  &amp; \dots  &amp; \dots \\   
-     \frac{\partial y_C}{\partial x_1} &amp; \frac{\partial y_C}{\partial x_2} &amp; \frac{\partial y_C}{\partial x_3}&amp; \dots  &amp;\frac{\partial y_C}{\partial x_D} \\  
-\end{bmatrix}_{(C \times D)}$$<p>We know that $\frac{\partial y_i}{\partial x_j} = w_{i,j}$, we have:</p>
-$$\frac{\partial y}{\partial x}
+    w_{0}^{(1)} &amp; w_{1}^{(1)} &amp; w_{2}^{(1)} &amp; \dots  &amp;w_{D}^{(1)} \\
+    w_{0}^{(2)} &amp; w_{1}^{(2)} &amp; w_{2}^{(2)} &amp; \dots  &amp;w_{D}^{(2)}\\
+    w_{0}^{(3)} &amp; w_{1}^{(3)} &amp; w_{2}^{(3)} &amp; \dots  &amp;w_{D}^{(3)}\\
+    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\   
+    w_{0}^{(C)} &amp; w_{1}^{(C)} &amp; w_{2}^{(C)} &amp; \dots  &amp;w_{D}^{(C)}\\  
+\end{bmatrix}  \cdot \begin{bmatrix}
+    x_{0}^{(1)} &amp; x_{0}^{(2)} &amp; x_{0}^{(3)} &amp; \dots  &amp;x_{0}^{(N)} \\
+    x_{1}^{(1)} &amp; x_{1}^{(2)} &amp; x_{1}^{(3)} &amp; \dots  &amp;x_{1}^{(N)} \\
+    x_{2}^{(1)} &amp; x_{2}^{(2)} &amp; x_{2}^{(3)} &amp; \dots  &amp;x_{2}^{(N)} \\
+    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\
+    x_{D}^{(1)} &amp; x_{D}^{(2)} &amp; x_{D}^{(3)} &amp; \dots  &amp;x_{D}^{(N)} \\
+\end{bmatrix}
 = \begin{bmatrix}
-    w_{11} &amp; w_{12}&amp; w_{13} &amp; \dots  &amp;w_{1D} \\
-    w_{21} &amp; w_{22}&amp; w_{23} &amp; \dots  &amp;w_{2D} \\
-    w_{31} &amp; w_{32}&amp; w_{33} &amp; \dots  &amp;w_{3D} \\
-    \dots  &amp; \dots &amp; \dots  &amp; \dots  &amp; \dots \\   
-    w_{C1} &amp; w_{C2}&amp; w_{C3} &amp; \dots  &amp;w_{CD} \\  
-\end{bmatrix} = W
-$$<p>In conclusion, for $y = Wx$, $\frac{\partial y}{\partial x} = W$.</p>
-<hr>
-
-</div>
-</div>
-</div>
-<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
-</div><div class='inner_cell'>
-<div class='text_cell_render border-box-sizing rendered_html'>
-<p>Now let's deal with more than two dimensions. In this case, we want to compute $\frac{\partial y}{\partial W}$, where $y$ varies along one coordinate while $W$ varies along two coordinates. Therefore we can use a three-dimensional array to store the result:</p>
-$$F_{i,j,k} = \frac{\partial y_i}{\partial w_{j,k}}$$<p>Consider the case $i = 2$, we have:</p>
-$$y_2 = \sum_{j=1}^{D}w_{2,j}x_j = w_{2,1}x_1 + w_{2,2}x_2 + ... + w_{2,D}x_D$$<p>And we can have $\frac{\partial y_2}{\partial w_{j,k}}$:</p>
-$$
-\begin{bmatrix}
-    \frac{\partial y_2}{\partial w_{11}} &amp; \frac{\partial y_2}{\partial w_{12}} &amp; \frac{\partial y_2}{\partial w_{13}}&amp; \dots  &amp;\frac{\partial y_2}{\partial w_{1D}} \\
-    \frac{\partial y_2}{\partial w_{21}} &amp; \frac{\partial y_2}{\partial w_{22}} &amp; \frac{\partial y_2}{\partial w_{23}}&amp; \dots  &amp;\frac{\partial y_2}{\partial w_{2D}}\\
-     \frac{\partial y_2}{\partial w_{31}} &amp; \frac{\partial y_2}{\partial w_{32}} &amp; \frac{\partial y_2}{\partial w_{33}}&amp; \dots  &amp;\frac{\partial y_2}{\partial x_{3D}} \\
-    \dots  &amp; \dots &amp; \dots  &amp; \dots  &amp; \dots \\   
-     \frac{\partial y_2}{\partial w_{C1}} &amp; \frac{\partial y_2}{\partial w_{C2}} &amp; \frac{\partial y_2}{\partial w_{C3}}&amp; \dots  &amp;\frac{\partial y_2}{\partial x_{CD}} \\  
-\end{bmatrix}
-= 
-\begin{bmatrix}
-    0 &amp; 0 &amp; 0 &amp; \dots  &amp; 0 \\
-    x_1 &amp; x_2 &amp; x_3 &amp; \dots  &amp; x_D\\
-     0 &amp; 0 &amp; 0 &amp; \dots  &amp; 0\\
-    \dots  &amp; \dots &amp; \dots  &amp; \dots  &amp; \dots \\   
-    0 &amp; 0 &amp; 0 &amp; \dots  &amp; 0 \\  
-\end{bmatrix}
-$$<p>For each $y_i$, we can have a matrix like the above one, and all rows are 0s except for the <code>ith</code> row. Therefore we know that <strong>$F_{i,j,k} = \frac{\partial y_i}{\partial w_{j,k}}$ are all 0s unless $i = j$</strong>, i.e., $F_{i,i,k} = \frac{\partial y_i}{\partial w_{i,k}} = x_k$.</p>
-<hr>
-<p>Let's make things more complicated, suppose we have $Y = XW$:</p>
-$$
-\begin{bmatrix}
-    y_{11} &amp; y_{12} &amp; y_{13} &amp; \dots  &amp;y_{1C} \\
-    y_{21} &amp; y_{22} &amp; y_{23} &amp; \dots  &amp;y_{2C} \\
-    y_{31} &amp; y_{32} &amp; y_{33} &amp; \dots  &amp;y_{3C} \\
+    s_{1}^{(1)} &amp; s_{1}^{(2)} &amp; s_{1}^{(3)} &amp; \dots  &amp;s_{1}^{(N)} \\
+    s_{2}^{(1)} &amp; s_{2}^{(2)} &amp; s_{2}^{(3)} &amp; \dots  &amp;s_{2}^{(N)}\\
+    s_{3}^{(1)} &amp; s_{3}^{(2)} &amp; s_{3}^{(3)} &amp; \dots  &amp;s_{3}^{(N)}\\
     \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\
-    y_{N1} &amp; y_{N2} &amp; y_{N3} &amp; \dots  &amp;y_{NC} \\
+    s_{C}^{(1)} &amp; s_{C}^{(2)} &amp; s_{C}^{(3)} &amp; \dots  &amp;s_{C}^{(N)}
 \end{bmatrix}
-= Y = XW \\ 
+$$<p>where each column is the training scores of a training point $X^{(i)}$ on each of the <strong>C</strong> classes.</p>
+<h2 id='Loss-Function-&amp;-Gradient'>Loss Function &amp; Gradient</h2><h3 id='Multiclass-SVM-Loss'>Multiclass SVM Loss</h3>
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+$$L = \frac{1}{N}\sum_{i = 1}^{N}L^{(i)} + \lambda R(W)$$<p>where $\frac{1}{N}\sum_{i = 1}^{N}L^{(i)}$ is the <strong>data loss</strong>, and $\lambda R(W)$ is the <strong>regularization</strong> term.</p>
+<p>Given a training point $(X^{(i)}, y^{(i)})$,$1 \leq y^{(i)} \leq C$, we have:</p>
+$$L^{(i)} = \sum_{j \neq y^{(i)}} max(0, s^{(i)}_{j} - s^{(i)}_{y^{(i)}} + delta) = \sum_{j \neq y^{(i)}}max(0, W^{(j)} X^{(i)} - W^{y^{(i)}} X^{(i)} + delta)$$<p></p>
+<p>where $j$ means the class $j$, and $1 \leq j \leq C$.</p>
+<p>Considering $delta = 1$, the loss function is:</p>
+$$L = \frac{1}{N}\sum_{i = 1}^{N}\sum_{j \neq y^{(i)}}max(0, W^{(j)} X^{(i)} - W^{y^{(i)}} X^{(i)} + 1) + \lambda R(W)$$
+</div>
+</div>
+</div>
+<div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
+</div><div class='inner_cell'>
+<div class='text_cell_render border-box-sizing rendered_html'>
+<p>To minimize the loss function $L(W)$, we should use gradient descent to update $W$. Firstly we compute the gradient $\nabla_{W}L$:</p>
+$$\nabla_{W}L = \frac{1}{N}\sum_{i, j} \nabla_{W}L^{(i)}_{j} + \lambda R'(W)$$<p>For a certain $L^{(i)}_{j}$, note that $j$ is different from the $j$ we used in the loss function, and here <strong>$j$ can be equal to $y^{(i)}$</strong>, we have:</p>
+$$\nabla_{W}L^{(i)}_{j} = \frac{\partial L^{(i)}}{\partial W^{(j)}} = \begin{cases}
+\frac{\partial L^{(i)}}{\partial W^{y^{(i)}}} &amp; j = y^{(i)}\\
+\frac{\partial L^{(i)}}{\partial W^{(j)}} &amp; j \neq y^{(i)}
+\end{cases} 
 = 
-\begin{bmatrix}
-    x_{11} &amp; x_{12} &amp; x_{13} &amp; \dots  &amp;x_{1D} \\
-    x_{21} &amp; x_{22} &amp; x_{23} &amp; \dots  &amp;x_{2D} \\
-    x_{31} &amp; x_{32} &amp; x_{33} &amp; \dots  &amp;x_{3D} \\
-    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\
-    x_{N1} &amp; x_{N2} &amp; x_{N3} &amp; \dots  &amp;x_{ND} \\
-\end{bmatrix}\cdot \begin{bmatrix}
-    w_{11} &amp; w_{12} &amp; w_{13} &amp; \dots  &amp;w_{1C} \\
-    w_{21} &amp; w_{22} &amp; w_{23} &amp; \dots  &amp;w_{2C}\\
-    w_{31} &amp; w_{32} &amp; w_{33} &amp; \dots  &amp;w_{3C}\\
-    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\   
-    w_{D1} &amp; w_{D2} &amp; w_{D3} &amp; \dots  &amp;w_{DC}\\  
-\end{bmatrix}
-=
- \begin{bmatrix}
-    \sum_{k = 1}^{D}x_{1k}w_{k1}&amp; \sum_{k = 1}^{D}x_{1k}w_{k2} &amp; \sum_{k = 1}^{D}x_{1k}w_{k3} &amp; \dots  &amp;\sum_{k = 1}^{D}x_{1k}w_{kC} \\
-    \sum_{k = 1}^{D}x_{2k}w_{k1}&amp; \sum_{k = 1}^{D}x_{2k}w_{k2} &amp; \sum_{k = 1}^{D}x_{2k}w_{k3} &amp; \dots  &amp;\sum_{k = 1}^{D}x_{2k}w_{kC} \\
-   \sum_{k = 1}^{D}x_{3k}w_{k1}&amp; \sum_{k = 1}^{D}x_{3k}w_{k2} &amp; \sum_{k = 1}^{D}x_{3k}w_{k3} &amp; \dots  &amp;\sum_{k = 1}^{D}x_{3k}w_{kC} \\
-    \dots &amp; \dots &amp; \dots &amp; \dots  &amp; \dots \\   
-   \sum_{k = 1}^{D}x_{Nk}w_{k1}&amp; \sum_{k = 1}^{D}x_{Nk}w_{k2} &amp; \sum_{k = 1}^{D}x_{Nk}w_{k3} &amp; \dots  &amp;\sum_{k = 1}^{D}x_{Nk}w_{kC}\\  
-\end{bmatrix}
-$$<p>As shown, we have:</p>
-$$y_{i,j} = \sum_{k = 1}^{D}x_{i,k}w_{k,i}$$<p>And we want to compute $\frac{\partial y}{\partial x}$, where $y$ varies along two coordinates and $x$ also varies along two coordinates. Therefore we need a four-dimensional array to store the result:</p>
-$$F_{i,j,k, l} = \frac{\partial y_{i, j}}{\partial x_{k,l}}$$
+\begin{cases}
+\nabla_{W^{y^{(i)}}}L^{(i)} &amp; j = y^{(i)}\\
+\nabla_{W^{(j)}}L^{(i)} &amp; j \neq y^{(i)}
+\end{cases}
+= 
+\begin{cases}
+\sum_{j = 1 and j \neq y^{(i)}}^{C} -\mathbb{1}(W^{(j)} X^{(i)} - W^{y^{(i)}} X^{(i)} + 1 &gt; 0)X^{(i)}&amp; j = y^{(i)}\\
+\mathbb{1}(W^{(j)} X^{(i)} - W^{y^{(i)}} X^{(i)} + 1 &gt; 0)X^{(i)}&amp; j \neq y^{(i)}
+\end{cases}
+$$
 </div>
 </div>
 </div>
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<p>Recap that $y_{i,j} = \sum_{k = 1}^{D}x_{i,k}w_{k,i}$, we know that $F_{i,j,k,l}$ are all 0s unless $i = k$, i.e., $F_{i,j,i, l} = \frac{\partial y_{i,j}}{\partial x_{i,l}} = w_{l,i}$.</p>
+<h3 id='Softmax-Function(Multinomial-Logistic-Regression)'>Softmax Function(Multinomial Logistic Regression)</h3>$$L = \frac{1}{N}\sum_{i = 1}^{N}L^{(i)} + \lambda R(W)$$<p>where $\frac{1}{N}\sum_{i = 1}^{N}L^{(i)}$ is the <strong>data loss</strong>, and $\lambda R(W)$ is the <strong>regularization</strong> term.</p>
+<p>Given a training point $(X^{(i)}, y^{(i)})$, $1 \leq y^{(i)} \leq C$, we have:</p>
+$$L^{(i)} = -log(\frac{e^{s^{(i)}_{y^{(i)}}}}{\sum_{j}e^{s^{(i)}_{j}}}) = -s^{(i)}_{y^{(i)}} + log(\sum_{j}e^{{s^{(i)}_{j}}}) = - W^{y^{(i)}} X^{(i)} + log(\sum_{j}e^{W^{(j)} X^{(i)}})$$<p></p>
+<p>where $j$ means the class $j$, and $1 \leq j \leq C$.</p>
 
 </div>
 </div>
@@ -13359,8 +13346,23 @@ $$F_{i,j,k, l} = \frac{\partial y_{i, j}}{\partial x_{k,l}}$$
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<h2 id='Reference'>Reference</h2><p><code>http://cs231n.stanford.edu/vecDerivs.pdf</code></p>
-
+<p>To minimize the loss function $L(W)$, we should use gradient descent to update $W$. Firstly we compute the gradient $\nabla_{W}L$:</p>
+$$\nabla_{W}L = \frac{1}{N}\sum_{i, j} \nabla_{W}L^{(i)}_{j} + \lambda R'(W)$$<p>For a certain $L^{(i)}_{j}$ note that $j$ is different from the $j$ we used in the loss function, we have:</p>
+$$\nabla_{W}L^{(i)}_{j} = \frac{\partial L^{(i)}}{\partial W^{(j)}} = \begin{cases}
+\frac{\partial L^{(i)}}{\partial W^{y^{(i)}}} &amp; j = y^{(i)}\\
+\frac{\partial L^{(i)}}{\partial W^{(j)}} &amp; j \neq y^{(i)}
+\end{cases} 
+= 
+\begin{cases}
+\nabla_{W^{y^{(i)}}}L^{(i)} &amp; j = y^{(i)}\\
+\nabla_{W^{(j)}}L^{(i)} &amp; j \neq y^{(i)}
+\end{cases}
+= 
+\begin{cases}
+-X^{(i)} + \frac{e^{w^{(j)}X^{(i)}}}{\sum_{j} e^{w^{(j)}X^{(i)}}}X^{(i)} &amp; j = y^{(i)}\\
+\frac{e^{w^{(j)}X^{(i)}}}{\sum_{j} e^{w^{(j)}X^{(i)}}}X^{(i)}&amp; j \neq y^{(i)}
+\end{cases}
+$$
 </div>
 </div>
 </div>
@@ -13411,16 +13413,16 @@ document.getElementById('ipynb').height=$("#ipynb").contents().find("#notebook")
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/19/Matrix-Derivatives/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&text=Matrix Derivatives"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&is_video=false&description=Matrix Derivatives"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Matrix Derivatives&body=Check out this article: http://yoursite.com/2020/05/19/Matrix-Derivatives/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&title=Matrix Derivatives"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/19/Matrix-Derivatives/&name=Matrix Derivatives&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&text=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&is_video=false&description=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Multiclass Linear SVM &amp; Multinomial Logistic Regression&body=Check out this article: http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&title=Multiclass Linear SVM &amp; Multinomial Logistic Regression"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2020/05/22/Multiclass-Linear-SVM-Multinomial-Logistic-Regression/&name=Multiclass Linear SVM &amp; Multinomial Logistic Regression&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
