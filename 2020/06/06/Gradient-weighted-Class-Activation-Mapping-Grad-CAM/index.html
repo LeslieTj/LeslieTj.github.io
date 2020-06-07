@@ -13303,9 +13303,9 @@ $$feature\ maps\rightarrow global\ average\ pooling \rightarrow softmax\ layer$$
 <div class='text_cell_render border-box-sizing rendered_html'>
 <p>After the last convolutional layer, we have $n$ feature maps $A_1, A_2, \dots A_n$, and each map $A_k$ is of spatial size $u\times v$.</p>
 <p>Similar to <code>CAM</code>, we only consider a particular class $c$ at a time, and the result of Grad-CAM is also a a weighted sum of feature maps, i.e.,</p>
-$$w_1^cA_1 + w_2^cA_2 + \dots + w_{n}^cA_{n} = \sum_{k=1}^{n}w_k^cA_k$$<p>Our task is to compute the weight $w_k$.</p>
-<p>Recap that to compute $w_k$, <code>CAM</code> uses <code>GAP</code> to replace FC layer , while for <code>Grad-CAM</code> we need to retain the FC layer. Without modifying the structure of CNN, we can compute $w_k$ like this:</p>
-$$w^c_k = \sum_{i = 1}^{u}\sum_{j = 1}^{v}\frac{{\partial{y^c}}}{{\partial A_{ij}^k}}$$<p>where $y^c$ is the score for class $c$ and the gradient $\frac{{\partial{y^c}}}{{\partial A_{ij}^k}}$ can be computed by propagation.</p>
+$$\alpha_1^cA_1 + \alpha_2^cA_2 + \dots + \alpha_{n}^cA_{n} = \sum_{k=1}^{n}\alpha_k^cA_k$$<p>Our task is to compute the weight $\alpha_k$.</p>
+<p>Recap that to compute $w_k$($\alpha_k$), <code>CAM</code> uses <code>GAP</code> to replace FC layer , while for <code>Grad-CAM</code> we need to retain the FC layer. Without modifying the structure of CNN, we can compute $\alpha_k$ like this:</p>
+$$\alpha^c_k =\frac{1}{Z} \sum_{i = 1}^{u}\sum_{j = 1}^{v}\frac{{\partial{y^c}}}{{\partial A_{ij}^k}}$$<p>where $y^c$ is the score for class $c$, $Z = u\times v$ and the gradient $\frac{{\partial{y^c}}}{{\partial A_{ij}^k}}$ can be computed by propagation.</p>
 
 </div>
 </div>
@@ -13313,8 +13313,8 @@ $$w^c_k = \sum_{i = 1}^{u}\sum_{j = 1}^{v}\frac{{\partial{y^c}}}{{\partial A_{ij
 <div class='cell border-box-sizing text_cell rendered'><div class='prompt input_prompt'>
 </div><div class='inner_cell'>
 <div class='text_cell_render border-box-sizing rendered_html'>
-<p>Then result $\sum_{k=1}^{n}w_k^cA_k$ is a heatmap containing $u \times v$ pixels. And because we are only interested in the features that have a positive influence on the class of interest, we finally apply a ReLU to each pixel of the heapmap:</p>
-$$ReLU(\sum_{k=1}^{n}w_k^cA_k)$$<p>Above is the basic idea of <code>Grad-CAM</code>.</p>
+<p>Then result $\sum_{k=1}^{n}\alpha_k^cA_k$ is a heatmap containing $u \times v$ pixels. And because we are only interested in the features that have a positive influence on the class of interest, we finally apply a ReLU to each pixel of the heapmap:</p>
+$$ReLU(\sum_{k=1}^{n}\alpha_k^cA_k)$$<p>Above is the basic idea of <code>Grad-CAM</code>.</p>
 
 </div>
 </div>
