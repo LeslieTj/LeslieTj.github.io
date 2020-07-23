@@ -13385,7 +13385,7 @@ $$R_i^l = (f_i^l &gt; 0) \cdot (R_i^{l+1} &gt; 0) \cdot R_i^{l+1}$$<p>where $ R_
 <span class='n'>tensor</span> <span class='o'>=</span> <span class='n'>transform</span><span class='p'>(</span><span class='n'>image</span><span class='p'>)</span><span class='o'>.</span><span class='n'>unsqueeze</span><span class='p'>(</span><span class='mi'>0</span><span class='p'>)</span><span class='o'>.</span><span class='n'>requires_grad_</span><span class='p'>()</span>
     
 <span class='n'>model</span> <span class='o'>=</span> <span class='n'>models</span><span class='o'>.</span><span class='n'>alexnet</span><span class='p'>(</span><span class='n'>pretrained</span><span class='o'>=</span><span class='kc'>True</span><span class='p'>)</span>
-<span class='nb'>print</span><span class='p'>(</span><span class='s1'>&#39;AlexNet Architecture:</span><span class='se'>\n</span><span class='s1'>&#39;</span><span class='p'>,</span> <span class='s1'>&#39;-&#39;</span><span class='o'>*</span><span class='mi'>60</span><span class='p'>,</span> <span class='n'>model</span><span class='p'>,</span> <span class='s1'>&#39;</span><span class='se'>\n</span><span class='s1'>&#39;</span><span class='p'>,</span> <span class='s1'>&#39;-&#39;</span><span class='o'>*</span><span class='mi'>60</span><span class='p'>)</span>
+<span class='nb'>print</span><span class='p'>(</span><span class='s1'>&#39;AlexNet Architecture:</span><span class='se'>\n</span><span class='s1'>&#39;</span><span class='p'>,</span> <span class='s1'>&#39;-&#39;</span><span class='o'>*</span><span class='mi'>60</span><span class='p'>,</span> <span class='s1'>&#39;</span><span class='se'>\n</span><span class='s1'>&#39;</span><span class='p'>,</span> <span class='n'>model</span><span class='p'>,</span> <span class='s1'>&#39;</span><span class='se'>\n</span><span class='s1'>&#39;</span><span class='p'>,</span> <span class='s1'>&#39;-&#39;</span><span class='o'>*</span><span class='mi'>60</span><span class='p'>)</span>
 
 <span class='n'>guided_bp</span> <span class='o'>=</span> <span class='n'>Guided_backprop</span><span class='p'>(</span><span class='n'>model</span><span class='p'>)</span>
 <span class='n'>result</span> <span class='o'>=</span> <span class='n'>guided_bp</span><span class='o'>.</span><span class='n'>visualize</span><span class='p'>(</span><span class='n'>tensor</span><span class='p'>,</span> <span class='kc'>None</span><span class='p'>)</span>
@@ -13410,7 +13410,8 @@ $$R_i^l = (f_i^l &gt; 0) \cdot (R_i^{l+1} &gt; 0) \cdot R_i^{l+1}$$<p>where $ R_
 
 <div class='output_subarea output_stream output_stdout output_text'>
 <pre>AlexNet Architecture:
- ------------------------------------------------------------ AlexNet(
+ ------------------------------------------------------------ 
+ AlexNet(
   (features): Sequential(
     (0): Conv2d(3, 64, kernel_size=(11, 11), stride=(4, 4), padding=(2, 2))
     (1): ReLU(inplace=True)
